@@ -13,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
     public float turnSmoothTime, speedSmoothTime;
     float currentSpeed;
     public float walkSpeed;
+    private Rigidbody rb;
 
     void Awake()
     {
         cameraT = Camera.main.transform;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
     void Start()
     {
@@ -40,18 +42,63 @@ public class PlayerMovement : MonoBehaviour
             float targetSpeed = walkSpeed * inputDir.magnitude;
             currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
 
-            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
-            {
-                transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
-                if (!walkSound.isPlaying && onGround)
-                {
-                    walkSound.Play();
-                }
-            }
-            else
-            {
-                walkSound.Pause();
-            }
+            Walking();
+
+            Jumping();
+                   
         }
     }
+
+    void Walking()
+    {
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        {
+            transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+            if (!walkSound.isPlaying && onGround)
+            {
+                walkSound.Play();
+            }
+        }
+        else
+        {
+            walkSound.Pause();
+        }
+    }
+
+    void Jumping()
+    {
+        if (onGround && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
+        }     
+    }
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            onGround = true;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            onGround = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            onGround = false;
+        }
+    }
+
+
+
+
 }
+
