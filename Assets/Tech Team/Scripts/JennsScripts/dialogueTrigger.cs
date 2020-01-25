@@ -7,11 +7,6 @@ using UnityTemplateProjects; // this is for the camera. Has to be included for t
 
 public class dialogueTrigger : MonoBehaviour
 {
-    /*
-    private Quest1_Khoa Quest1Reference; // referencing Khoa's script
-    private Quest2_Khoa Quest2Reference; // referencing Khoa's script
-    private Quest3_Khoa Quest3Reference; // referencing Khoa's script
-    */
     private PlayerController_Alex CanMoveReference; // Referencing Khoa/Alex Script
 
     public Flowchart flowchart; // calls the flowchart.
