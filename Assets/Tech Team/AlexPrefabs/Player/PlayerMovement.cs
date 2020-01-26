@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     float currentSpeed;
     public float walkSpeed;
     private Rigidbody rb;
+    private bool DoubleJumpInProgress;
+    private float rbMass;
 
     void Awake()
     {
         cameraT = Camera.main.transform;
         rb = gameObject.GetComponent<Rigidbody>();
+        rbMass = rb.mass;
     }
     void Start()
     {
@@ -45,7 +48,8 @@ public class PlayerMovement : MonoBehaviour
             Walking();
 
             Jumping();
-                   
+            DoubleJumping();
+            Gliding();
         }
     }
 
@@ -72,6 +76,25 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
         }     
     }
+    void DoubleJumping()
+    {
+        if (!onGround && !DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
+            DoubleJumpInProgress = true;
+        }     
+    }
+    void Gliding()
+    {
+        if (!onGround && DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.mass = 1;
+        }
+        if (onGround || Input.GetKeyUp(KeyCode.Space))
+        {
+            rb.mass = rbMass;
+        }     
+    }
 
 
 
@@ -80,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             onGround = true;
+            DoubleJumpInProgress = false;
         }
     }
     private void OnTriggerStay(Collider other)
