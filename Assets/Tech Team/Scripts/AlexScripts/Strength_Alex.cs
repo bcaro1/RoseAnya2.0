@@ -12,6 +12,8 @@ public class Strength_Alex : MonoBehaviour
     private Vector3 startPosition;
     Rigidbody strengthObjectRigidbody;
     bool CurrentlyUsingStrength;
+    public float height;
+
     void Awake()
     {
         CurrentlyUsingStrength = false;
@@ -19,63 +21,57 @@ public class Strength_Alex : MonoBehaviour
 
     void Update()
     {
-        ReleaseStrength();
+        if (Input.GetKeyUp(KeyCode.Q) && CurrentlyUsingStrength)
+        {
+            CurrentlyUsingStrength = false;
+            ReleaseStrength();
+        }
     }
 
     void OnTriggerStay(Collider collider)
     {
-        var strengthCollider = collider.gameObject.transform;
-        strengthObject = strengthCollider.gameObject;
-        strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
-
-        if (Input.GetKeyDown(KeyCode.Q) && collider.gameObject.tag == "Strength")
+        if (collider.gameObject.tag == "Strength")
         {
-            CurrentlyUsingStrength = true;
-
-            // set the collider to strengthCollider
-            strengthCollider = collider.gameObject.transform;
-            // convert strengthCollider to a gameobject and store in strengthObject
+            var strengthCollider = collider.gameObject.transform;
             strengthObject = strengthCollider.gameObject;
+            strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
 
-            // Gathers strengthObject and Player's current position
-            Vector3 dirFromAtoB = (strengthObject.transform.position - this.gameObject.transform.position).normalized;
-
-            // Gathers direction of Player
-            dotProd = Vector3.Dot(dirFromAtoB, this.gameObject.transform.forward);
-        
-            // If Player is facing strengthObject...
-            if (dotProd > 0.9) 
+            if (Input.GetKeyDown(KeyCode.Q) && collider.gameObject.tag == "Strength")
             {
-                Debug.Log("Player is looking at cube");
-                // Make strength object the child of the player
-                strengthObject.transform.parent = this.gameObject.transform;
-                // Set current position of strengthObject to startPosition
-                startPosition = strengthObject.transform.position;
-                // Move strengthObject up
-                strengthObject.transform.position = new Vector3(startPosition.x, startPosition.y + 5, startPosition.z);
-                // Set rigidbody of strengthObject to strengthObjectRigidbody
-                strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
-                // Turn on Kinematic...this means the strengthObject won't fall
-                strengthObjectRigidbody.isKinematic = true;
+                // set the collider to strengthCollider
+                strengthCollider = collider.gameObject.transform;
+                // grab strengthCollider's gameobject and store in strengthObject
+                strengthObject = strengthCollider.gameObject;
+                // Gathers strengthObject and Player's current position
+                Vector3 dirFromAtoB = (strengthObject.transform.position - this.gameObject.transform.position).normalized;
+                // Gathers direction of Player
+                dotProd = Vector3.Dot(dirFromAtoB, this.gameObject.transform.forward);
+
+                // If Player is facing strengthObject...
+                if (dotProd > 0.85) 
+                {
+                    CurrentlyUsingStrength = true;
+                    // Make strength object the child of the player
+                    strengthObject.transform.parent = this.gameObject.transform;
+                    // Set current position of strengthObject to startPosition
+                    startPosition = strengthObject.transform.position;
+                    // Move strengthObject up
+                    strengthObject.transform.position = new Vector3(startPosition.x, startPosition.y + height, startPosition.z);
+                    // Set rigidbody of strengthObject to strengthObjectRigidbody
+                    strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
+                    // Turn on Kinematic...this means the strengthObject won't fall
+                    strengthObjectRigidbody.isKinematic = true;
+                }
             }
         }
     }
 
+
+
     void ReleaseStrength()
     {
-        if (Input.GetKeyUp(KeyCode.Q) && CurrentlyUsingStrength)
-        {
-            CurrentlyUsingStrength = false;
-
-            if (Input.GetKeyUp(KeyCode.Q) && !CurrentlyUsingStrength)
-            {
-                Debug.Log("Turning off Kinematic");
-                Debug.Log(strengthObject);
-                strengthObject.transform.parent = null;
-                strengthObjectRigidbody.WakeUp();
-                
-                strengthObjectRigidbody.isKinematic = false;
-            }
-        }
+        strengthObject.transform.parent = null;
+        strengthObjectRigidbody.WakeUp();
+        strengthObjectRigidbody.isKinematic = false;
     }
 }
