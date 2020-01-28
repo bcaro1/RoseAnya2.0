@@ -33,8 +33,8 @@ public class DialogueTrigger_Alex : MonoBehaviour
     {
         switch (this.gameObject.tag)
         {
-            case "NPC1":
-                flowchart.ExecuteBlock("Quest Dialogue"); // we execute the named block within the flowchart.
+            case "NPC6":
+                flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
                 break;
             case "NPC2":
                 flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
