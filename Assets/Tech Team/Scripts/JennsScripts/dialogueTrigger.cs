@@ -79,9 +79,9 @@ public class dialogueTrigger : MonoBehaviour
             {
                 if (this.gameObject.tag == "NPC6")
                 {
-                    Debug.Log("NPC6");
+                    Debug.Log("Matron1");
                     // thirdPersonCamera.enabled = false;
-                    flowchart.ExecuteBlock("Quest1"); // executing the fire quest chain.
+                    flowchart.ExecuteBlock("Matron1"); // executing the first/tutorial quest.
                     hasTalked = true;
                 }
             }
@@ -91,7 +91,7 @@ public class dialogueTrigger : MonoBehaviour
                 {
                     Debug.Log("Quest not done yet.");
                     // thirdPersonCamera.enabled = false;
-                    flowchart.ExecuteBlock("IPfire"); // you know what this does by now :D
+                    flowchart.ExecuteBlock("Matron1IP"); // you know what this does by now :D
                 }
             }
             else if (taskDone && hasTalked) // checks if task is COMPLETED!!!!!!
@@ -100,7 +100,7 @@ public class dialogueTrigger : MonoBehaviour
                 {
                     Debug.Log("Quest complete.");
                     // thirdPersonCamera.enabled = false;
-                    flowchart.ExecuteBlock("fFire");
+                    flowchart.ExecuteBlock("Matron2");
                 }
             }
         }
