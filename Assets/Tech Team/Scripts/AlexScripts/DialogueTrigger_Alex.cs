@@ -49,7 +49,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
                 break;
             case "NPC11":
-                flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
+                // flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
                 break;
         }
     }
