@@ -9,9 +9,8 @@ public class SceneLoading : MonoBehaviour
     private Image _progressBar;
     void Start()
     {
-        Debug.Log("PRESS 'SPACE' TO LOAD NEXT SCENE");
         // Start async operation
-        // StartCoroutine(LoadAsyncOperation());
+        StartCoroutine(LoadAsyncOperation());
     }
 
     IEnumerator LoadAsyncOperation()
@@ -29,9 +28,6 @@ public class SceneLoading : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(LoadAsyncOperation());
-        }
+
     }
 }
