@@ -34,24 +34,22 @@ public class DialogueTrigger_Alex : MonoBehaviour
         switch (this.gameObject.tag)
         {
             case "NPC1":
-                Debug.Log("NPC1");
                 flowchart.ExecuteBlock("Quest Dialogue"); // we execute the named block within the flowchart.
                 break;
             case "NPC2":
-                Debug.Log("NPC2");
-                flowchart.ExecuteBlock("Testing1"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
                 break;
             case "NPC3":
-                Debug.Log("NPC3");
-                flowchart.ExecuteBlock("FlavorHW"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
                 break;
             case "NPC4":
-                Debug.Log("NPC4");
-                flowchart.ExecuteBlock("FlavorC"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
                 break;
             case "NPC5":
-                Debug.Log("NPC5");
-                flowchart.ExecuteBlock("FlavorG"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
+                break;
+            case "NPC11":
+                flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
                 break;
         }
     }
