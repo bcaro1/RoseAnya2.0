@@ -7,11 +7,6 @@ using UnityTemplateProjects; // this is for the camera. Has to be included for t
 
 public class dialogueTrigger : MonoBehaviour
 {
-    /*
-    private Quest1_Khoa Quest1Reference; // referencing Khoa's script
-    private Quest2_Khoa Quest2Reference; // referencing Khoa's script
-    private Quest3_Khoa Quest3Reference; // referencing Khoa's script
-    */
     private PlayerController_Alex CanMoveReference; // Referencing Khoa/Alex Script
 
     public Flowchart flowchart; // calls the flowchart.
@@ -52,27 +47,33 @@ public class dialogueTrigger : MonoBehaviour
             }
             else if (this.gameObject.tag == "NPC2") // checks tag.
             {
-                Debug.Log("Npc2");
+                Debug.Log("Blacksmith1");
                 // thirdPersonCamera.enabled = false;
-                flowchart.ExecuteBlock("Testing1"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
             }
             else if (this.gameObject.tag == "NPC3")
             {
-                Debug.Log("Npc3");
+                Debug.Log("Chef1");
                 // thirdPersonCamera.enabled = false;
-                flowchart.ExecuteBlock("FlavorHW"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
             }
             else if (this.gameObject.tag == "NPC4")
             {
                 Debug.Log("Npc4");
                 // thirdPersonCamera.enabled = false;
-                flowchart.ExecuteBlock("FlavorC"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
             }
             else if (this.gameObject.tag == "NPC5")
             {
-                Debug.Log("Npc5");
+                Debug.Log("guard testing");
                 // thirdPersonCamera.enabled = false;
-                flowchart.ExecuteBlock("FlavorG"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
+            }
+
+            else if (this.gameObject.tag == "NPC11")
+            {
+                Debug.Log("Doctor dialogue");
+                flowchart.ExecuteBlock("Doctor1");
             }
         }
     }
@@ -84,9 +85,9 @@ public class dialogueTrigger : MonoBehaviour
             {
                 if (this.gameObject.tag == "NPC6")
                 {
-                    Debug.Log("NPC6");
+                    Debug.Log("Matron1");
                     // thirdPersonCamera.enabled = false;
-                    flowchart.ExecuteBlock("Quest1"); // executing the fire quest chain.
+                    flowchart.ExecuteBlock("Matron1"); // executing the first/tutorial quest.
                     hasTalked = true;
                 }
             }
@@ -96,7 +97,7 @@ public class dialogueTrigger : MonoBehaviour
                 {
                     Debug.Log("Quest not done yet.");
                     // thirdPersonCamera.enabled = false;
-                    flowchart.ExecuteBlock("IPfire"); // you know what this does by now :D
+                    flowchart.ExecuteBlock("Matron1IP"); // you know what this does by now :D
                 }
             }
             else if (taskDone && hasTalked) // checks if task is COMPLETED!!!!!!
@@ -105,7 +106,14 @@ public class dialogueTrigger : MonoBehaviour
                 {
                     Debug.Log("Quest complete.");
                     // thirdPersonCamera.enabled = false;
-                    flowchart.ExecuteBlock("fFire");
+                    flowchart.ExecuteBlock("Matron2");
+                }
+
+                else if (this.gameObject.tag == "NPCMS")
+                {
+                    Debug.Log("Mysterious Stranger Dialogue");
+                    //Here's the antagonist.
+                    flowchart.ExecuteBlock("MysteriousStranger1");
                 }
             }
         }

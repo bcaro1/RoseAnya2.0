@@ -2,26 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Quest_Joseph
+public interface Quest_Joseph
 {
     #region Public
-    public string QuestName;
-    public string ElementUsed;
-    public bool CanBeTurnedIn = false;
-    public bool Success = false;
+    string QuestName { set; get; }
+    string ElementUsed { set; get; }
+    bool CanBeTurnedIn { set; get; }
+    bool Success { set; get; }
+    Transform StartLocation { set; get; }
     //Possibly Consider Adding Rewards to Quests
     #endregion
 
-    #region Private
-    private Transform StartLocation;
-    //Possibly a Reference to Fungus?
-    #endregion
+    void InitializeTask();
 
-    public abstract void InitializeTask();
+    void IncrementTask();
 
-    public abstract void IncrementTask();
+    void CompleteTask();
 
-    public abstract void CompleteTask();
-
-    public abstract void RestartOnFail();
+    void RestartOnFail();
 }
