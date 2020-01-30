@@ -6,8 +6,15 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject optionsMenuUI;
+    public GameObject tasksMenuUI;
+    public GameObject Camera;
+    CameraFollow_Joseph CameraFollowScript;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        CameraFollowScript = Camera.GetComponent<CameraFollow_Joseph>();
+    } 
     void Update()
     {
        if (Input.GetKeyDown(KeyCode.P))
@@ -26,6 +33,9 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
+        tasksMenuUI.SetActive(false);
+
         Time.timeScale = 1f;
         IsPaused = false;
         Cursor.visible = false;
@@ -47,7 +57,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
-
+    public void AdjustSensitivity(float newSpeed)
+    {
+        CameraFollowScript.InputSensitivity = newSpeed;
+    }
 
 
 
