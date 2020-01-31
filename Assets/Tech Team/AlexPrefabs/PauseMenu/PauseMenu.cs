@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject tasksMenuUI;
+    public GameObject controlsMenuUI;
     public GameObject Camera;
     AudioSource CameraAudio;
     public GameObject Player;
@@ -40,6 +41,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         optionsMenuUI.SetActive(false);
         tasksMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
         IsPaused = false;
