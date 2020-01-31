@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraCollision_Joseph : MonoBehaviour
 {
     #region Public
-    public float MinDistance = 1.0f;
-    public float MaxDistance = 4.0f;
+    public float MinDistance = 3.0f;
+    public float MaxDistance = 5.0f;
     public float Smooth = 10.0f;
     public Vector3 DollyDirAdjusted;
     public float Distance;

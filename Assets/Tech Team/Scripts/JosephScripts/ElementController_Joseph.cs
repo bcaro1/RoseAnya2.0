@@ -9,6 +9,11 @@ public class ElementController_Joseph : MonoBehaviour
     public int Wind = 0;
     public int Fire = 0;
     public int Water = 0;
+    public Rigidbody Player;
+    public int DashForce = 50;
+    public float DashDuration = 0.2f;
+    public int DashCost = 1;
+    public float CoolDownRate = 2f;
     #endregion
 
     #region Private
@@ -17,6 +22,7 @@ public class ElementController_Joseph : MonoBehaviour
     private bool UnlockedFire = false;
     private int CurrentElement = 0;
     private int MaxElementValue = 16;
+    private float CooldownTimer = 0;
     #endregion
 
     void Start()
@@ -32,7 +38,11 @@ public class ElementController_Joseph : MonoBehaviour
         {
             ToggleElement();
         }
-        Debug.Log(CurrentElement);
+        //Checks to see if Dash is pushed, and if it is dashes
+        if(Input.GetButtonDown("Dash"))
+        {
+            StartCoroutine(Dash());
+        }
     }
 
     void ToggleElement()
@@ -70,7 +80,7 @@ public class ElementController_Joseph : MonoBehaviour
 
         if(CurrentElement == 2 && !UnlockedEarth)
         {
-            CurrentElement = 1;
+            CurrentElement = 0;
         }
 
         if(CurrentElement == 3 && !UnlockedFire)
@@ -159,6 +169,20 @@ public class ElementController_Joseph : MonoBehaviour
     public void UnlockWind()
     {
         UnlockedWind = true;
+    }
+
+    IEnumerator Dash()
+    {
+        //Checks to see if there is Wind available to use for Dashing, and if the Dash is off cooldown
+        if (Wind - DashCost >= 0 && CooldownTimer < Time.time)
+        {
+            //Adds force in the direction teh camera is facing, then waits for the duration to end before resetting velocity
+            Player.AddForce(Camera.main.transform.forward * DashForce, ForceMode.VelocityChange);
+            yield return new WaitForSeconds(DashDuration);
+            Player.velocity = Vector3.zero;
+            Wind -= DashCost;
+            CooldownTimer = Time.time + CoolDownRate;
+        }
     }
 
     private void OnTriggerStay(Collider other)
