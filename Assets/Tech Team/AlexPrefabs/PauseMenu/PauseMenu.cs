@@ -9,11 +9,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenuUI;
     public GameObject tasksMenuUI;
     public GameObject Camera;
+    AudioSource CameraAudio;
+    public GameObject Player;
+    AudioSource PlayerAudio;
     CameraFollow_Joseph CameraFollowScript;
 
     void Awake()
     {
         CameraFollowScript = Camera.GetComponent<CameraFollow_Joseph>();
+        CameraAudio = Camera.GetComponent<AudioSource>();
+        PlayerAudio = Player.GetComponent<AudioSource>();
     } 
     void Update()
     {
@@ -62,6 +67,27 @@ public class PauseMenu : MonoBehaviour
         CameraFollowScript.InputSensitivity = newSpeed;
     }
 
-
+    public void Sound()
+    {
+        if (PlayerAudio.volume == 0.645f)
+        {
+            PlayerAudio.volume = 0f;
+        }
+        else
+        {
+            PlayerAudio.volume = 0.645f;
+        }
+    }
+    public void Music()
+    {
+        if (CameraAudio.volume == 1f)
+        {
+            CameraAudio.volume = 0f;
+        }
+        else
+        {
+            CameraAudio.volume = 1f;
+        }
+    }
 
 }
