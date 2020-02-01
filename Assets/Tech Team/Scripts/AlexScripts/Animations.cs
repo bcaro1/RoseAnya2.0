@@ -5,24 +5,31 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     GameObject Player;
+    GameObject NPC;
     private Rigidbody PlayerRb;
     public Animator anim;
     
     bool onGround;
     bool playerMoving;
 
+    private DialogueTrigger_Alex DialogueTriggerScript;
+
+
     // Start is called before the first frame update
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        NPC = GameObject.FindGameObjectWithTag("NPC6");
         PlayerRb = Player.GetComponent<Rigidbody>();
         anim.SetBool("isGrounded", true);
+        DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>();
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerMoving();
+        PlayerTalking();
 
         if (onGround)
         {
@@ -40,12 +47,8 @@ public class Animations : MonoBehaviour
         {
             anim.SetBool("isGliding", false);
         } 
-
     }
-    void LateUpdate()
-    {
 
-    }
     void PlayerMoving()
     {
         if((Input.GetButton("Horizontal") || Input.GetButton("Vertical") && onGround))
@@ -57,6 +60,18 @@ public class Animations : MonoBehaviour
             anim.SetFloat("Speed", 0);
         }
     }
+    void PlayerTalking()
+    {
+        if (DialogueTriggerScript.hasPlayer && Input.GetKeyDown("k"))
+        {
+            anim.SetBool("isTalking", true);
+        }
+        if (!DialogueTriggerScript.hasPlayer)
+        {
+            anim.SetBool("isTalking", false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Ground")

@@ -11,7 +11,8 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     public Flowchart flowchart; // calls the flowchart.
     public bool taskDone;
-    private bool hasPlayer; // is the player in a collider? yes or no
+
+    public bool hasPlayer; // is the player in a collider? yes or no
     private bool isTalking; // is the npc talking
     private bool hasTalked; // is the player in a collider? yes or no
 
