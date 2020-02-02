@@ -442,7 +442,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2267945974642864344}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1515901618}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
@@ -858,6 +858,35 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 729666590}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1453763195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2267945976078936340, guid: d17195135b827475e8a357cb617cfdc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2267945974642864344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1515901618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2267945975311177954, guid: d17195135b827475e8a357cb617cfdc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2267945974642864344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1515901703
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515901618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 154
+  indentLevel: 0
+  targetObject: {fileID: 1453763195}
+  methodName: UnfreezePlayer
+  delay: 0
 --- !u!1 &1572936420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1386,7 @@ PrefabInstance:
     - target: {fileID: 2267945975311177955, guid: d17195135b827475e8a357cb617cfdc8,
         type: 3}
       propertyPath: selectedBlocks.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2267945974512384582, guid: d17195135b827475e8a357cb617cfdc8,
         type: 3}
@@ -1484,7 +1513,18 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 2064626085}
-    m_RemovedComponents: []
+    - target: {fileID: 2267945975311177814, guid: d17195135b827475e8a357cb617cfdc8,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2267945975311177814, guid: d17195135b827475e8a357cb617cfdc8,
+        type: 3}
+      propertyPath: commandList.Array.data[7]
+      value: 
+      objectReference: {fileID: 1515901703}
+    m_RemovedComponents:
+    - {fileID: 2149307688380949986, guid: d17195135b827475e8a357cb617cfdc8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d17195135b827475e8a357cb617cfdc8, type: 3}
 --- !u!1001 &5532266141493598490
 PrefabInstance:

@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2267945975311177955}
-  taskDone: 0
   hasPlayer: 0
+  Player: {fileID: 0}
 --- !u!1 &2267945974848790326
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,8 +427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2267945975311177955}
-  taskDone: 0
   hasPlayer: 0
+  Player: {fileID: 0}
 --- !u!1 &2267945974859161296
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,8 +551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2267945975311177955}
-  taskDone: 0
   hasPlayer: 0
+  Player: {fileID: 0}
 --- !u!1 &2267945974860667872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1118,7 @@ GameObject:
   - component: {fileID: 2267945975311177883}
   - component: {fileID: 2267945975311177882}
   - component: {fileID: 2267945975311177881}
+  - component: {fileID: 2149307688380949986}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1210,6 +1211,7 @@ MonoBehaviour:
   - {fileID: 2267945975311177809}
   - {fileID: 2267945975311177808}
   - {fileID: 2267945975311177823}
+  - {fileID: 2149307688380949986}
 --- !u!114 &2267945975311177813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3647,6 +3649,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &2149307688380949986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267945975311177954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 153
+  indentLevel: 0
+  targetObject: {fileID: 2267945976078936340}
+  methodName: UnfreezePlayer
+  delay: 0
 --- !u!1 &2267945975430261657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3769,8 +3788,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2267945975311177955}
-  taskDone: 0
   hasPlayer: 0
+  Player: {fileID: 0}
 --- !u!1 &2267945975507404299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,8 +3912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2267945975311177955}
-  taskDone: 0
   hasPlayer: 0
+  Player: {fileID: 0}
 --- !u!1 &2267945975578376626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4710,8 +4729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 2267945975311177955}
-  taskDone: 0
   hasPlayer: 0
+  Player: {fileID: 0}
 --- !u!1 &2267945976215432046
 GameObject:
   m_ObjectHideFlags: 0

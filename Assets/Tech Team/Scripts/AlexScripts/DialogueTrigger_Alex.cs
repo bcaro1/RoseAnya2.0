@@ -7,30 +7,27 @@ using UnityTemplateProjects; // this is for the camera. Has to be included for t
 
 public class DialogueTrigger_Alex : MonoBehaviour
 {
-    private PlayerController_Alex CanMoveReference; // Referencing Khoa/Alex Script
-
     public Flowchart flowchart; // calls the flowchart.
-    public bool taskDone;
-
-    public bool hasPlayer; // is the player in a collider? yes or no
-    private bool isTalking; // is the npc talking
-    private bool hasTalked; // is the player in a collider? yes or no
+    public bool hasPlayer; // is the player in a npc's radius?
+    public GameObject Player;
+    private PlayerMovement PlayerMovementScript;
 
     private void Awake()
     {
-        hasTalked = false;
-        // CanMoveReference = FindObjectOfType<PlayerController_Alex>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerMovementScript = Player.GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
         if (hasPlayer && Input.GetKeyDown("k"))
         {
+            FreezePlayer();
             NormalDialogue();
         }
     }
 
-    void NormalDialogue()
+    void NormalDialogue() // No on going quests
     {
         switch (this.gameObject.tag)
         {
@@ -57,25 +54,25 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     public void FreezePlayer()
     {
-        Debug.Log("FreezePlayer");
+        PlayerMovementScript.canMove = false;
     }
     public void UnfreezePlayer()
     {
-        Debug.Log("UnfreezePlayer");
+        PlayerMovementScript.canMove = true;
     }
 
-    void OnTriggerEnter(Collider other) // collider stuff
+    void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) //if the player is colliding with trigger
+        if (other.CompareTag("Player")) // if the player is in NPC's radius
         {
-            hasPlayer = true; // set hasPlayer to true!
+            hasPlayer = true;
         }
     }
-    private void OnTriggerExit(Collider other) //when leaving the trigger
+    private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) // checks for the player tag
+        if (other.CompareTag("Player")) // if the player is out of NPC's radius
         {
-            hasPlayer = false; // sets hasPlayer to be false so dialogue won't play.
+            hasPlayer = false;
         }
     }
 }
