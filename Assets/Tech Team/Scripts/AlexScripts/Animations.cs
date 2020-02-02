@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Animations : MonoBehaviour
 {
@@ -8,21 +9,30 @@ public class Animations : MonoBehaviour
     GameObject NPC;
     private Rigidbody PlayerRb;
     public Animator anim;
+    private DialogueTrigger_Alex DialogueTriggerScript;
     
     bool onGround;
     bool playerMoving;
 
-    private DialogueTrigger_Alex DialogueTriggerScript;
-
+    
+    Scene currentScene;
+    string sceneName;
 
     // Start is called before the first frame update
     void Awake()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
         Player = GameObject.FindGameObjectWithTag("Player");
         NPC = GameObject.FindGameObjectWithTag("NPC6");
         PlayerRb = Player.GetComponent<Rigidbody>();
         anim.SetBool("isGrounded", true);
-        DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>();
+
+        if (sceneName == "RoseAnya(new)" || sceneName == "AlexTechScene")
+        {
+            DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>();
+        }
     }
 
     // Update is called once per frame
