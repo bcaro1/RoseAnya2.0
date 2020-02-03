@@ -6,8 +6,21 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject optionsMenuUI;
+    public GameObject tasksMenuUI;
+    public GameObject controlsMenuUI;
+    public GameObject Camera;
+    AudioSource CameraAudio;
+    public GameObject Player;
+    AudioSource PlayerAudio;
+    CameraFollow_Joseph CameraFollowScript;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        CameraFollowScript = Camera.GetComponent<CameraFollow_Joseph>();
+        CameraAudio = Camera.GetComponent<AudioSource>();
+        PlayerAudio = Player.GetComponent<AudioSource>();
+    } 
     void Update()
     {
        if (Input.GetKeyDown(KeyCode.P))
@@ -26,6 +39,10 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
+        tasksMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(false);
+
         Time.timeScale = 1f;
         IsPaused = false;
         Cursor.visible = false;
@@ -47,8 +64,32 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void AdjustSensitivity(float newSpeed)
+    {
+        CameraFollowScript.InputSensitivity = newSpeed;
+    }
 
-
-
+    public void Sound()
+    {
+        if (PlayerAudio.volume == 0.645f)
+        {
+            PlayerAudio.volume = 0f;
+        }
+        else
+        {
+            PlayerAudio.volume = 0.645f;
+        }
+    }
+    public void Music()
+    {
+        if (CameraAudio.volume == 1f)
+        {
+            CameraAudio.volume = 0f;
+        }
+        else
+        {
+            CameraAudio.volume = 1f;
+        }
+    }
 
 }

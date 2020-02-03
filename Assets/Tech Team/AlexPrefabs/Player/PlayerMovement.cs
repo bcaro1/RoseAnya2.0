@@ -62,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 walkSound.Play();
             }
+            if (!onGround) 
+            {
+                walkSound.Pause();
+            }
         }
         else
         {

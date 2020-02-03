@@ -47,7 +47,8 @@ public class CameraFollow_Joseph : MonoBehaviour
         FinalInputZ = MouseY; //Add Stick Input Here
 
         RotY += FinalInputX * InputSensitivity * Time.deltaTime;
-        RotX += FinalInputZ * InputSensitivity * Time.deltaTime;
+        //Inverted to make the Camera feel more natural
+        RotX += -FinalInputZ * InputSensitivity * Time.deltaTime;
 
         RotX = Mathf.Clamp(RotX, ClampAngleMin, ClampAngleMax);
 
