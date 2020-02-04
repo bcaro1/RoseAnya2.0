@@ -29,10 +29,8 @@ public class Animations : MonoBehaviour
         PlayerRb = Player.GetComponent<Rigidbody>();
         anim.SetBool("isGrounded", true);
 
-        if (sceneName == "RoseAnya(new)" || sceneName == "AlexTechScene")
-        {
-            DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>();
-        }
+        DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>();
+        
     }
 
     // Update is called once per frame

@@ -17,28 +17,48 @@ public class SceneManager_Alex : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("t"))
-        {
-            StartCoroutine(BedroomScene());
-        }
+        // if (Input.GetKeyDown("t"))
+        // {
+            // StartCoroutine(BedroomScene());
+        // }
     }
 
-    IEnumerator MainScene()
+    public IEnumerator MainScene()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(()=>black.color.a ==1);
+        SceneManager.LoadScene(4);
+    }
+    public IEnumerator BedroomScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
         SceneManager.LoadScene(2);
     }
-    IEnumerator BedroomScene()
+    public IEnumerator ForestScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
         SceneManager.LoadScene(2);
     }
-    IEnumerator ForestScene()
+    public IEnumerator LoadingScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "MainScene")
+        {
+            StartCoroutine(MainScene());
+        }
+        if (other.gameObject.tag == "LoadingScene")
+        {
+            LoadingScene();
+        }
+
     }
 }

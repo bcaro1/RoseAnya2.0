@@ -5,11 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger_Alex : MonoBehaviour
 {
+  GameObject SceneManagement;
+  SceneManager_Alex SceneManagerScript;
+  void Awake()
+  {
+      SceneManagement = GameObject.FindGameObjectWithTag("SceneManager");
+      SceneManagerScript = SceneManagement.GetComponent<SceneManager_Alex>();
+  }
 
-  void OnTriggerEnter(Collider other) {
-    if (other.CompareTag ("Player")) 
+  void OnTriggerEnter(Collider other) 
+  {
+    if (this.gameObject.tag == "LoadingScene")
     {
-        SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+      if (other.CompareTag("Player")) 
+      {
+        SceneManagerScript.StartCoroutine("LoadingScene");
+        Debug.Log("Loading...");
+      }
     }
-}
+    
+  }
+
+
 }
