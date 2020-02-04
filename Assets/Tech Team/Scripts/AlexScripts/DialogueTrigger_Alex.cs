@@ -20,15 +20,20 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     private void Update()
     {
-        if (hasPlayer && Input.GetKeyDown("k"))
-        {
-            FreezePlayer();
+        if (hasPlayer && Input.GetKeyDown("k") && flowchart.GetIntegerVariable("WaterQuest") == 0)
+        { 
             NormalDialogue();
+        }
+        if (hasPlayer && Input.GetKeyDown("k") && flowchart.GetIntegerVariable("WaterQuest") == 1)
+        {
+            WIPTutorial();
         }
     }
 
     void NormalDialogue() // No on going quests
     {
+        FreezePlayer();
+
         switch (this.gameObject.tag)
         {
             case "NPC6":
@@ -53,25 +58,11 @@ public class DialogueTrigger_Alex : MonoBehaviour
     }
     void WIPTutorial() // Tutorial in progress
     {
+        FreezePlayer();
         switch (this.gameObject.tag)
         {
             case "NPC6":
-                flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC2":
-                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC3":
-                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC4":
-                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC5":
-                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
-                break;
-            case "NPC11":
-                // flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
+                flowchart.ExecuteBlock("Matron1IP"); // we execute the named block within the flowchart.
                 break;
         }
     }
