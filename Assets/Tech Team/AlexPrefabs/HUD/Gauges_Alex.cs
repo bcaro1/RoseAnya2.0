@@ -18,7 +18,7 @@ public class Gauges_Alex : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)) //THIS WILL CHANGE TO WHATEVER KEY WE USE TO ABSORB / DISCHARGE ELEMENTS
+        if (Input.GetButtonDown("Absorb") || Input.GetButtonDown("Interact")) //THIS WILL CHANGE TO WHATEVER KEY WE USE TO ABSORB / DISCHARGE ELEMENTS
         {
             UpdateGauges();
         }

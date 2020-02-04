@@ -39,7 +39,7 @@ public class SceneManager_Alex : MonoBehaviour
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
     public IEnumerator LoadingScene()
     {

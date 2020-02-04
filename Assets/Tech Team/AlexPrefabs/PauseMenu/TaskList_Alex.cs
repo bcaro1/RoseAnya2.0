@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus; // access to fungus
 
 public class TaskList_Alex : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TaskList_Alex : MonoBehaviour
     public Text[] IPtextBoxes; //In Progress - Text UI
     int[] tasks;
     public int TASK_WaterQuest, TASK_FireQuest, TASK_StrenghtQuest, TASK_AirQuest, TASK_GoToQuest;
+    public Flowchart flowchart; // calls the flowchart.
 
 
     // 0 = NOT STARTED
@@ -18,8 +20,8 @@ public class TaskList_Alex : MonoBehaviour
 
     void Awake()
     {
-        TASK_WaterQuest = 2;
-        TASK_FireQuest = 1;
+        TASK_WaterQuest = 0;
+        TASK_FireQuest = 0;
         TASK_StrenghtQuest = 0;
         TASK_AirQuest = 0;
         TASK_GoToQuest = 0;
@@ -37,8 +39,11 @@ public class TaskList_Alex : MonoBehaviour
 
     public void BuildArrays()
     {
+
+        TASK_WaterQuest = flowchart.GetIntegerVariable("WaterQuest");
+
         tasksText = new string[]{
-            "Drain water",                  //0
+            "Collect water + fill well",    //0
             "Put out fire",                 //1
             "Move boulder",                 //2
             "Use air",                      //3
