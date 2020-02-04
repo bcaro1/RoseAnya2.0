@@ -9,6 +9,12 @@ public class Gauges_Alex : MonoBehaviour
     public Image airGauge; 
     public Image earthGauge;  
 
+    static float fireFill;
+    static float waterFill;
+    static float airFill;
+    static float earthFill;
+
+
     public GameObject element;
     private ElementController_Joseph ElementControllerScript;
     void Start()
@@ -22,14 +28,20 @@ public class Gauges_Alex : MonoBehaviour
         {
             UpdateGauges();
         }
+
+        fireGauge.fillAmount = fireFill;
+        earthGauge.fillAmount = earthFill;
+        waterGauge.fillAmount = waterFill;
+        airGauge.fillAmount = airFill;
+
     }
 
     void UpdateGauges()
     {
-        fireGauge.fillAmount = ElementControllerScript.Fire / 12.0f;
-        earthGauge.fillAmount = ElementControllerScript.Earth / 12.0f;
-        waterGauge.fillAmount = ElementControllerScript.Water / 12.0f;
-        airGauge.fillAmount = ElementControllerScript.Wind / 12.0f;
+        fireFill = ElementControllerScript.Fire / 12.0f;
+        earthFill = ElementControllerScript.Earth / 12.0f;
+        waterFill = ElementControllerScript.Water / 12.0f;
+        airFill = ElementControllerScript.Wind / 12.0f;
     }
 
 

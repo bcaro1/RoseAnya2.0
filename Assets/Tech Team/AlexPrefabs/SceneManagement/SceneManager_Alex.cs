@@ -7,20 +7,25 @@ using UnityEngine.UI;
 public class SceneManager_Alex : MonoBehaviour
 {
     GameObject Player;
+    public GameObject Gauge;
     public Image black;
     public Animator animator;
+    int currentScene;
+    private Gauges_Alex GaugesScript;
     
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player"); //Find Player
+        currentScene = SceneManager.GetActiveScene().buildIndex; // get active scene build index
+        GaugesScript = Gauge.GetComponent<Gauges_Alex>();
     }
 
     void Update()
     {
-        // if (Input.GetKeyDown("t"))
-        // {
-            // StartCoroutine(BedroomScene());
-        // }
+        if (currentScene == 5) // This is temporary..will change @AH
+        {
+            FinishTutorial();
+        }
     }
 
     public IEnumerator MainScene()
@@ -47,6 +52,15 @@ public class SceneManager_Alex : MonoBehaviour
         yield return new WaitUntil(()=>black.color.a ==1);
         SceneManager.LoadScene(3);
     }
+    public void FinishTutorial()
+    {
+        if(GaugesScript.waterGauge.fillAmount == 1f)
+        {
+            StartCoroutine(LoadingScene());
+        }
+    }
+
+
 
 
     private void OnTriggerEnter(Collider other)

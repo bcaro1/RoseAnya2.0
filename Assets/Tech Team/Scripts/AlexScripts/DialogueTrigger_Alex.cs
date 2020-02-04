@@ -51,7 +51,54 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 break;
         }
     }
-
+    void WIPTutorial() // Tutorial in progress
+    {
+        switch (this.gameObject.tag)
+        {
+            case "NPC6":
+                flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC2":
+                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC3":
+                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC4":
+                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC5":
+                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
+                break;
+            case "NPC11":
+                // flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
+                break;
+        }
+    }
+    void PostTutorial() // Just finished tutorial
+    {
+        switch (this.gameObject.tag)
+        {
+            case "NPC6":
+                flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC2":
+                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC3":
+                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC4":
+                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
+                break;
+            case "NPC5":
+                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
+                break;
+            case "NPC11":
+                // flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
+                break;
+        }
+    }
     public void FreezePlayer()
     {
         PlayerMovementScript.canMove = false;
