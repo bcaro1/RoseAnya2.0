@@ -23,7 +23,7 @@ public class Animations : MonoBehaviour
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
-        NPC = GameObject.FindGameObjectWithTag("NPC6"); // Grabs NPC
+        NPC = GameObject.FindGameObjectWithTag("Matron"); // Grabs NPC
         PlayerRb = Player.GetComponent<Rigidbody>(); // Grabs Player's Rigidbody
         DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>(); //Grabs script attached to NPC
 

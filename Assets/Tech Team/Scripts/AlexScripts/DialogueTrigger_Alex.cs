@@ -7,89 +7,58 @@ using UnityTemplateProjects; // this is for the camera. Has to be included for t
 
 public class DialogueTrigger_Alex : MonoBehaviour
 {
+    #region Public
+    [Header("References")]
+    [Tooltip("Drag and drop Flowchart here")]
     public Flowchart flowchart; // calls the flowchart.
-    public bool hasPlayer; // is the player in a npc's radius?
+    [Tooltip("Script will find Player")]
     public GameObject Player;
+    [Header("Variables")]
+    public bool hasPlayer; // is the player in a npc's radius?
+    #endregion
+
+    #region Private
     private PlayerMovement PlayerMovementScript;
+    #endregion
 
     private void Awake()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        PlayerMovementScript = Player.GetComponent<PlayerMovement>();
+        Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
+        PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
     }
 
     private void Update()
     {
-        if (hasPlayer && Input.GetKeyDown("k") && flowchart.GetIntegerVariable("WaterQuest") == 0)
+        if (hasPlayer && Input.GetKeyDown("k"))
         { 
-            NormalDialogue();
-        }
-        if (hasPlayer && Input.GetKeyDown("k") && flowchart.GetIntegerVariable("WaterQuest") == 1)
-        {
-            WIPTutorial();
+            Dialogue();
         }
     }
 
-    void NormalDialogue() // No on going quests
+    void Dialogue() 
     {
         FreezePlayer();
 
         switch (this.gameObject.tag)
         {
-            case "NPC6":
+            case "Matron":
                 flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
                 break;
-            case "NPC2":
+            case "Blacksmith":
                 flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
                 break;
-            case "NPC3":
+            case "Chef":
                 flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
                 break;
-            case "NPC4":
+            case "Herbalist":
                 flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
                 break;
-            case "NPC5":
-                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
-                break;
-            case "NPC11":
-                // flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
+            case "Doctor":
+                flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
                 break;
         }
     }
-    void WIPTutorial() // Tutorial in progress
-    {
-        FreezePlayer();
-        switch (this.gameObject.tag)
-        {
-            case "NPC6":
-                flowchart.ExecuteBlock("Matron1IP"); // we execute the named block within the flowchart.
-                break;
-        }
-    }
-    void PostTutorial() // Just finished tutorial
-    {
-        switch (this.gameObject.tag)
-        {
-            case "NPC6":
-                flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC2":
-                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC3":
-                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC4":
-                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
-                break;
-            case "NPC5":
-                flowchart.ExecuteBlock("guardIdle"); // we execute the named block within the flowchart.
-                break;
-            case "NPC11":
-                // flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
-                break;
-        }
-    }
+
     public void FreezePlayer()
     {
         PlayerMovementScript.canMove = false;
