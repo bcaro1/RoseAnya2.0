@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class Strength_Alex : MonoBehaviour
 {
-    //This is the object the player will be "picking up"
-    public GameObject strengthObject; 
-    //Returns 1 if 2 objects point in the same direction
-    float dotProd;
-    //This is the current position
-    private Vector3 startPosition;
-    Rigidbody strengthObjectRigidbody;
-    bool CurrentlyUsingStrength;
+    #region Public
+    public GameObject strengthObject; //This is the object the player will be "picking up"
     public float height;
+    #endregion
+
+    #region Private
+    private Vector3 startPosition; //This is the current position
+    private float dotProd; //Returns 1 if 2 objects point in the same direction
+    private bool CurrentlyUsingStrength;
+    private Rigidbody strengthObjectRigidbody; // Rigidbody of strength object
+    #endregion
 
     void Awake()
     {
+        // ASSIGNING VARIABLES //
         CurrentlyUsingStrength = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q) && CurrentlyUsingStrength)
+        if (Input.GetKeyUp(KeyCode.Q) && CurrentlyUsingStrength) // @AH Need to change to correct key
         {
             CurrentlyUsingStrength = false;
             ReleaseStrength();
@@ -32,14 +35,14 @@ public class Strength_Alex : MonoBehaviour
     {
         if (collider.gameObject.tag == "Strength")
         {
-            var strengthCollider = collider.gameObject.transform;
-            strengthObject = strengthCollider.gameObject;
-            strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
+            // var strengthCollider = collider.gameObject.transform;
+            // strengthObject = strengthCollider.gameObject;
+            // strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
 
             if (Input.GetKeyDown(KeyCode.Q) && collider.gameObject.tag == "Strength")
             {
                 // set the collider to strengthCollider
-                strengthCollider = collider.gameObject.transform;
+                var strengthCollider = collider.gameObject.transform;
                 // grab strengthCollider's gameobject and store in strengthObject
                 strengthObject = strengthCollider.gameObject;
                 // Gathers strengthObject and Player's current position
@@ -65,8 +68,6 @@ public class Strength_Alex : MonoBehaviour
             }
         }
     }
-
-
 
     void ReleaseStrength()
     {
