@@ -10,7 +10,6 @@ public class Animations : MonoBehaviour
     private GameObject NPC;
     private Rigidbody PlayerRb;
     private DialogueTrigger_Alex DialogueTriggerScript;
-
     private bool onGround;
     #endregion
 

@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 7939779302333237555}
   - component: {fileID: 7939779302333237552}
   - component: {fileID: 3772385491424380574}
+  - component: {fileID: 7343425099306407756}
   m_Layer: 0
   m_Name: RoseAnyaPlayer
   m_TagString: Player
@@ -302,6 +303,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strengthObject: {fileID: 0}
   height: 2
+--- !u!114 &7343425099306407756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939779302333237547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f740b5fc66504c3fb228624525bea81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9103574526022961060
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +364,11 @@ MonoBehaviour:
   Wind: 0
   Fire: 0
   Water: 0
+  Player: {fileID: 0}
+  DashForce: 50
+  DashDuration: 0.2
+  DashCost: 1
+  CoolDownRate: 2
 --- !u!65 &3737877625493121150
 BoxCollider:
   m_ObjectHideFlags: 0
