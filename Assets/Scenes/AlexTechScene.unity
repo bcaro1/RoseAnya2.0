@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 946759739}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &563110045
 Transform:
   m_ObjectHideFlags: 1
@@ -342,18 +342,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9b4112950834156abe62d5aed9403e, type: 3}
---- !u!114 &946759739 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2267945975311177955, guid: d17195135b827475e8a357cb617cfdc8,
+--- !u!1 &731093108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 531990739812907761, guid: 217dbf30333a145669b8cea23ac34347,
     type: 3}
-  m_PrefabInstance: {fileID: 2267945974642864344}
+  m_PrefabInstance: {fileID: 531990740255971749}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515901618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1326621964
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,35 +717,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 729666590}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1453763195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2267945976078936340, guid: d17195135b827475e8a357cb617cfdc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2267945974642864344}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1515901618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2267945975311177954, guid: d17195135b827475e8a357cb617cfdc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2267945974642864344}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1515901703
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515901618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 154
-  indentLevel: 0
-  targetObject: {fileID: 1453763195}
-  methodName: UnfreezePlayer
-  delay: 0
 --- !u!1001 &1808572760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1219,6 +1184,16 @@ PrefabInstance:
       propertyPath: element
       value: 
       objectReference: {fileID: 356762698}
+    - target: {fileID: 531990739179799441, guid: 217dbf30333a145669b8cea23ac34347,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -87.3999
+      objectReference: {fileID: 0}
+    - target: {fileID: 531990739996438416, guid: 217dbf30333a145669b8cea23ac34347,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -188.7002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 217dbf30333a145669b8cea23ac34347, type: 3}
 --- !u!1001 &2267945974642864344
@@ -1372,7 +1347,7 @@ PrefabInstance:
         type: 3}
       propertyPath: commandList.Array.data[7]
       value: 
-      objectReference: {fileID: 1515901703}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2149307688380949986, guid: d17195135b827475e8a357cb617cfdc8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d17195135b827475e8a357cb617cfdc8, type: 3}
@@ -1510,6 +1485,16 @@ PrefabInstance:
     - target: {fileID: 8328141402075159234, guid: cecd1f76d34444e2bb5b1529ded06384,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328141402075159233, guid: cecd1f76d34444e2bb5b1529ded06384,
+        type: 3}
+      propertyPath: Gauge
+      value: 
+      objectReference: {fileID: 731093108}
+    - target: {fileID: 8328141403676215778, guid: cecd1f76d34444e2bb5b1529ded06384,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
