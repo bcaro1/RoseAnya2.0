@@ -18,7 +18,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
     #endregion
 
     #region Private
-    private PlayerMovement PlayerMovementScript;
+    public PlayerMovement PlayerMovementScript;
     #endregion
 
     private void Awake()
@@ -38,7 +38,6 @@ public class DialogueTrigger_Alex : MonoBehaviour
     void Dialogue() 
     {
         FreezePlayer();
-
         switch (this.gameObject.tag)
         {
             case "Matron":
