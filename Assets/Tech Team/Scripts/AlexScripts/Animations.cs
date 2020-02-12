@@ -5,60 +5,43 @@ using UnityEngine.SceneManagement;
 
 public class Animations : MonoBehaviour
 {
-    GameObject Player;
-    GameObject NPC;
+    #region Private
+    private GameObject Player;
+    private GameObject NPC;
     private Rigidbody PlayerRb;
-    public Animator anim;
     private DialogueTrigger_Alex DialogueTriggerScript;
-    
-    bool onGround;
-    bool playerMoving;
+    private bool onGround;
+    #endregion
 
-    
-    Scene currentScene;
-    string sceneName;
+    #region Public
+    [Header("References")]
+    [Tooltip("Drag and drop Player's animator here")]
+    public Animator anim;
+    #endregion
 
-    // Start is called before the first frame update
     void Awake()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
+        // REFERENCES //
+        Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
+        NPC = GameObject.FindGameObjectWithTag("Matron"); // Grabs NPC
+        PlayerRb = Player.GetComponent<Rigidbody>(); // Grabs Player's Rigidbody
+        DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>(); //Grabs script attached to NPC
 
-        Player = GameObject.FindGameObjectWithTag("Player");
-        NPC = GameObject.FindGameObjectWithTag("NPC6");
-        PlayerRb = Player.GetComponent<Rigidbody>();
-        anim.SetBool("isGrounded", true);
-
-        DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>();
-        
+        // ASSIGNING VARIABLES //
+        anim.SetBool("isGrounded", true); // Start game with Player grounded
     }
 
-    // Update is called once per frame
     void Update()
     {
         PlayerMoving();
         PlayerTalking();
-
-        if (onGround)
-        {
-            anim.SetBool("isGliding", false);
-        }
-        if (Input.GetButtonDown("Jump") && onGround)
-        {
-            anim.SetBool("isGrounded", false);
-        }
-        if (Input.GetButton("Jump") && !onGround)
-        {
-            anim.SetBool("isGliding", true);
-        }
-        if (Input.GetButtonUp("Jump") && !onGround)
-        {
-            anim.SetBool("isGliding", false);
-        } 
+        PlayerGliding();
+        PlayerAbsorbDischarge();
     }
 
     void PlayerMoving()
     {
+        // If player is moving and on the ground, change Speed in animator
         if((Input.GetButton("Horizontal") || Input.GetButton("Vertical") && onGround))
         {
             anim.SetFloat("Speed", 1);
@@ -70,6 +53,7 @@ public class Animations : MonoBehaviour
     }
     void PlayerTalking()
     {
+        // If player is in NPCs radius and interacts, change isTalking in animator
         if (DialogueTriggerScript.hasPlayer && Input.GetKeyDown("k"))
         {
             anim.SetBool("isTalking", true);
@@ -79,9 +63,62 @@ public class Animations : MonoBehaviour
             anim.SetBool("isTalking", false);
         }
     }
+    void PlayerGliding()
+    {
+        // If Player is on the ground, they cannot glide
+        if (onGround)
+        {
+            anim.SetBool("isGliding", false);
+        }
+        // If Player jumps off the ground, they cannot glide
+        if (Input.GetButtonDown("Jump") && onGround)
+        {
+            anim.SetBool("isGrounded", false);
+        }
+        // If Player holds jump button and not on ground, they can glide
+        if (Input.GetButton("Jump") && !onGround)
+        {
+            anim.SetBool("isGliding", true);
+        }
+        // If Player releases jump button and not on ground, they cannot glide
+        if (Input.GetButtonUp("Jump") && !onGround)
+        {
+            anim.SetBool("isGliding", false);
+        } 
+    }
+    void PlayerAbsorbDischarge() //WIP
+    {
+        if (Input.GetButtonDown("Absorb"))
+        {
+            anim.SetBool("isAbsorbing", true);
+        }
+        else if (Input.GetButtonUp("Absorb"))
+        {
+            anim.SetBool("isAbsorbing", false);
+        }
+        if (Input.GetButtonDown("Interact"))
+        {
+            anim.SetBool("isDischarging", true);
+        }
+        else if (Input.GetButtonUp("Interact"))
+        {
+            anim.SetBool("isDischarging", false);
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Absorb") || anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Discharge"))
+        {
+            DialogueTriggerScript.FreezePlayer();
+        }
+        else 
+        {
+            DialogueTriggerScript.UnfreezePlayer();
+        }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
+        // If Player is touching the ground...
         if (other.gameObject.tag == "Ground")
         {
             onGround = true;
@@ -90,6 +127,7 @@ public class Animations : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        // If Player is touching the ground...
         if (other.gameObject.tag == "Ground")
         {
             onGround = true;
@@ -98,6 +136,7 @@ public class Animations : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        // If Player is not touching the ground...
         if (other.gameObject.tag == "Ground")
         {
             onGround = false;

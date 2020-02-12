@@ -9,7 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenuUI;
     public GameObject tasksMenuUI;
     public GameObject controlsMenuUI;
-    public GameObject Camera;
+    public GameObject CameraBase;
+    public GameObject RoseanyaCamera;
     AudioSource CameraAudio;
     public GameObject Player;
     AudioSource PlayerAudio;
@@ -17,8 +18,8 @@ public class PauseMenu : MonoBehaviour
 
     void Awake()
     {
-        CameraFollowScript = Camera.GetComponent<CameraFollow_Joseph>();
-        CameraAudio = Camera.GetComponent<AudioSource>();
+        CameraFollowScript = CameraBase.GetComponent<CameraFollow_Joseph>();
+        CameraAudio = RoseanyaCamera.GetComponent<AudioSource>();
         PlayerAudio = Player.GetComponent<AudioSource>();
     } 
     void Update()
