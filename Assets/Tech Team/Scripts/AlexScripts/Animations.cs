@@ -91,29 +91,34 @@ public class Animations : MonoBehaviour
         if (Input.GetButtonDown("Absorb"))
         {
             anim.SetBool("isAbsorbing", true);
+            DialogueTriggerScript.FreezePlayer();
         }
         else if (Input.GetButtonUp("Absorb"))
         {
             anim.SetBool("isAbsorbing", false);
+            DialogueTriggerScript.UnfreezePlayer();
         }
         if (Input.GetButtonDown("Interact"))
         {
             anim.SetBool("isDischarging", true);
+            DialogueTriggerScript.FreezePlayer();
         }
         else if (Input.GetButtonUp("Interact"))
         {
             anim.SetBool("isDischarging", false);
-        }
-
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Absorb") || anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Discharge"))
-        {
-            DialogueTriggerScript.FreezePlayer();
-        }
-        else 
-        {
             DialogueTriggerScript.UnfreezePlayer();
         }
 
+
+
+        // if (anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Absorb") || anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Discharge"))
+        // {
+        //     DialogueTriggerScript.FreezePlayer();
+        // }
+        // else 
+        // {
+        //     DialogueTriggerScript.UnfreezePlayer();
+        // }
     }
 
     private void OnTriggerEnter(Collider other)
