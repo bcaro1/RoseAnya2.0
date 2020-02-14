@@ -259,4 +259,16 @@ public class ElementController_Joseph : MonoBehaviour
             //Display LEvels in some way
         }
     }
+
+    public bool GetWindUnlocked => UnlockedWind;
+
+    public bool GetEarthUnlocked => UnlockedEarth;
+
+    public bool GetFireUnlocked => UnlockedFire;
+
+    public void SetWindUnlocked(bool Unlocked) => UnlockedWind = Unlocked;
+
+    public void SetEarthUnlocked(bool Unlocked) => UnlockedEarth = Unlocked;
+
+    public void SetFireUnlocked(bool Unlocked) => UnlockedFire = Unlocked;
 }

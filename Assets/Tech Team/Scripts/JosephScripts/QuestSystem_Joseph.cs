@@ -47,4 +47,10 @@ public class QuestSystem_Joseph : MonoBehaviour
         }
     }
 
+    public void QuestOnLoad(int QuestNumber)
+    {
+        CurrentQuest = QuestNumber;
+        StartQuest();
+    }
+
 }
