@@ -17,6 +17,8 @@ public class Animations : MonoBehaviour
     [Header("References")]
     [Tooltip("Drag and drop Player's animator here")]
     public Animator anim;
+    [Tooltip("Drag and drop NPC's animator here")]
+    public Animator animNPC;
     #endregion
 
     void Awake()
@@ -57,10 +59,12 @@ public class Animations : MonoBehaviour
         if (DialogueTriggerScript.hasPlayer && Input.GetKeyDown("k"))
         {
             anim.SetBool("isTalking", true);
+            animNPC.SetBool("isTalking", true);
         }
         if (!DialogueTriggerScript.hasPlayer)
         {
             anim.SetBool("isTalking", false);
+            animNPC.SetBool("isTalking", false);
         }
     }
     void PlayerGliding()
