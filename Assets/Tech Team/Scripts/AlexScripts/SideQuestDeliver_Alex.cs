@@ -18,6 +18,7 @@ public class SideQuestDeliver_Alex : MonoBehaviour
         // REFERENCES //
         player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
         deliverableObject = GameObject.FindGameObjectWithTag("Deliverable"); // Grabs deliverable object
+        deliverableObject.active = false; // hide object
 
         // ASSIGNING VARIABLES //
         holdingObject = false; 
@@ -39,7 +40,7 @@ public class SideQuestDeliver_Alex : MonoBehaviour
             // hide object
 
         // PLAYER PICKS UP OBJECT
-            // show object in scene after player accepts quest from npc 
+            deliverableObject.active = true;
             holdingObject = true; 
             deliverableObject.transform.parent = player.transform; // set deliverable object child of player
             playerPosition = player.transform.position; // grab players current position
@@ -53,7 +54,6 @@ public class SideQuestDeliver_Alex : MonoBehaviour
         // in fungus - run this function
         // set holdingObject = false
         // set this side quest as complete
-
     }
      IEnumerator HideObject()
     {

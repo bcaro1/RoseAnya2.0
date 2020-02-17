@@ -10,7 +10,7 @@ public class TaskList_Alex : MonoBehaviour
     public Text[] CtextBoxes; //Completed - Text UI
     public Text[] IPtextBoxes; //In Progress - Text UI
     int[] tasks;
-    public int TASK_WaterQuest, TASK_FireQuest, TASK_StrenghtQuest, TASK_AirQuest, TASK_GoToQuest;
+    public int TASK_WaterQuest, TASK_FireQuest, TASK_StrenghtQuest, TASK_AirQuest, TASK_GoToQuest, SIDE_Deliver;
     public Flowchart flowchart; // calls the flowchart.
 
 
@@ -25,6 +25,7 @@ public class TaskList_Alex : MonoBehaviour
         TASK_StrenghtQuest = 0;
         TASK_AirQuest = 0;
         TASK_GoToQuest = 0;
+        SIDE_Deliver = 0;
     }
     void Start()
     {
@@ -37,10 +38,11 @@ public class TaskList_Alex : MonoBehaviour
 
     }
 
-    public void BuildArrays()
+    public void BuildArrays() // Being called in pause menu UI
     {
 
         TASK_WaterQuest = flowchart.GetIntegerVariable("WaterQuest");
+        SIDE_Deliver = flowchart.GetIntegerVariable("DeliverSide");
 
         tasksText = new string[]{
             "Collect water + fill well",    //0
@@ -48,6 +50,7 @@ public class TaskList_Alex : MonoBehaviour
             "Move boulder",                 //2
             "Use air",                      //3
             "go to npc",                    //4
+            "Deliver object"                //5
         };
 
         tasks = new int[]{
@@ -56,6 +59,7 @@ public class TaskList_Alex : MonoBehaviour
             TASK_StrenghtQuest,             //2
             TASK_AirQuest,                  //3
             TASK_GoToQuest,                 //4
+            SIDE_Deliver                    //5
         };
     }
     public void BuildTaskList()
