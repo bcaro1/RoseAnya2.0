@@ -12,6 +12,11 @@ public class QuestSystem_Joseph : MonoBehaviour
     private int CurrentQuest = 0;
     #endregion
 
+    private void Start()
+    {
+        CurrentQuest = StaticDatabase_Joseph.CurrentQuest;
+    }
+
     public int GetQuestNumber() => CurrentQuest;
 
     public void StartQuest()
@@ -33,6 +38,7 @@ public class QuestSystem_Joseph : MonoBehaviour
             {
                 //Award Whatever Reward we have here
                 CurrentQuest++;
+                StaticDatabase_Joseph.CurrentQuest = CurrentQuest;
             }
             else
             {

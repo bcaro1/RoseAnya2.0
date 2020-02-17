@@ -6,8 +6,6 @@ using UnityEngine;
 public class DataManager_Joseph : MonoBehaviour
 {
     #region Public
-    public ElementController_Joseph ElementController;
-    public QuestSystem_Joseph QuestController;
     public SaveData_Joseph Data;
     #endregion
 
@@ -23,14 +21,14 @@ public class DataManager_Joseph : MonoBehaviour
     {
         //Get Character Name for now this is placeholder
         Data.CharacterName = "Joseph";
-        Data.WindUnlocked = ElementController.GetWindUnlocked;
-        Data.EarthUnlocked = ElementController.GetEarthUnlocked;
-        Data.FireUnlocked = ElementController.GetFireUnlocked;
-        Data.WaterAmount = ElementController.Water;
-        Data.WindAmount = ElementController.Wind;
-        Data.EarthAmount = ElementController.Earth;
-        Data.FireAmount = ElementController.Fire;
-        Data.QuestNumber = QuestController.GetQuestNumber();
+        Data.WindUnlocked = StaticDatabase_Joseph.UnlockedWind;
+        Data.EarthUnlocked = StaticDatabase_Joseph.UnlockedEarth;
+        Data.FireUnlocked = StaticDatabase_Joseph.UnlockedFire;
+        Data.WaterAmount = StaticDatabase_Joseph.Water;
+        Data.WindAmount = StaticDatabase_Joseph.Wind;
+        Data.EarthAmount = StaticDatabase_Joseph.Earth;
+        Data.FireAmount = StaticDatabase_Joseph.Fire;
+        Data.QuestNumber = StaticDatabase_Joseph.CurrentQuest;
 
 
         string FileName = Data.CharacterName + ".json";
@@ -45,15 +43,14 @@ public class DataManager_Joseph : MonoBehaviour
         string json = ReadFromFile("Joseph.json");
         JsonUtility.FromJsonOverwrite(json, Data);
         //Give Character Name to whatever holds it
-        ElementController.SetWindUnlocked(Data.WindUnlocked);
-        ElementController.SetEarthUnlocked(Data.EarthUnlocked);
-        ElementController.SetFireUnlocked(Data.FireUnlocked);
-        ElementController.Water = Data.WaterAmount;
-        ElementController.Wind = Data.WindAmount;
-        ElementController.Earth = Data.EarthAmount;
-        ElementController.Fire = Data.FireAmount;
-        QuestController.QuestOnLoad(Data.QuestNumber);
-        Debug.Log(Data.FireAmount);
+        StaticDatabase_Joseph.UnlockedWind = Data.WindUnlocked;
+        StaticDatabase_Joseph.UnlockedEarth = Data.EarthUnlocked;
+        StaticDatabase_Joseph.UnlockedFire = Data.FireUnlocked;
+        StaticDatabase_Joseph.Water = Data.WaterAmount;
+        StaticDatabase_Joseph.Wind = Data.WindAmount;
+        StaticDatabase_Joseph.Earth = Data.EarthAmount;
+        StaticDatabase_Joseph.Fire = Data.FireAmount;
+        StaticDatabase_Joseph.CurrentQuest = Data.QuestNumber;
     }
 
     private void WriteToFile(string FilePath, string json)
@@ -73,7 +70,6 @@ public class DataManager_Joseph : MonoBehaviour
     private string ReadFromFile(string FileName)
     {
         string Path = GetFilePath(FileName);
-        Debug.Log(Path);
         if (File.Exists(Path))
         {
             using (StreamReader Reader = new StreamReader(Path))
