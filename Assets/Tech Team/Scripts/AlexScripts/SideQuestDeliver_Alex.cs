@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus; // must be used. This allows the script to access the fungus scripts.
 
 public class SideQuestDeliver_Alex : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SideQuestDeliver_Alex : MonoBehaviour
     public GameObject deliverableObject; // deliverable object 
     public bool holdingObject; // is the player holding the object
     public float height;
+    public Flowchart flowchart;
     #endregion
 
     #region Private
@@ -46,7 +48,9 @@ public class SideQuestDeliver_Alex : MonoBehaviour
             playerPosition = player.transform.position; // grab players current position
             deliverableObject.transform.position = playerPosition; // set deliverable object to players current position 
             deliverableObject.transform.position = new Vector3(playerPosition.x, playerPosition.y + height, playerPosition.z); // raise height
+            flowchart.SetIntegerVariable("DeliverSide", 2);
             StartCoroutine(HideObject()); 
+
     }
     public void GiveObjectToNPC()
     {
