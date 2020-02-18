@@ -60,6 +60,10 @@ public class SideQuestDeliver_Alex : MonoBehaviour
         yield return new WaitForSeconds (3.0f);
         deliverableObject.active = false;
     }
+    public void ShowObject()
+    {
+        deliverableObject.active = true;
+    }
 
 
     private void OnTriggerEnter(Collider other)
