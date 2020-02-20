@@ -28,6 +28,13 @@ public class ElementController_Joseph : MonoBehaviour
     void Start()
     {
         //Here would be checking the save to see what elements are unlocked and the previously held elements
+        Water = StaticDatabase_Joseph.Water;
+        Wind = StaticDatabase_Joseph.Wind;
+        Earth = StaticDatabase_Joseph.Earth;
+        Fire = StaticDatabase_Joseph.Fire;
+        UnlockedWind = StaticDatabase_Joseph.UnlockedWind;
+        UnlockedEarth = StaticDatabase_Joseph.UnlockedEarth;
+        UnlockedFire = StaticDatabase_Joseph.UnlockedFire;
     }
 
 
@@ -121,6 +128,7 @@ public class ElementController_Joseph : MonoBehaviour
                 Fire += Value;
             }
         }
+        UpdateValues();
     }
 
     void UseElement(int Value)
@@ -154,21 +162,25 @@ public class ElementController_Joseph : MonoBehaviour
                 Fire -= Value;
             }
         }
+        UpdateValues();
     }
 
     public void UnlockEarth()
     {
         UnlockedEarth = true;
+        UpdateValues();
     }
 
     public void UnlockFire()
     {
         UnlockedFire = true;
+        UpdateValues();
     }
 
     public void UnlockWind()
     {
         UnlockedWind = true;
+        UpdateValues();
     }
 
     IEnumerator Dash()
@@ -183,6 +195,7 @@ public class ElementController_Joseph : MonoBehaviour
             Wind -= DashCost;
             CooldownTimer = Time.time + CoolDownRate;
         }
+        UpdateValues();
     }
 
     private void OnTriggerStay(Collider other)
@@ -259,4 +272,27 @@ public class ElementController_Joseph : MonoBehaviour
             //Display LEvels in some way
         }
     }
+
+    private void UpdateValues()
+    {
+        StaticDatabase_Joseph.UnlockedWind = UnlockedWind;
+        StaticDatabase_Joseph.UnlockedEarth = UnlockedEarth;
+        StaticDatabase_Joseph.UnlockedFire = UnlockedFire;
+        StaticDatabase_Joseph.Water = Water;
+        StaticDatabase_Joseph.Wind = Wind;
+        StaticDatabase_Joseph.Earth = Earth;
+        StaticDatabase_Joseph.Fire = Fire;
+    }
+
+    public bool GetWindUnlocked => UnlockedWind;
+
+    public bool GetEarthUnlocked => UnlockedEarth;
+
+    public bool GetFireUnlocked => UnlockedFire;
+
+    public void SetWindUnlocked(bool Unlocked) => UnlockedWind = Unlocked;
+
+    public void SetEarthUnlocked(bool Unlocked) => UnlockedEarth = Unlocked;
+
+    public void SetFireUnlocked(bool Unlocked) => UnlockedFire = Unlocked;
 }

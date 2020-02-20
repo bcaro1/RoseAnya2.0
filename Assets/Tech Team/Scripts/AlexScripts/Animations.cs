@@ -17,6 +17,8 @@ public class Animations : MonoBehaviour
     [Header("References")]
     [Tooltip("Drag and drop Player's animator here")]
     public Animator anim;
+    [Tooltip("Drag and drop NPC's animator here")]
+    public Animator animNPC;
     #endregion
 
     void Awake()
@@ -57,10 +59,12 @@ public class Animations : MonoBehaviour
         if (DialogueTriggerScript.hasPlayer && Input.GetKeyDown("k"))
         {
             anim.SetBool("isTalking", true);
+            animNPC.SetBool("isTalking", true);
         }
         if (!DialogueTriggerScript.hasPlayer)
         {
             anim.SetBool("isTalking", false);
+            animNPC.SetBool("isTalking", false);
         }
     }
     void PlayerGliding()
@@ -91,29 +95,34 @@ public class Animations : MonoBehaviour
         if (Input.GetButtonDown("Absorb"))
         {
             anim.SetBool("isAbsorbing", true);
+            DialogueTriggerScript.FreezePlayer();
         }
         else if (Input.GetButtonUp("Absorb"))
         {
             anim.SetBool("isAbsorbing", false);
+            DialogueTriggerScript.UnfreezePlayer();
         }
         if (Input.GetButtonDown("Interact"))
         {
             anim.SetBool("isDischarging", true);
+            DialogueTriggerScript.FreezePlayer();
         }
         else if (Input.GetButtonUp("Interact"))
         {
             anim.SetBool("isDischarging", false);
-        }
-
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Absorb") || anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Discharge"))
-        {
-            DialogueTriggerScript.FreezePlayer();
-        }
-        else 
-        {
             DialogueTriggerScript.UnfreezePlayer();
         }
 
+
+
+        // if (anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Absorb") || anim.GetCurrentAnimatorStateInfo(0).IsName("Player_Discharge"))
+        // {
+        //     DialogueTriggerScript.FreezePlayer();
+        // }
+        // else 
+        // {
+        //     DialogueTriggerScript.UnfreezePlayer();
+        // }
     }
 
     private void OnTriggerEnter(Collider other)
