@@ -8,6 +8,8 @@ public static class StaticDatabase_Joseph
 
     private static bool unlockedfire, unlockedearth, unlockedwind;
 
+    private static string charactername;
+
     public static int Water
     {
         get
@@ -109,6 +111,19 @@ public static class StaticDatabase_Joseph
         set
         {
             unlockedwind = value;
+        }
+    }
+
+    public static string CharacterName
+    {
+        get
+        {
+            return charactername;
+        }
+
+        set
+        {
+            charactername = value;
         }
     }
 }
