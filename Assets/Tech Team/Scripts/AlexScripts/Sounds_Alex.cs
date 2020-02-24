@@ -7,6 +7,8 @@ public class Sounds_Alex : MonoBehaviour
     public AudioSource StrengthSound;
     public AudioSource WaterAbsorbSound;
     public AudioSource WaterDisperseSound;
+    public AudioSource FireAbsorbSound;
+    public AudioSource FireDisperseSound;
 
     private GameObject Player;
     private Strength_Alex StrengthScript;
@@ -40,9 +42,13 @@ public class Sounds_Alex : MonoBehaviour
     {
         if (Input.GetButtonDown("Absorb"))
         {
-            if (GaugesScript.fireGauge.fillAmount > GaugesScript.currFireFill) // Check if new fill is greater than previous fill
+            if ((!FireAbsorbSound.isPlaying) && GaugesScript.fireGauge.fillAmount > GaugesScript.currFireFill) // Check if new fill is greater than previous fill
             {
-
+                FireAbsorbSound.Play();
+            }
+            else 
+            {
+                FireAbsorbSound.Pause();
             }
         }
         if (Input.GetButtonDown("Absorb"))
@@ -75,16 +81,24 @@ public class Sounds_Alex : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
-            if (GaugesScript.fireGauge.fillAmount < GaugesScript.currFireFill)
+            if ((!WaterDisperseSound.isPlaying) && GaugesScript.fireGauge.fillAmount < GaugesScript.currFireFill)
             {
-
+                FireDisperseSound.Play();
+            }
+            else
+            {
+                FireDisperseSound.Pause();
             }
         }
         if (Input.GetButtonDown("Interact"))
         {
-            if (GaugesScript.waterGauge.fillAmount < GaugesScript.currWaterFill)
+            if ((!WaterDisperseSound.isPlaying) && GaugesScript.waterGauge.fillAmount < GaugesScript.currWaterFill)
             {
-
+                WaterDisperseSound.Play();
+            }
+            else
+            {
+                WaterDisperseSound.Pause();
             }
         }
         if (Input.GetButtonDown("Interact"))

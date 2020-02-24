@@ -7,30 +7,39 @@ public class MusicSound_Alex : MonoBehaviour
 {
     #region Private
     private AudioSource PlayerAudio;
-    private AudioSource AudioSrc;
-
     private GameObject Player;
-
     private float prevAudioVolume;
     private int currentScene;
     static float AudioVolume = 1f;
     #endregion
+
+    #region Public
+    public AudioSource VillageMusic;
+    public AudioSource ForestMusic;
+    #endregion
+
     void Awake()
     {
-        // REFERENCES //
-        AudioSrc = GetComponent<AudioSource>();
         currentScene = SceneManager.GetActiveScene().buildIndex; // get active scene build index
 
-        if (currentScene != 0) // Don't do this in Main Menu
+        if (currentScene != 0) // Do this if NOT in Main Menu
         {
             // REFERENCES //
             Player = GameObject.FindGameObjectWithTag("Player");
             PlayerAudio = Player.GetComponent<AudioSource>();
         }
+        if ((!VillageMusic.isPlaying) && currentScene == 4) // Village Only
+        {
+            VillageMusic.Play();
+        }
+        if ((!ForestMusic.isPlaying) && currentScene == 5) // Forest Only
+        {
+            ForestMusic.Play();
+        }
     }
     void Update()
     {
-        AudioSrc.volume = AudioVolume;
+        VillageMusic.volume = AudioVolume;
     }
     public void SoundToggle()
     {
