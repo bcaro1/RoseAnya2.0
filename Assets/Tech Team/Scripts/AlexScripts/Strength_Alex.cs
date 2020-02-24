@@ -7,12 +7,12 @@ public class Strength_Alex : MonoBehaviour
     #region Public
     public GameObject strengthObject; //This is the object the player will be "picking up"
     public float height;
+    public bool CurrentlyUsingStrength;
     #endregion
 
     #region Private
     private Vector3 startPosition; //This is the current position
     private float dotProd; //Returns 1 if 2 objects point in the same direction
-    private bool CurrentlyUsingStrength;
     private Rigidbody strengthObjectRigidbody; // Rigidbody of strength object
     #endregion
 
