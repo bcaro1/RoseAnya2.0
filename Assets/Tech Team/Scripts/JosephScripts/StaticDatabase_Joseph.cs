@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class StaticDatabase_Joseph
 {
-    private static int water, fire, earth, wind, currentquest;
+    private static int water, fire, earth, wind, currentquest, level, hp, attack, magic, exp;
 
     private static bool unlockedfire, unlockedearth, unlockedwind;
 
@@ -59,6 +59,71 @@ public static class StaticDatabase_Joseph
         set
         {
             wind = value;
+        }
+    }
+
+    public static int Level
+    {
+        get
+        {
+            return level;
+        }
+
+        set
+        {
+            level = value;
+        }
+    }
+
+    public static int HP
+    {
+        get
+        {
+            return hp;
+        }
+
+        set
+        {
+            hp = value;
+        }
+    }
+
+    public static int Attack
+    {
+        get
+        {
+            return attack;
+        }
+
+        set
+        {
+            attack = value;
+        }
+    }
+
+    public static int Magic
+    {
+        get
+        {
+            return magic;
+        }
+
+        set
+        {
+            magic = value;
+        }
+    }
+
+    public static int EXP
+    {
+        get
+        {
+            return exp;
+        }
+
+        set
+        {
+            exp = value;
         }
     }
 

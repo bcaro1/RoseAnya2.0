@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, ESCAPED }
 
 public class TBBattleSystem_Joseph : MonoBehaviour
 {
@@ -20,15 +20,18 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     public string[] TextChoices;
     public string[] EnemyDialogue;
     public Button[] ActionButtons;
+    public GameObject MagicMenu;
     #endregion
 
     #region Private
     private TBUnit_Joseph PlayerUnit;
     private TBUnit_Joseph EnemyUnit;
+    private RPGController_Joseph Controller;
     #endregion
 
     void Start()
     {
+        Controller = GameObject.FindGameObjectWithTag("Player").GetComponent<RPGController_Joseph>();
         State = BattleState.START;
         StartCoroutine(SetupBattle());
     }
@@ -57,18 +60,26 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         PlayerTurn();
     }
 
-    IEnumerator PlayerAttack(int Type)
+    IEnumerator PlayerAttack(int Type, bool Magic)
     {
-        int Damage = PlayerUnit.Damage;
+        float Damage;
+        if(Magic)
+        {
+            Damage = PlayerUnit.MagicDamage;
+        }
+        else
+        {
+            Damage = PlayerUnit.Damage;
+        }     
         string DamageText = " You seem to do damage.";
 
-        if(Type != EnemyUnit.UnitType)
+        if(Type == EnemyUnit.UnitType)
         {
-            Damage = 0;
-            DamageText = " They are unimpressed.";
+            Damage = Damage * 1.5f;
+            DamageText = " The attack seems very effective.";
         }
 
-        bool IsDead = EnemyUnit.TakeDamage(Damage);
+        bool IsDead = EnemyUnit.TakeDamage((int)Damage);
 
         EnemyHUD.SetHP(EnemyUnit.CurrentHP);
 
@@ -115,15 +126,61 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         }
     }
 
+    IEnumerator RunAttempt(bool escaped)
+    {
+        string EscapeText = "You failed to escape";
+        if(escaped)
+        {
+            EscapeText = "You managed to run away.";
+        }
+
+        DialogueText.text = EscapeText;
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        if(escaped)
+        {
+            State = BattleState.ESCAPED;
+            EndBattle();
+        }
+        else
+        {
+            State = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
+    }
+
+    IEnumerator LevelUp()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+
+        DialogueText.text = "You leveled up! You are now level " + Controller.Level + ".";
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        DialogueText.text = "Your HP is now " + Controller.HP + "and your Attack and Magic attack are " + Controller.Attack + " " + Controller.MagicAttack + " respectively.";
+
+        yield return new WaitForSecondsRealtime(2f);
+    }
+
     void EndBattle()
     {
         if(State == BattleState.WON)
         {
-            DialogueText.text = "You Won!";
+            DialogueText.text = "You Won! You gained " + EnemyUnit.EXP + " Experience Points!";
+            
+            if(Controller.GetEXP(EnemyUnit.EXP))
+            {
+                StartCoroutine(LevelUp());
+            }
         }
         else if(State == BattleState.LOST)
         {
             DialogueText.text = "You Lost!";
+        }
+        else if(State == BattleState.ESCAPED)
+        {
+            DialogueText.text = "You managed to run away.";
         }
     }
 
@@ -137,39 +194,75 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         }
     }
 
-    public void OnAttack1Button()
+    public void OnAttackButton()
+    {
+        if (State != BattleState.PLAYERTURN)
+        {
+            return;
+        }
+        MagicMenu.SetActive(false);
+        StartCoroutine(PlayerAttack(0, false));
+    }
+
+    public void OnMagicButton()
     {
         if(State != BattleState.PLAYERTURN)
         {
             return;
         }
-        StartCoroutine(PlayerAttack(0));
+        MagicMenu.SetActive(true);
     }
 
-    public void OnAttack2Button()
+    public void OnItemButton()
+    {
+        MagicMenu.SetActive(false);
+    }
+
+    public void OnRunButton()
+    {
+        MagicMenu.SetActive(false);
+        int escape = Random.Range(0, 100);
+        StartCoroutine(RunAttempt(escape < EnemyUnit.EscapeChance));
+    }
+
+    public void OnWaterButton()
+    {
+        if(State != BattleState.PLAYERTURN)
+        {
+            return;
+        }
+        MagicMenu.SetActive(false);
+        StartCoroutine(PlayerAttack(1, true));
+    }
+
+    public void OnWindButton()
     {
         if (State != BattleState.PLAYERTURN)
         {
             return;
         }
-        StartCoroutine(PlayerAttack(1));
+        MagicMenu.SetActive(false);
+        StartCoroutine(PlayerAttack(2, true));
     }
 
-    public void OnAttack3Button()
+    public void OnEarthButton()
     {
         if (State != BattleState.PLAYERTURN)
         {
             return;
         }
-        StartCoroutine(PlayerAttack(2));
+        MagicMenu.SetActive(false);
+        StartCoroutine(PlayerAttack(3, true));
     }
 
-    public void OnAttack4Button()
+    public void OnFireButton()
     {
         if (State != BattleState.PLAYERTURN)
         {
             return;
         }
-        StartCoroutine(PlayerAttack(3));
+        MagicMenu.SetActive(false);
+        StartCoroutine(PlayerAttack(4, true));
     }
+
 }

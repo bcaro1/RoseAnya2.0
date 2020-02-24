@@ -7,8 +7,11 @@ public class TBUnit_Joseph : MonoBehaviour
     public string UnitName;
     public int UnitLevel;
     public int UnitType;
+    public int EscapeChance;
+    public int EXP;
 
     public int Damage;
+    public int MagicDamage;
 
     public int MaxHP;
     public int CurrentHP;
