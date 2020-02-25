@@ -32,25 +32,25 @@ public class SceneManager_Alex : MonoBehaviour
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("RoseAnya(new)");
     }
     public IEnumerator BedroomScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("RoseAnyaInterior");
     }
     public IEnumerator ForestScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Forest Level");
     }
     public IEnumerator LoadingScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Loading");
     }
     public void FinishTutorial()
     {

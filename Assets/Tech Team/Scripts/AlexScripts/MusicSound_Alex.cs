@@ -9,30 +9,35 @@ public class MusicSound_Alex : MonoBehaviour
     private AudioSource PlayerAudio;
     private GameObject Player;
     private float prevAudioVolume;
-    private int currentScene;
-    static float AudioVolume = 1f;
+    private string currentScene;
+    public static float AudioVolume = 1f;
     #endregion
 
     #region Public
+    public AudioSource MenuMusic;
     public AudioSource VillageMusic;
     public AudioSource ForestMusic;
     #endregion
 
     void Awake()
     {
-        currentScene = SceneManager.GetActiveScene().buildIndex; // get active scene build index
+        currentScene = SceneManager.GetActiveScene().name; // get active scene build index
 
-        if (currentScene != 0) // Do this if NOT in Main Menu
+        if (currentScene != "MainMenu(Yingying)") // Do this if NOT in Main Menu
         {
             // REFERENCES //
             Player = GameObject.FindGameObjectWithTag("Player");
             PlayerAudio = Player.GetComponent<AudioSource>();
         }
-        if ((!VillageMusic.isPlaying) && currentScene == 4) // Village Only
+        if ((!MenuMusic.isPlaying) && currentScene == "MainMenu(Yingying)") // Village Only
+        {
+            MenuMusic.Play();
+        }
+        if ((!VillageMusic.isPlaying) && currentScene == "RoseAnya(new)") // Village Only
         {
             VillageMusic.Play();
         }
-        if ((!ForestMusic.isPlaying) && currentScene == 5) // Forest Only
+        if ((!ForestMusic.isPlaying) && currentScene == "Forest Level") // Forest Only
         {
             ForestMusic.Play();
         }
@@ -40,6 +45,8 @@ public class MusicSound_Alex : MonoBehaviour
     void Update()
     {
         VillageMusic.volume = AudioVolume;
+        ForestMusic.volume = AudioVolume;
+        MenuMusic.volume = AudioVolume;
     }
     public void SoundToggle()
     {

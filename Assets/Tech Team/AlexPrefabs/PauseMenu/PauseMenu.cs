@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    #region Public
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject tasksMenuUI;
     public GameObject controlsMenuUI;
     public GameObject CameraBase;
-    public GameObject RoseanyaCamera;
-    AudioSource CameraAudio;
+    public AudioSource VillageMusic;
+    public AudioSource ForestMusic;
     public GameObject Player;
+    #endregion
+
+    #region Private
     AudioSource PlayerAudio;
     CameraFollow_Joseph CameraFollowScript;
+    #endregion
 
     void Awake()
     {
+        // REFERENCES //
         CameraFollowScript = CameraBase.GetComponent<CameraFollow_Joseph>();
-        CameraAudio = RoseanyaCamera.GetComponent<AudioSource>();
         PlayerAudio = Player.GetComponent<AudioSource>();
     } 
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.P))
+       if (Input.GetKeyDown(KeyCode.P)) // Need to change to actual input @AH
        {
            if (IsPaused)
            {
@@ -70,27 +75,31 @@ public class PauseMenu : MonoBehaviour
         CameraFollowScript.InputSensitivity = newSpeed;
     }
 
-    public void Sound()
-    {
-        if (PlayerAudio.volume == 0.645f)
-        {
-            PlayerAudio.volume = 0f;
-        }
-        else
-        {
-            PlayerAudio.volume = 0.645f;
-        }
-    }
-    public void Music()
-    {
-        if (CameraAudio.volume == 1f)
-        {
-            CameraAudio.volume = 0f;
-        }
-        else
-        {
-            CameraAudio.volume = 1f;
-        }
-    }
+    // public void Sound()
+    // {
+    //     if (PlayerAudio.volume > 0f)
+    //     {
+    //         PlayerAudio.volume = 0f;
+    //     }
+    //     else
+    //     {
+    //         PlayerAudio.volume = 0.645f; // Hardcoded, will change @AH
+    //     }
+    // }
+    // public void Music()
+    // {
+
+    //     if (VillageMusic.volume > 0f || ForestMusic.volume > 0f)
+    //     {
+    //         VillageMusic.volume = 0f;
+    //         ForestMusic.volume = 0f;
+    //     }
+    //     else
+    //     {
+    //         VillageMusic.volume = MusicSound_Alex.AudioVolume;
+    //         ForestMusic.volume = MusicSound_Alex.AudioVolume;
+    //     }
+
+    // }
 
 }
