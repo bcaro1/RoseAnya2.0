@@ -10,19 +10,23 @@ public class SceneManager_Alex : MonoBehaviour
     public GameObject Gauge;
     public Image black;
     public Animator animator;
-    int currentScene;
+    string currentScene;
     private Gauges_Alex GaugesScript;
     
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player"); //Find Player
-        currentScene = SceneManager.GetActiveScene().buildIndex; // get active scene build index
-        GaugesScript = Gauge.GetComponent<Gauges_Alex>();
+        currentScene = SceneManager.GetActiveScene().name; // get active scene build index
+        
+        if (currentScene != "MainMenu(Yingying)") // Do this if NOT in Main Menu
+        {
+            GaugesScript = Gauge.GetComponent<Gauges_Alex>();
+        }
     }
 
     void Update()
     {
-        if (currentScene == 5) // This is temporary..will change @AH
+        if (currentScene == "Forest Level") // This is temporary..will change @AH
         {
             FinishTutorial();
         }
@@ -32,25 +36,29 @@ public class SceneManager_Alex : MonoBehaviour
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("RoseAnya(new)");
     }
     public IEnumerator BedroomScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("RoseAnyaInterior");
     }
     public IEnumerator ForestScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Forest Level");
     }
     public IEnumerator LoadingScene()
     {
         animator.SetBool("Fade", true);
         yield return new WaitUntil(()=>black.color.a ==1);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Loading");
+    }
+    public void Play()
+    {
+        StartCoroutine(BedroomScene());
     }
     public void FinishTutorial()
     {

@@ -38,7 +38,7 @@ public class Animations : MonoBehaviour
         PlayerMoving();
         PlayerTalking();
         PlayerGliding();
-        PlayerAbsorbDischarge();
+        // PlayerAbsorbDischarge();
     }
 
     void PlayerMoving()

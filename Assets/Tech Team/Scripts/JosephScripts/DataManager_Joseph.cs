@@ -20,7 +20,7 @@ public class DataManager_Joseph : MonoBehaviour
     public void Save()
     {
         //Get Character Name for now this is placeholder
-        Data.CharacterName = "Joseph";
+        Data.CharacterName = StaticDatabase_Joseph.CharacterName;
         Data.WindUnlocked = StaticDatabase_Joseph.UnlockedWind;
         Data.EarthUnlocked = StaticDatabase_Joseph.UnlockedEarth;
         Data.FireUnlocked = StaticDatabase_Joseph.UnlockedFire;
@@ -40,9 +40,10 @@ public class DataManager_Joseph : MonoBehaviour
     {
         Data = new SaveData_Joseph();
         //Change Filename to whatever the name of the button is when loading
-        string json = ReadFromFile("Joseph.json");
+        string json = ReadFromFile(PlayerPrefs.GetString("CurrentFile"));
         JsonUtility.FromJsonOverwrite(json, Data);
         //Give Character Name to whatever holds it
+        StaticDatabase_Joseph.CharacterName = Data.CharacterName;
         StaticDatabase_Joseph.UnlockedWind = Data.WindUnlocked;
         StaticDatabase_Joseph.UnlockedEarth = Data.EarthUnlocked;
         StaticDatabase_Joseph.UnlockedFire = Data.FireUnlocked;
