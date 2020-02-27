@@ -7,6 +7,7 @@ public class RPGController_Joseph : MonoBehaviour
     #region Public
     public int Level;
     public int HP;
+    public int CurrentHP;
     public int Attack;
     public int MagicAttack;
     public int EXP;
@@ -17,9 +18,25 @@ public class RPGController_Joseph : MonoBehaviour
     {
         Level = StaticDatabase_Joseph.Level;
         HP = StaticDatabase_Joseph.HP;
+        CurrentHP = StaticDatabase_Joseph.CurrentHP;
         Attack = StaticDatabase_Joseph.Attack;
         MagicAttack = StaticDatabase_Joseph.Magic;
         EXP = StaticDatabase_Joseph.EXP;
+
+        if(Level == 0)
+        {
+            Level = 1;
+            HP = 20;
+            CurrentHP = 20;
+            Attack = 15;
+            MagicAttack = 15;
+            StaticDatabase_Joseph.Level = Level;
+            StaticDatabase_Joseph.HP = HP;
+            StaticDatabase_Joseph.CurrentHP = CurrentHP;
+            StaticDatabase_Joseph.Attack = Attack;
+            StaticDatabase_Joseph.Magic = MagicAttack;
+        }
+
         CalculateEXPToNextLevel(Level);
     }
 
@@ -27,17 +44,27 @@ public class RPGController_Joseph : MonoBehaviour
     {
         EXP += experience;
 
-        if(EXP >= EXPToNextLevel)
+        if(CheckLevelUp())
         {
-            Level++;
-            EXP -= EXPToNextLevel;
-
-            StaticDatabase_Joseph.Level = Level;
-            StaticDatabase_Joseph.EXP = EXP;
             return true;
         }
         StaticDatabase_Joseph.EXP = EXP;
         return false;   
+    }
+
+    public bool CheckLevelUp()
+    {
+        if (EXP >= EXPToNextLevel)
+        {
+            Level++;
+            EXP -= EXPToNextLevel;
+            CalculateStatChanges();
+            CalculateEXPToNextLevel(Level);
+            StaticDatabase_Joseph.Level = Level;
+            StaticDatabase_Joseph.EXP = EXP;
+            return true;
+        }
+        return false;
     }
 
     private void CalculateEXPToNextLevel(int Level)
@@ -47,7 +74,7 @@ public class RPGController_Joseph : MonoBehaviour
 
     private void CalculateStatChanges()
     {
-        int HPAdd = Random.Range(1, 6);
+        int HPAdd = Random.Range(2, 6);
         int AttackAdd = Random.Range(1, 6);
         int MagicAdd = Random.Range(2, 8);
         HP += HPAdd;
@@ -55,6 +82,7 @@ public class RPGController_Joseph : MonoBehaviour
         MagicAttack += MagicAdd;
 
         StaticDatabase_Joseph.HP = HP;
+        StaticDatabase_Joseph.CurrentHP = HP;
         StaticDatabase_Joseph.Attack = Attack;
         StaticDatabase_Joseph.Magic = MagicAttack;
     }
