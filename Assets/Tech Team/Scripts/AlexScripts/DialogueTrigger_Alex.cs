@@ -29,7 +29,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     private void Update()
     {
-        if (hasPlayer && Input.GetKeyDown("k"))
+        if (hasPlayer && Input.GetButtonDown("Interact"))
         { 
             Dialogue();
         }

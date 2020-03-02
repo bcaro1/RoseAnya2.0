@@ -107,12 +107,21 @@ public class PlayerMovement : MonoBehaviour
             onGround = true;
             DoubleJumpInProgress = false;
         }
+
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Ground")
         {
             onGround = true;
+        }
+
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (other.gameObject.CompareTag("Item"))
+            {
+                other.gameObject.GetComponent<ItemPickup_Joseph>().Pickup();
+            }
         }
     }
     private void OnTriggerExit(Collider other)

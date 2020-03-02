@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour
     } 
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.P)) // Need to change to actual input @AH
+       if (Input.GetButtonDown("Cancel")) 
        {
            if (IsPaused)
            {

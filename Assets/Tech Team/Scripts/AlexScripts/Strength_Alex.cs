@@ -24,7 +24,7 @@ public class Strength_Alex : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q) && CurrentlyUsingStrength) // @AH Need to change to correct key
+        if (Input.GetButtonUp("Strength") && CurrentlyUsingStrength) 
         {
             CurrentlyUsingStrength = false;
             ReleaseStrength();
@@ -39,7 +39,7 @@ public class Strength_Alex : MonoBehaviour
             // strengthObject = strengthCollider.gameObject;
             // strengthObjectRigidbody = strengthObject.GetComponent<Rigidbody>();
 
-            if (Input.GetKeyDown(KeyCode.Q) && collider.gameObject.tag == "Strength")
+            if (Input.GetButtonDown("Strength") && collider.gameObject.tag == "Strength")
             {
                 // set the collider to strengthCollider
                 var strengthCollider = collider.gameObject.transform;
