@@ -23,6 +23,13 @@ public class SceneChanger_Alex : MonoBehaviour
         Debug.Log("Loading...");
       }
     }
+    if (this.gameObject.tag == "BedroomScene")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        SceneManagerScript.StartCoroutine("BedroomScene");
+      }
+    }
     
   }
 
