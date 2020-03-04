@@ -10,6 +10,7 @@ public class RPGController_Joseph : MonoBehaviour
     public int CurrentHP;
     public int Attack;
     public int MagicAttack;
+    public int MaxMana;
     public int EXP;
     public int EXPToNextLevel;
     #endregion
@@ -20,6 +21,7 @@ public class RPGController_Joseph : MonoBehaviour
         HP = StaticDatabase_Joseph.HP;
         CurrentHP = StaticDatabase_Joseph.CurrentHP;
         Attack = StaticDatabase_Joseph.Attack;
+        MaxMana = StaticDatabase_Joseph.MaxMana;
         MagicAttack = StaticDatabase_Joseph.Magic;
         EXP = StaticDatabase_Joseph.EXP;
 
@@ -29,11 +31,13 @@ public class RPGController_Joseph : MonoBehaviour
             HP = 20;
             CurrentHP = 20;
             Attack = 15;
+            MaxMana = 10;
             MagicAttack = 15;
             StaticDatabase_Joseph.Level = Level;
             StaticDatabase_Joseph.HP = HP;
             StaticDatabase_Joseph.CurrentHP = CurrentHP;
             StaticDatabase_Joseph.Attack = Attack;
+            StaticDatabase_Joseph.MaxMana = MaxMana;
             StaticDatabase_Joseph.Magic = MagicAttack;
         }
 
@@ -76,14 +80,17 @@ public class RPGController_Joseph : MonoBehaviour
     {
         int HPAdd = Random.Range(2, 6);
         int AttackAdd = Random.Range(1, 6);
+        int ManaAdd = Random.Range(1, 6);
         int MagicAdd = Random.Range(2, 8);
         HP += HPAdd;
         Attack += AttackAdd;
+        MaxMana += ManaAdd;
         MagicAttack += MagicAdd;
 
         StaticDatabase_Joseph.HP = HP;
         StaticDatabase_Joseph.CurrentHP = HP;
         StaticDatabase_Joseph.Attack = Attack;
+        StaticDatabase_Joseph.MaxMana = MaxMana;
         StaticDatabase_Joseph.Magic = MagicAttack;
     }
 }

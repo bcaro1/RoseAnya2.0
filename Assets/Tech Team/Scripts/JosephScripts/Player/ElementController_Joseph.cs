@@ -35,6 +35,8 @@ public class ElementController_Joseph : MonoBehaviour
         UnlockedWind = StaticDatabase_Joseph.UnlockedWind;
         UnlockedEarth = StaticDatabase_Joseph.UnlockedEarth;
         UnlockedFire = StaticDatabase_Joseph.UnlockedFire;
+
+        StaticDatabase_Joseph.OnElementChangedCallback += UpdateFromDatabase;
     }
 
 
@@ -282,6 +284,14 @@ public class ElementController_Joseph : MonoBehaviour
         StaticDatabase_Joseph.Wind = Wind;
         StaticDatabase_Joseph.Earth = Earth;
         StaticDatabase_Joseph.Fire = Fire;
+    }
+
+    public void UpdateFromDatabase()
+    {
+        Water = StaticDatabase_Joseph.Water;
+        Wind = StaticDatabase_Joseph.Wind;
+        Earth = StaticDatabase_Joseph.Earth;
+        Fire = StaticDatabase_Joseph.Fire;
     }
 
     public bool GetWindUnlocked => UnlockedWind;

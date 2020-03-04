@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraFollow_Joseph : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class CameraFollow_Joseph : MonoBehaviour
     private Vector3 FollowPOS;
     private float RotX = 0.0f;
     private float RotY = 0.0f;
+    private EventSystem Events;
     #endregion
 
     void Start()
@@ -36,10 +38,16 @@ public class CameraFollow_Joseph : MonoBehaviour
         RotX = Rot.x;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Events = EventSystem.current;
     }
 
     void Update()
     {
+        if (Events.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         //Set up Gamepad Sticks here
         MouseX = Input.GetAxis("Mouse X");
         MouseY = Input.GetAxis("Mouse Y");

@@ -12,9 +12,8 @@ public class Item_Joseph : ScriptableObject
         //Use the Item
     }
 
-    public void Trash()
+    public void RemoveFromInventory()
     {
-
-        Destroy(this);
+        Inventory_Joseph.Instance.Remove(this);
     }
 }

@@ -22,7 +22,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     public Button[] ActionButtons;
     public GameObject MagicMenu;
     public Button[] MagicButtons;
-    public int MagicCost = 3;
+    public int MagicCost = 5;
     #endregion
 
     #region Private
@@ -236,7 +236,6 @@ public class TBBattleSystem_Joseph : MonoBehaviour
             MagicMenu.SetActive(true);
             if (MagicCost > StaticDatabase_Joseph.Water)
             {
-                Debug.Log("Here");
                 MagicButtons[0].interactable = false;
             }
             if (MagicCost > StaticDatabase_Joseph.Wind)

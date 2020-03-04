@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,12 +17,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private bool DoubleJumpInProgress;
     private float rbMass;
+    private EventSystem Events;
 
     void Awake()
     {
         cameraT = Camera.main.transform;
         rb = gameObject.GetComponent<Rigidbody>();
         rbMass = rb.mass;
+        Events = EventSystem.current;
     }
     void Start()
     {
@@ -31,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(Events.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (canMove)
         {
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));

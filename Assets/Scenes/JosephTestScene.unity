@@ -1807,13 +1807,14 @@ GameObject:
   - component: {fileID: 588562577}
   - component: {fileID: 588562576}
   - component: {fileID: 588562575}
+  - component: {fileID: 588562579}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &588562575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,6 +1897,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &588562579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588562574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865ae15a3daf6ce428eee56424820026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemsParent: {fileID: 0}
+  InventoryUI: {fileID: 0}
 --- !u!1 &602015432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,6 +3204,7 @@ MonoBehaviour:
   CurrentHP: 0
   Attack: 0
   MagicAttack: 0
+  MaxMana: 0
   EXP: 0
   EXPToNextLevel: 0
 --- !u!1 &1339280057
@@ -3387,7 +3403,7 @@ PrefabInstance:
     - target: {fileID: 1184035618999547473, guid: 1e842b5bb590749e78bfcab53f28b6b9,
         type: 3}
       propertyPath: Wind
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1184035618999547473, guid: 1e842b5bb590749e78bfcab53f28b6b9,
         type: 3}
@@ -3413,6 +3429,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939779302333237555, guid: 1e842b5bb590749e78bfcab53f28b6b9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343425099306407756, guid: 1e842b5bb590749e78bfcab53f28b6b9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589575940975385446, guid: 1e842b5bb590749e78bfcab53f28b6b9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e842b5bb590749e78bfcab53f28b6b9, type: 3}
@@ -4386,6 +4417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Turnbased Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774693922391759576, guid: 6cca0ed3e5aa6644991f45e989bcd91a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6774693922391759579, guid: 6cca0ed3e5aa6644991f45e989bcd91a,
         type: 3}
