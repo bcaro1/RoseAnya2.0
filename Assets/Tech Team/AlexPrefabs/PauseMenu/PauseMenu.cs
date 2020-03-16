@@ -15,11 +15,20 @@ public class PauseMenu : MonoBehaviour
     public AudioSource VillageMusic;
     public AudioSource ForestMusic;
     public GameObject Player;
+
+    [Header("Hover Text")]
+    public Text ResumeText;
+    public Text TasksText;
+    public Text OptionsText;
+    public Text ControlsText;
+    public Text CreditsText;
+    public Text QuitText;
     #endregion
 
     #region Private
     AudioSource PlayerAudio;
     CameraFollow_Joseph CameraFollowScript;
+    private Color maroon;
     #endregion
 
     void Awake()
@@ -27,6 +36,9 @@ public class PauseMenu : MonoBehaviour
         // REFERENCES //
         CameraFollowScript = CameraBase.GetComponent<CameraFollow_Joseph>();
         PlayerAudio = Player.GetComponent<AudioSource>();
+
+        // VARIABLES //
+        maroon = new Color32(145,1,1,255);
     } 
     void Update()
     {
@@ -40,7 +52,7 @@ public class PauseMenu : MonoBehaviour
            {
                Pause();
            }
-       } 
+       }
     }
 
     public void Resume()
@@ -71,6 +83,12 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void ActiveColor()
+    {
+        // OptionsText.color = optionsMenuUI.activeSelf == true ? maroon : Color.black;
+        // TasksText.color = tasksMenuUI.activeSelf == true ? maroon : Color.black;
+        // ControlsText.color = controlsMenuUI.activeSelf == true ? maroon : Color.black;
+    }
     public void AdjustSensitivity(float newSpeed)
     {
         CameraFollowScript.InputSensitivity = newSpeed;
