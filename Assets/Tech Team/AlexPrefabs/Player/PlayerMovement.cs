@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jumping()
     {
-        if (onGround && Input.GetKeyDown(KeyCode.Space))
+        if (onGround && Input.GetKeyDown(KeyCode.Space)) //@AH
         {
             rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
         }     
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (ElementControllerScript.Wind > 0)
         {
-            if (!onGround && !DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space))
+            if (!onGround && !DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space)) //@AH
             {
                 rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
                 DoubleJumpInProgress = true;
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (ElementControllerScript.Wind >= 1)
         {
-            if (!onGround && DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space))
+            if (!onGround && DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space)) //@AH
             {
                 rb.mass = 1;
                 ElementControllerScript.Wind --;
