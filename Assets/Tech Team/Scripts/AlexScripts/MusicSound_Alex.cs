@@ -56,7 +56,7 @@ public class MusicSound_Alex : MonoBehaviour
         }
         else
         {
-            PlayerAudio.volume = 0.645f;
+            PlayerAudio.volume = 0.645f; //Hardcoded, need to change @AH
         }
     }
     public void MusicToggle()

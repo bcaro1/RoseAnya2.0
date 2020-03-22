@@ -336,12 +336,12 @@ GameObject:
   - component: {fileID: 4527248528322039021}
   - component: {fileID: 9160391509656973658}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Text-Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &711016589845406225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -351,15 +351,15 @@ RectTransform:
   m_GameObject: {fileID: 1163421899798049501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
   m_Children: []
   m_Father: {fileID: 7282039851884871695}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 289.99994, y: 31.80014}
-  m_SizeDelta: {x: -1212.2999, y: -657.5}
+  m_AnchoredPosition: {x: 291, y: 40}
+  m_SizeDelta: {x: -1130.2, y: -481.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8775925087489299744
 CanvasRenderer:
@@ -390,12 +390,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: ca7f2897bc87043c2a8d7d9c1b1b375d, type: 3}
+    m_FontSize: 175
+    m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 50
+    m_MinSize: 1
+    m_MaxSize: 175
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1895,7 +1895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4085764628224666213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1915,8 +1915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 292.00006, y: -7}
-  m_SizeDelta: {x: 178.91, y: 25.68}
+  m_AnchoredPosition: {x: 292.00006, y: -9.8}
+  m_SizeDelta: {x: 310.8, y: 35.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5962980614703261030
 MonoBehaviour:
@@ -1962,9 +1962,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1840642008293338923}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 200
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 120
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
