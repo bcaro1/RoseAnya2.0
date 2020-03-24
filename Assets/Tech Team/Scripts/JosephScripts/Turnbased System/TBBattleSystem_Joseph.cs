@@ -12,6 +12,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     public BattleState State;
     public GameObject PlayerPrefab;
     public GameObject EnemyPrefab;
+    public GameObject TBCanvas;
     public Transform PlayerBattlestation;
     public Transform EnemyBattlestation;
     public TextMeshProUGUI DialogueText;
@@ -35,6 +36,12 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     {
         Controller = GameObject.FindGameObjectWithTag("Player").GetComponent<RPGController_Joseph>();
         State = BattleState.START;
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        EnemyPrefab = StaticDatabase_Joseph.Enemy;
+        AudioSource source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        source.Stop();
         StartCoroutine(SetupBattle());
     }
 
@@ -165,6 +172,18 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         yield return new WaitForSecondsRealtime(2f);
 
         CheckMultipleLevelUp();
+    }
+
+    IEnumerator EndTheBattle()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        Destroy(TBCanvas);
+
     }
 
     void CheckMultipleLevelUp()

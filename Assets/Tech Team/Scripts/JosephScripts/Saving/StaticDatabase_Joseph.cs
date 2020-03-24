@@ -13,6 +13,10 @@ public static class StaticDatabase_Joseph
 
     private static string charactername;
 
+    private static GameObject enemy;
+
+    private static Item_Joseph item;
+
     public static int Water
     {
         get
@@ -258,6 +262,32 @@ public static class StaticDatabase_Joseph
         set
         {
             charactername = value;
+        }
+    }
+
+    public static GameObject Enemy
+    {
+        get
+        {
+            return enemy;
+        }
+
+        set
+        {
+            enemy = value;
+        }
+    }
+
+    public static Item_Joseph Item
+    {
+        get
+        {
+            return item;
+        }
+
+        set
+        {
+            item = value;
         }
     }
 }

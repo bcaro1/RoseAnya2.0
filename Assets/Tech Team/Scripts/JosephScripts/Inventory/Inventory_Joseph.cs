@@ -9,7 +9,7 @@ public class Inventory_Joseph : MonoBehaviour
     public OnItemChanged OnItemChangedCallback;
     public List<Item_Joseph> Items = new List<Item_Joseph>();
     public static Inventory_Joseph Instance;
-    public int Space = 20;
+    public int Space = 15;
     #endregion
 
     private void Awake()

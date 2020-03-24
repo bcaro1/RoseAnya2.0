@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventorySlot_Joseph : MonoBehaviour
 {
     #region Public
     public Image Icon;
     public Button RemoveButton;
+    public TextMeshProUGUI DescriptionText;
     #endregion
 
     #region Private
@@ -33,13 +35,13 @@ public class InventorySlot_Joseph : MonoBehaviour
     {
         //Add Prompt to confirm
         Inventory_Joseph.Instance.Remove(Item);
+        ClearSlot();
     }
 
-    public void UseItem()
+    public void focusItem()
     {
-        if(Item != null)
-        {
-            Item.Use();
-        }
+        StaticDatabase_Joseph.Item = Item;
+        DescriptionText.text = Item.name + " - " + Item.Description;
+        Debug.Log("TEST");
     }
 }

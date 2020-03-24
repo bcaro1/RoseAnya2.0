@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class InventoryUI_Joseph : MonoBehaviour
 {
     #region Public
     public Transform ItemsParent;
     public GameObject InventoryUI;
+    public TextMeshProUGUI DescriptionText;
     #endregion
 
     #region Private
@@ -26,6 +28,23 @@ public class InventoryUI_Joseph : MonoBehaviour
         if(Input.GetButtonDown("Inventory"))
         {
             InventoryUI.SetActive(!InventoryUI.activeSelf);
+
+            if(InventoryUI.activeSelf)
+            {
+                Time.timeScale = 0;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                StaticDatabase_Joseph.Item = null;
+                DescriptionText.text = "";
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                StaticDatabase_Joseph.Item = null;
+                DescriptionText.text = "";
+            }
         }
     }
 
@@ -41,6 +60,18 @@ public class InventoryUI_Joseph : MonoBehaviour
             {
                 Slots[i].ClearSlot();
             }
+        }
+    }
+
+    public void UseItem()
+    {
+        Item_Joseph hold = StaticDatabase_Joseph.Item;
+        if(hold != null)
+        {
+            Debug.Log("here");
+            hold.Use();
+            DescriptionText.text = "";
+            UpdateUI();
         }
     }
 }
