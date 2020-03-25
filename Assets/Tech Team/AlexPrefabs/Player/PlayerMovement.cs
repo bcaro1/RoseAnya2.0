@@ -1,27 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Public
     public bool canMove, onGround;
-    private Transform cameraT;
     public AudioSource walkSound; //This is the sound for walking
     public Animator anim;
-    float turnSmoothVelocity;
-    float speedSmoothVelocity;
     public float turnSmoothTime, speedSmoothTime;
-    float currentSpeed;
     public float walkSpeed;
+    [Tooltip("Drag and drop Player's Element gameobject here")]  
+    public GameObject element; // Element that's child of Player
+    #endregion
+
+    #region Private
+    private Transform cameraT;
     private Rigidbody rb;
     private bool DoubleJumpInProgress;
     private float rbMass;
+    float turnSmoothVelocity;
+    float speedSmoothVelocity;
+    float currentSpeed;
+    private EventSystem Events;
+    private ElementController_Joseph ElementControllerScript;
+    #endregion
 
     void Awake()
     {
+        // REFERENCES //
         cameraT = Camera.main.transform;
         rb = gameObject.GetComponent<Rigidbody>();
         rbMass = rb.mass;
+        Events = EventSystem.current;
+        ElementControllerScript = element.GetComponent<ElementController_Joseph>();
     }
     void Start()
     {
@@ -31,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(Events.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (canMove)
         {
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -75,29 +93,38 @@ public class PlayerMovement : MonoBehaviour
 
     void Jumping()
     {
-        if (onGround && Input.GetKeyDown(KeyCode.Space))
+        if (onGround && Input.GetKeyDown(KeyCode.Space)) //@AH
         {
             rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
         }     
     }
     void DoubleJumping()
     {
-        if (!onGround && !DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space))
+        if (ElementControllerScript.Wind > 0)
         {
-            rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
-            DoubleJumpInProgress = true;
-        }     
+            if (!onGround && !DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space)) //@AH
+            {
+                rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
+                DoubleJumpInProgress = true;
+                ElementControllerScript.Wind --;
+            }    
+        }
+  
     }
     void Gliding()
     {
-        if (!onGround && DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space))
+        if (ElementControllerScript.Wind >= 1)
         {
-            rb.mass = 1;
+            if (!onGround && DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space)) //@AH
+            {
+                rb.mass = 1;
+                ElementControllerScript.Wind --;
+            }
+            if (onGround || Input.GetKeyUp(KeyCode.Space))
+            {
+                rb.mass = rbMass;
+            }     
         }
-        if (onGround || Input.GetKeyUp(KeyCode.Space))
-        {
-            rb.mass = rbMass;
-        }     
     }
 
     private void OnTriggerEnter(Collider other)
@@ -106,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         {
             onGround = true;
             DoubleJumpInProgress = false;
+            rb.mass = rbMass;
         }
 
     }

@@ -5,11 +5,11 @@ using UnityEngine;
 public class Inventory_Joseph : MonoBehaviour
 {
     #region Public
-    public List<Item_Joseph> Items = new List<Item_Joseph>();
-    public static Inventory_Joseph Instance;
-    public int Space = 20;
     public delegate void OnItemChanged();
     public OnItemChanged OnItemChangedCallback;
+    public List<Item_Joseph> Items = new List<Item_Joseph>();
+    public static Inventory_Joseph Instance;
+    public int Space = 15;
     #endregion
 
     private void Awake()

@@ -56,15 +56,15 @@ public class Animations : MonoBehaviour
     void PlayerTalking()
     {
         // If player is in NPCs radius and interacts, change isTalking in animator
-        if (DialogueTriggerScript.hasPlayer && Input.GetKeyDown("k"))
+        if (DialogueTriggerScript.hasPlayer && Input.GetButtonDown("Interact"))
         {
             anim.SetBool("isTalking", true);
-            animNPC.SetBool("isTalking", true);
+            // animNPC.SetBool("isTalking", true);
         }
         if (!DialogueTriggerScript.hasPlayer)
         {
             anim.SetBool("isTalking", false);
-            animNPC.SetBool("isTalking", false);
+            // animNPC.SetBool("isTalking", false);
         }
     }
     void PlayerGliding()

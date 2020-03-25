@@ -4,11 +4,18 @@ using UnityEngine;
 
 public static class StaticDatabase_Joseph
 {
-    private static int water, fire, earth, wind, currentquest, level, hp, currenthp, attack, magic, exp;
+    public delegate void OnElementValueChanged();
+    public static OnElementValueChanged OnElementChangedCallback;
+
+    private static int water, fire, earth, wind, maxmana, currentquest, level, hp, currenthp, attack, magic, exp;
 
     private static bool unlockedfire, unlockedearth, unlockedwind;
 
     private static string charactername;
+
+    private static GameObject enemy;
+
+    private static Item_Joseph item;
 
     public static int Water
     {
@@ -20,6 +27,16 @@ public static class StaticDatabase_Joseph
         set
         {
             water = value;
+
+            if(water > maxmana)
+            {
+                water = maxmana;
+            }
+
+            if(OnElementChangedCallback != null)
+            {
+                OnElementChangedCallback.Invoke();
+            }
         }
     }
 
@@ -33,6 +50,16 @@ public static class StaticDatabase_Joseph
         set
         {
             fire = value;
+
+            if(fire > maxmana)
+            {
+                fire = maxmana;
+            }
+
+            if (OnElementChangedCallback != null)
+            {
+                OnElementChangedCallback.Invoke();
+            }
         }
     }
 
@@ -46,6 +73,16 @@ public static class StaticDatabase_Joseph
         set
         {
             earth = value;
+
+            if(earth > maxmana)
+            {
+                earth = maxmana;
+            }
+
+            if (OnElementChangedCallback != null)
+            {
+                OnElementChangedCallback.Invoke();
+            }
         }
     }
 
@@ -59,6 +96,29 @@ public static class StaticDatabase_Joseph
         set
         {
             wind = value;
+
+            if(wind > maxmana)
+            {
+                wind = maxmana;
+            }
+
+            if (OnElementChangedCallback != null)
+            {
+                OnElementChangedCallback.Invoke();
+            }
+        }
+    }
+
+    public static int MaxMana
+    {
+        get
+        {
+            return maxmana;
+        }
+
+        set
+        {
+            maxmana = value;
         }
     }
 
@@ -202,6 +262,32 @@ public static class StaticDatabase_Joseph
         set
         {
             charactername = value;
+        }
+    }
+
+    public static GameObject Enemy
+    {
+        get
+        {
+            return enemy;
+        }
+
+        set
+        {
+            enemy = value;
+        }
+    }
+
+    public static Item_Joseph Item
+    {
+        get
+        {
+            return item;
+        }
+
+        set
+        {
+            item = value;
         }
     }
 }

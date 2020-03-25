@@ -10,11 +10,11 @@ public class Item_Joseph : ScriptableObject
     public virtual void Use()
     {
         //Use the Item
+        RemoveFromInventory();
     }
 
-    public void Trash()
+    public void RemoveFromInventory()
     {
-
-        Destroy(this);
+        Inventory_Joseph.Instance.Remove(this);
     }
 }

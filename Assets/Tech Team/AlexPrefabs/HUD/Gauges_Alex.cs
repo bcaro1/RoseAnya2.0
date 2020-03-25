@@ -35,7 +35,7 @@ public class Gauges_Alex : MonoBehaviour
     {
         if (Input.GetButtonDown("Absorb") || Input.GetButtonDown("Interact"))
         {
-            UpdateGauges();
+            UpdateGauges(); // Updates only when player is absorbing / interacting
         }
 
         fireGauge.fillAmount = fireFill;
@@ -56,9 +56,9 @@ public class Gauges_Alex : MonoBehaviour
         // Stores previous fill amount
         // This is used in PlayerParticleEffects_Alex
         currFireFill = fireFill;
-        currWaterFill = earthFill;
-        currAirFill = waterFill;
-        currEarthFill = airFill;
+        currEarthFill = earthFill;
+        currWaterFill = waterFill;
+        currAirFill = airFill;
     }
 
 
