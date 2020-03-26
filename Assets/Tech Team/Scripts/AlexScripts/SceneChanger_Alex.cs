@@ -30,6 +30,13 @@ public class SceneChanger_Alex : MonoBehaviour
         SceneManagerScript.StartCoroutine("BedroomScene");
       }
     }
+    if (this.gameObject.tag == "ForestScene")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        SceneManagerScript.StartCoroutine("ForestScene");
+      }
+    }
     
   }
 
