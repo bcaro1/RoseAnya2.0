@@ -40,21 +40,13 @@ public class DialogueTrigger_Alex : MonoBehaviour
         FreezePlayer();
         switch (this.gameObject.tag)
         {
-            case "Matron":
-                flowchart.ExecuteBlock("Matron1"); // we execute the named block within the flowchart.
+            case "Fisherman1":
+                flowchart.ExecuteBlock("Intro Dialogue"); // we execute the named block within the flowchart.
                 break;
-            case "Blacksmith":
-                flowchart.ExecuteBlock("Blacksmith1"); // we execute the named block within the flowchart.
+            case "Jimothy":
+                flowchart.ExecuteBlock("Jimothy"); // we execute the named block within the flowchart.
                 break;
-            case "Chef":
-                flowchart.ExecuteBlock("Chef1"); // we execute the named block within the flowchart.
-                break;
-            case "Herbalist":
-                flowchart.ExecuteBlock("Herbalist1"); // we execute the named block within the flowchart.
-                break;
-            case "Doctor":
-                flowchart.ExecuteBlock("Doctor1"); // we execute the named block within the flowchart.
-                break;
+            
         }
     }
 
