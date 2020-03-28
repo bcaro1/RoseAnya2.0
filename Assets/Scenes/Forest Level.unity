@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: animNPC
       value: 
       objectReference: {fileID: 1104988523}
+    - target: {fileID: 7939779302333237555, guid: 1e842b5bb590749e78bfcab53f28b6b9,
+        type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1104988524}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e842b5bb590749e78bfcab53f28b6b9, type: 3}
 --- !u!1 &156496 stripped
@@ -1074,6 +1079,16 @@ PrefabInstance:
       propertyPath: nodeRect.x
       value: -2462.0955
       objectReference: {fileID: 0}
+    - target: {fileID: 4758858596005310316, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 2081455227}
+    - target: {fileID: 4758858596005310316, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: methodName
+      value: MainScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
 --- !u!95 &1104988523 stripped
@@ -1865,6 +1880,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cecd1f76d34444e2bb5b1529ded06384, type: 3}
+--- !u!1 &2081455227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8328141402075159235, guid: cecd1f76d34444e2bb5b1529ded06384,
+    type: 3}
+  m_PrefabInstance: {fileID: 2081455226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7419776684744775041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,6 +1952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574494618535672178, guid: c21c64481ecf3384fbe2619b7756adcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21c64481ecf3384fbe2619b7756adcd, type: 3}

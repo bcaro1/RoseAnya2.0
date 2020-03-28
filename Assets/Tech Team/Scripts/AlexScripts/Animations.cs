@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fungus; // access to fungus
 
 public class Animations : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Animations : MonoBehaviour
     private Rigidbody PlayerRb;
     private DialogueTrigger_Alex DialogueTriggerScript;
     private bool onGround;
+    private bool playerTalking;
     #endregion
 
     #region Public
@@ -19,6 +21,7 @@ public class Animations : MonoBehaviour
     public Animator anim;
     [Tooltip("Drag and drop NPC's animator here")]
     public Animator animNPC;
+    public Flowchart flowchart; // calls the flowchart.
     #endregion
 
     void Awake()
@@ -28,7 +31,7 @@ public class Animations : MonoBehaviour
         NPC = GameObject.FindGameObjectWithTag("Fisherman1"); // Grabs NPC
         PlayerRb = Player.GetComponent<Rigidbody>(); // Grabs Player's Rigidbody
         DialogueTriggerScript = NPC.GetComponent<DialogueTrigger_Alex>(); //Grabs script attached to NPC
-
+        
         // ASSIGNING VARIABLES //
         anim.SetBool("isGrounded", true); // Start game with Player grounded
     }
@@ -56,15 +59,24 @@ public class Animations : MonoBehaviour
     void PlayerTalking()
     {
         // If player is in NPCs radius and interacts, change isTalking in animator
-        if (DialogueTriggerScript.hasPlayer && Input.GetButtonDown("Interact"))
+        // if (DialogueTriggerScript.hasPlayer && Input.GetButtonDown("Interact"))
+        // {
+        //     anim.SetBool("isTalking", true);
+        // }
+        // if (!DialogueTriggerScript.hasPlayer)
+        // {
+        //     anim.SetBool("isTalking", false);
+        // }
+
+        playerTalking = flowchart.GetBooleanVariable("playerTalking");
+
+        if (playerTalking) 
         {
             anim.SetBool("isTalking", true);
-            // animNPC.SetBool("isTalking", true);
         }
-        if (!DialogueTriggerScript.hasPlayer)
+        else 
         {
             anim.SetBool("isTalking", false);
-            // animNPC.SetBool("isTalking", false);
         }
     }
     void PlayerGliding()
