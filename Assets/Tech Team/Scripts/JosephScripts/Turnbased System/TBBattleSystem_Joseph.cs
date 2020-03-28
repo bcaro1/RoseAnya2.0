@@ -50,6 +50,8 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         GameObject PlayerGo = Instantiate(PlayerPrefab, PlayerBattlestation);
         PlayerUnit = PlayerGo.GetComponent<TBUnit_Joseph>();
 
+        yield return new WaitForSecondsRealtime(.2f);
+
         GameObject EnemyGo = Instantiate(EnemyPrefab, EnemyBattlestation);
         EnemyUnit = EnemyGo.GetComponent<TBUnit_Joseph>();
 
@@ -62,7 +64,6 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         {
             ActionButtons[i].interactable = false;
         }
-
         yield return new WaitForSecondsRealtime(2f);
 
         State = BattleState.PLAYERTURN;
@@ -194,6 +195,10 @@ public class TBBattleSystem_Joseph : MonoBehaviour
             PlayerHUD.SetHUD(PlayerUnit);
             StartCoroutine(LevelUp());
         }
+        else
+        {
+            StartCoroutine(EndTheBattle());
+        }
     }
 
     void EndBattle()
@@ -205,8 +210,13 @@ public class TBBattleSystem_Joseph : MonoBehaviour
             if(Controller.GetEXP(EnemyUnit.EXP))
             {
                 PlayerUnit.UnitLevel = Controller.Level;
+                PlayerUnit.CurrentHP = PlayerUnit.MaxHP;
                 PlayerHUD.SetHUD(PlayerUnit);
                 StartCoroutine(LevelUp());
+            }
+            else
+            {
+                StartCoroutine(EndTheBattle());
             }
         }
         else if(State == BattleState.LOST)
@@ -216,6 +226,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         else if(State == BattleState.ESCAPED)
         {
             DialogueText.text = "You managed to run away.";
+            StartCoroutine(EndTheBattle());
         }
     }
 

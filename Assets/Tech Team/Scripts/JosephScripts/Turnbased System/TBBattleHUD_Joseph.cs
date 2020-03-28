@@ -16,8 +16,8 @@ public class TBBattleHUD_Joseph : MonoBehaviour
     {
         NameText.text = Unit.UnitName;
         LevelText.text = "Lvl. " + Unit.UnitLevel;
-        HPSlider.maxValue = Unit.MaxHP;
-        HPSlider.value = Unit.CurrentHP;
+        HPSlider.maxValue = (float) Unit.MaxHP;
+        HPSlider.value = (float) Unit.CurrentHP;
     }
 
     public void SetHP(int HP)
