@@ -26,10 +26,7 @@ public class SceneManager_Alex : MonoBehaviour
 
     void Update()
     {
-        if (currentScene == "Forest Level") // This is temporary..will change @AH
-        {
-            FinishTutorial();
-        }
+
     }
 
     public IEnumerator MainScene()

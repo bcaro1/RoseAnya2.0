@@ -10,7 +10,7 @@ public class TaskList_Alex : MonoBehaviour
     public Text[] CtextBoxes; //Completed - Text UI
     public Text[] IPtextBoxes; //In Progress - Text UI
     int[] tasks;
-    public int TASK_JimothyQuest, TASK_FireQuest, TASK_StrenghtQuest, TASK_AirQuest, TASK_GoToQuest, SIDE_Deliver;
+    public int TASK_JimothyQuest, TASK_JeanieQuest, TASK_FireQuest, TASK_StrenghtQuest, TASK_GoToQuest, SIDE_Deliver;
     public Flowchart flowchart; // calls the flowchart.
 
 
@@ -21,9 +21,9 @@ public class TaskList_Alex : MonoBehaviour
     void Awake()
     {
         TASK_JimothyQuest = 0;
+        TASK_JeanieQuest = 0;
         TASK_FireQuest = 0;
         TASK_StrenghtQuest = 0;
-        TASK_AirQuest = 0;
         TASK_GoToQuest = 0;
         SIDE_Deliver = 0;
     }
@@ -42,22 +42,22 @@ public class TaskList_Alex : MonoBehaviour
     {
 
         TASK_JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
-        SIDE_Deliver = flowchart.GetIntegerVariable("DeliverSide");
+        TASK_JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
 
         tasksText = new string[]{
             "Find Jimothy",                 //0
-            "Put out fire",                 //1
-            "Move boulder",                 //2
-            "Use air",                      //3
+            "Locate Jeanie",                //1
+            "Put out fire",                 //2
+            "Move boulder",                 //3
             "go to npc",                    //4
             "Deliver object"                //5
         };
 
         tasks = new int[]{
             TASK_JimothyQuest,              //0
-            TASK_FireQuest,                 //1
-            TASK_StrenghtQuest,             //2
-            TASK_AirQuest,                  //3
+            TASK_JeanieQuest,               //1
+            TASK_FireQuest,                 //2
+            TASK_StrenghtQuest,             //3
             TASK_GoToQuest,                 //4
             SIDE_Deliver                    //5
         };

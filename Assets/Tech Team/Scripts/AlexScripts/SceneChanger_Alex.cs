@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fungus; // access to fungus
 
 public class SceneChanger_Alex : MonoBehaviour
 {
   GameObject SceneManagement;
   SceneManager_Alex SceneManagerScript;
+  public Flowchart flowchart; // calls the flowchart.
+  private int JimothyQuest;
   void Awake()
   {
       SceneManagement = GameObject.FindGameObjectWithTag("SceneManager");
@@ -34,7 +37,8 @@ public class SceneChanger_Alex : MonoBehaviour
     {
       if (other.CompareTag("Player")) 
       {
-        SceneManagerScript.StartCoroutine("ForestScene");
+        JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
+        if (JimothyQuest > 0) { SceneManagerScript.StartCoroutine("ForestScene"); }
       }
     }
     
