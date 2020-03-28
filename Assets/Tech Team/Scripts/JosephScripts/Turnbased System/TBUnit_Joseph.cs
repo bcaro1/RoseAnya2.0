@@ -16,6 +16,18 @@ public class TBUnit_Joseph : MonoBehaviour
     public int MaxHP;
     public int CurrentHP;
 
+    private void Start()
+    {
+        if(UnitType == -1)
+        {
+            UnitLevel = StaticDatabase_Joseph.Level;
+            Damage = StaticDatabase_Joseph.Attack;
+            MagicDamage = StaticDatabase_Joseph.Magic;
+            MaxHP = StaticDatabase_Joseph.HP;
+            CurrentHP = StaticDatabase_Joseph.CurrentHP;
+        }
+    }
+
     public bool TakeDamage(int Damage)
     {
         CurrentHP -= Damage;
