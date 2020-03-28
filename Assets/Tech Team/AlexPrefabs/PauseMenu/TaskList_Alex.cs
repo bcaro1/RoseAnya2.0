@@ -10,10 +10,11 @@ public class TaskList_Alex : MonoBehaviour
     public Text[] CtextBoxes; //Completed - Text UI
     public Text[] IPtextBoxes; //In Progress - Text UI
     int[] tasks;
-    public int TASK_JimothyQuest, TASK_JeanieQuest, TASK_FireQuest, TASK_StrenghtQuest, TASK_GoToQuest, SIDE_Deliver;
+    public int TASK_JimothyQuest, TASK_JeanieQuest, TASK_LearnQuest, TASK_ChickenQuest, TASK_HeroQuest;
     public Flowchart flowchart; // calls the flowchart.
 
 
+    /////***  IMPORTANT ***/////
     // 0 = NOT STARTED
     // 1 = IN PROGESS (APPEARS IN TO DO LIST)
     // 2 = FINISHED (APPEARS IN COMPLETED LIST)
@@ -22,10 +23,9 @@ public class TaskList_Alex : MonoBehaviour
     {
         TASK_JimothyQuest = 0;
         TASK_JeanieQuest = 0;
-        TASK_FireQuest = 0;
-        TASK_StrenghtQuest = 0;
-        TASK_GoToQuest = 0;
-        SIDE_Deliver = 0;
+        TASK_LearnQuest = 0;
+        TASK_ChickenQuest = 0;
+        TASK_HeroQuest = 0;
     }
     void Start()
     {
@@ -43,23 +43,24 @@ public class TaskList_Alex : MonoBehaviour
 
         TASK_JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
         TASK_JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
+        TASK_LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
+        TASK_ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
+        TASK_HeroQuest = flowchart.GetIntegerVariable("HeroQuest");
 
         tasksText = new string[]{
             "Find Jimothy",                 //0
             "Locate Jeanie",                //1
-            "Put out fire",                 //2
-            "Move boulder",                 //3
-            "go to npc",                    //4
-            "Deliver object"                //5
+            "Learn about Hero",             //2
+            "Feed the Chicken",             //3
+            "Free the Hero"                 //4
         };
 
         tasks = new int[]{
             TASK_JimothyQuest,              //0
             TASK_JeanieQuest,               //1
-            TASK_FireQuest,                 //2
-            TASK_StrenghtQuest,             //3
-            TASK_GoToQuest,                 //4
-            SIDE_Deliver                    //5
+            TASK_LearnQuest,                //2
+            TASK_ChickenQuest,              //3
+            TASK_HeroQuest                  //4
         };
     }
     public void BuildTaskList()
