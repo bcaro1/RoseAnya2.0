@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -920,56 +920,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 389800432}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &437463944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 437463946}
-  - component: {fileID: 437463945}
-  m_Layer: 0
-  m_Name: StoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &437463945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437463944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2597be99b9d4406b0d5fa417f8b083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorial: 0
-  firstQuest: 0
-  secondQuest: 0
-  thirdQuest: 0
-  finalQuest: 0
-  black: {fileID: 1826366894}
-  animator: {fileID: 1826366893}
---- !u!4 &437463946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437463944}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34223938, y: -3.7752075, z: 19.040854}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438849523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7f2f9b277544a2e4b8885738ba0b3889,
@@ -1060,7 +1010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press ___ to sleep (Save Progress)
+  m_Text: '"Interact" to sleep (Save Progress)'
 --- !u!222 &439881041
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2162,6 +2112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: flowchart
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117891662474771002, guid: 2dc6c22e181ad45a698810c95cab07e8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.999939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dc6c22e181ad45a698810c95cab07e8, type: 3}
@@ -4030,7 +3985,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   textUI: {fileID: 1952674049}
   inRadius: 0
-  StoryManager: {fileID: 437463944}
+  black: {fileID: 1826366894}
+  animator: {fileID: 1826366893}
 --- !u!65 &1660289619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4576,7 +4532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1942427149
 MonoBehaviour:
@@ -4859,6 +4815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 1401779073}
+  TravelMenuUI: {fileID: 0}
+  TravelMenuUI_CaveButton: {fileID: 0}
+  TravelMenuUI_CastleButton: {fileID: 0}
 --- !u!65 &1976453475
 BoxCollider:
   m_ObjectHideFlags: 0

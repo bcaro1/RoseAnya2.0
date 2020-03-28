@@ -11,10 +11,6 @@ public class Gauges_Alex : MonoBehaviour
     public Image waterGauge; 
     public Image airGauge; 
     public Image earthGauge;
-
-    [Tooltip("Drag and drop Player's Element gameobject here")]  
-    public GameObject element; // Element that's child of Player
-
     [HideInInspector]
     public float currFireFill, currWaterFill, currAirFill, currEarthFill; // Current Element values
 
@@ -22,12 +18,14 @@ public class Gauges_Alex : MonoBehaviour
     #endregion
 
     #region Private
+    private GameObject element; // Element that's child of Player
     private ElementController_Joseph ElementControllerScript;
     #endregion
 
     void Awake()
     {
         // REFERENCES //
+        element = GameObject.FindGameObjectWithTag("Element"); // Grabs Element
         ElementControllerScript = element.GetComponent<ElementController_Joseph>();
     }
 

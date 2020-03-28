@@ -17,8 +17,7 @@ public class SceneChanger_Alex : MonoBehaviour
   #region Private
   private GameObject SceneManagement;
   private SceneManager_Alex SceneManagerScript;
-  private int JimothyQuest;
-  private int JeanieQuest;
+  private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
   #endregion
   
   void Awake()
@@ -48,9 +47,13 @@ public class SceneChanger_Alex : MonoBehaviour
 
     JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
     JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
+    LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
+    ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
+    HeroQuest = flowchart.GetIntegerVariable("HeroQuest");
     
     if (JimothyQuest > 0) { TravelMenuUI.SetActive(true); }
     if (JeanieQuest > 0) { TravelMenuUI_CaveButton.SetActive(true); }
+    if (HeroQuest > 0) { TravelMenuUI_CastleButton.SetActive(true); }
   }
   public void Resume()
   {

@@ -972,6 +972,7 @@ GameObject:
   - component: {fileID: 7699702790697653172}
   - component: {fileID: 3636157597619268546}
   - component: {fileID: 7095993260367407748}
+  - component: {fileID: 6830967637461673967}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Flowchart
@@ -1018,9 +1019,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 3602622218672327995}
+  - {fileID: 7734758140539786410}
   selectedCommands:
-  - {fileID: 1994439221081392972}
+  - {fileID: 6830967637461673967}
   variables:
   - {fileID: 1040294943305376102}
   - {fileID: 3404613996966430764}
@@ -9315,6 +9316,7 @@ MonoBehaviour:
   - {fileID: 6112779863785327536}
   - {fileID: 4413399616234884020}
   - {fileID: 2757719514249194335}
+  - {fileID: 6830967637461673967}
 --- !u!114 &5980090490694666181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20931,6 +20933,23 @@ MonoBehaviour:
   itemId: 672
   indentLevel: 0
   targetObject: {fileID: 3153047021609012499}
+  methodName: UnfreezePlayer
+  delay: 0
+--- !u!114 &6830967637461673967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 673
+  indentLevel: 0
+  targetObject: {fileID: 5057981186684013336}
   methodName: UnfreezePlayer
   delay: 0
 --- !u!1 &1893241790611063087

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SleepSave_Alex : MonoBehaviour
 {
 
@@ -9,24 +9,34 @@ public class SleepSave_Alex : MonoBehaviour
     public GameObject Player;
     public GameObject textUI;
     public bool inRadius;
-    public GameObject StoryManager;
-    private StoryManagement_Alex StoryManagementScript;
+    public Image black;
+    public Animator animator;
     
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
-        StoryManagementScript = StoryManager.GetComponent<StoryManagement_Alex>();
     }
 
     void Update()
     {
-        if (inRadius && Input.GetKeyDown(KeyCode.L)) // hardcoded, will change -@AH
+        if (inRadius && Input.GetButtonDown("Interact")) // hardcoded, will change -@AH
         {
-            Debug.Log("Test");
-            StartCoroutine (StoryManagementScript.FadeOut());
+            Debug.Log("Saving");
+            StartCoroutine (FadeOut());
         }
     }
 
+    public IEnumerator FadeOut()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(()=>black.color.a ==1);
+        StartCoroutine(FadeIn());
+    }
+    public IEnumerator FadeIn()
+    {
+        animator.SetBool("Fade", false);
+        yield return new WaitUntil(()=>black.color.a ==0);
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) // if the player is in radius

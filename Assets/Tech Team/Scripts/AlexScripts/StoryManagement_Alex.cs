@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus; // access to fungus
 
 public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
-    public bool tutorial, firstQuest, secondQuest, thirdQuest, finalQuest;
-    public Image black;
-    public Animator animator;
+    public GameObject Checkpoint;
+    #endregion
+    #region Private
+    private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
+    private GameObject Player;
+    public Flowchart flowchart; // calls the flowchart.
     #endregion
     void Awake()
     {
-        
+        // REFERENCES //
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
-    void Update()
+    void Start()
     {
-        
-    }
-    public IEnumerator FadeOut()
-    {
-        animator.SetBool("Fade", true);
-        yield return new WaitUntil(()=>black.color.a ==1);
-        StartCoroutine(FadeIn());
-    }
-    public IEnumerator FadeIn()
-    {
-        animator.SetBool("Fade", false);
-        yield return new WaitUntil(()=>black.color.a ==0);
+        JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
+        JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
+
+        if (JimothyQuest == 2 && JeanieQuest == 1) 
+        {
+            Player.transform.position = Checkpoint.transform.position;
+        }
     }
 }
