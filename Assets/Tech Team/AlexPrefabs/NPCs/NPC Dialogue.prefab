@@ -1321,7 +1321,6 @@ GameObject:
   - component: {fileID: 7651464018036817542}
   - component: {fileID: 2570796263391611389}
   - component: {fileID: 2615124906403147902}
-  - component: {fileID: 8676072714799722746}
   - component: {fileID: 7021546764734905220}
   - component: {fileID: 7612018909686440048}
   - component: {fileID: 5920721829512855032}
@@ -1334,7 +1333,6 @@ GameObject:
   - component: {fileID: 5813418556026465372}
   - component: {fileID: 3026398501166482543}
   - component: {fileID: 4724298272119598493}
-  - component: {fileID: 6083365235049397357}
   - component: {fileID: 280535978493722328}
   - component: {fileID: 5164946375954884817}
   - component: {fileID: 51385346776679171}
@@ -1411,6 +1409,10 @@ GameObject:
   - component: {fileID: 3990471903461177758}
   - component: {fileID: 1221382888519130759}
   - component: {fileID: 1058907152657139754}
+  - component: {fileID: 6394223866943531182}
+  - component: {fileID: 4049067994736631668}
+  - component: {fileID: 741105785589465609}
+  - component: {fileID: 7371432106480290333}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Flowchart
@@ -1457,8 +1459,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 7734758140539786410}
-  selectedCommands: []
+  - {fileID: 8230237334960952217}
+  selectedCommands:
+  - {fileID: 7371432106480290333}
   variables:
   - {fileID: 1040294943305376102}
   - {fileID: 3404613996966430764}
@@ -17964,7 +17967,7 @@ MonoBehaviour:
     player enters the room.
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 8676072714799722746}
+  - {fileID: 741105785589465609}
   - {fileID: 2615124906403147902}
   - {fileID: 2570796263391611389}
   - {fileID: 7782755942291274032}
@@ -17980,7 +17983,7 @@ MonoBehaviour:
   - {fileID: 5164946375954884817}
   - {fileID: 280535978493722328}
   - {fileID: 51385346776679171}
-  - {fileID: 6083365235049397357}
+  - {fileID: 7371432106480290333}
   - {fileID: 4724298272119598493}
   - {fileID: 3026398501166482543}
 --- !u!114 &7782755942291274032
@@ -17996,7 +17999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 587
-  indentLevel: 1
+  indentLevel: 0
   storyText: Alright, seems easy enough.
   description: 
   character: {fileID: 0}
@@ -18023,7 +18026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 578
-  indentLevel: 1
+  indentLevel: 0
   storyText: "I - wow - that\u2019s a bit of an escalation, don\u2019t you think?"
   description: 
   character: {fileID: 0}
@@ -18050,7 +18053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 579
-  indentLevel: 1
+  indentLevel: 0
   storyText: "THEY DID?! I\u2019ll KILL them. "
   description: 
   character: {fileID: 0}
@@ -18077,7 +18080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 580
-  indentLevel: 1
+  indentLevel: 0
   storyText: "That you\u2019re a baby. Everyone says you\u2019re just a stupid man-child."
   description: 
   character: {fileID: 0}
@@ -18104,7 +18107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 581
-  indentLevel: 1
+  indentLevel: 0
   storyText: WHAT DID YOU SAY?!
   description: 
   character: {fileID: 0}
@@ -18131,7 +18134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 582
-  indentLevel: 1
+  indentLevel: 0
   storyText: "From what I hear, {i}you\u2019re{/i} the baby."
   description: 
   character: {fileID: 0}
@@ -18158,7 +18161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 583
-  indentLevel: 1
+  indentLevel: 0
   storyText: HA! MEAN! What a baby!
   description: 
   character: {fileID: 0}
@@ -18185,7 +18188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 584
-  indentLevel: 1
+  indentLevel: 0
   storyText: "You don\u2019t have to be so mean, geeze."
   description: 
   character: {fileID: 0}
@@ -18212,7 +18215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 585
-  indentLevel: 1
+  indentLevel: 0
   storyText: "You\x19re still the idiot on the other side of the room\r!"
   description: 
   character: {fileID: 0}
@@ -18239,7 +18242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 586
-  indentLevel: 1
+  indentLevel: 0
   storyText: "EASY?! Bah! We\u2019ll see how easy you think it is when you\u2019re
     over here!\r"
   description: 
@@ -18267,7 +18270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 588
-  indentLevel: 1
+  indentLevel: 0
   storyText: "See if you can make it to me through this puzzle.\r\nI dare you."
   description: 
   character: {fileID: 0}
@@ -18294,7 +18297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 577
-  indentLevel: 1
+  indentLevel: 0
   storyText: "HAHA, you\u2019ve finally come, have you? WELL, let\u2019s see what
     you have.\r\nLet\u2019s play a game.\r"
   description: 
@@ -18309,70 +18312,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &8676072714799722746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828021264282709891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 576
-  indentLevel: 0
-  compareOperator: 0
-  variable: {fileID: 3404613996966430764}
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 2
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &7021546764734905220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18389,7 +18328,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: UGH! How could someone like {i}you{/i] beat me at my own game?!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 7220367134273990908}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -18427,11 +18366,13 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 5813418556026465372}
+  - {fileID: 6394223866943531182}
   - {fileID: 7021546764734905220}
   - {fileID: 6726642109858202923}
   - {fileID: 8896661402742552494}
   - {fileID: 887946624635835930}
   - {fileID: 379749619925937596}
+  - {fileID: 4049067994736631668}
   - {fileID: 5920721829512855032}
 --- !u!114 &5920721829512855032
 MonoBehaviour:
@@ -18461,7 +18402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 605
   indentLevel: 1
-  variable: {fileID: 92678169068911328}
+  variable: {fileID: 119129901581831583}
   setOperator: 0
   booleanData:
     booleanRef: {fileID: 0}
@@ -18582,7 +18523,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Ugh, alright fine, let's do this.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -18610,7 +18551,7 @@ MonoBehaviour:
   storyText: I'll kill you for that! This palace is mine fair and square! I killed
     the demon king for this place. Who are YOU to challenge me?!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 7220367134273990908}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -18637,7 +18578,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Seemed pretty simple to me honestly.
   description: 
-  character: {fileID: 0}
+  character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -18663,7 +18604,7 @@ MonoBehaviour:
   itemId: 596
   indentLevel: 0
   compareOperator: 0
-  variable: {fileID: 92678169068911328}
+  variable: {fileID: 119129901581831583}
   booleanData:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -18742,70 +18683,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 593
   indentLevel: 0
---- !u!114 &6083365235049397357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828021264282709891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 592
-  indentLevel: 1
-  variable: {fileID: 92678169068911328}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 1
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &280535978493722328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18819,7 +18696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 591
-  indentLevel: 1
+  indentLevel: 0
   storyText: "You\u2019re STALLING because you know you can\u2019t do it!\r\nHa haaaa!
     You can\u2019t fool mee."
   description: 
@@ -18847,7 +18724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 590
-  indentLevel: 1
+  indentLevel: 0
   storyText: "Just SHUT UP and try to come over here!\r\nDon\u2019t think I don\u2019t
     know what you\u2019re doing!"
   description: 
@@ -18875,7 +18752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 589
-  indentLevel: 1
+  indentLevel: 0
   storyText: I uh, alright then.
   description: 
   character: {fileID: 0}
@@ -21782,6 +21659,262 @@ MonoBehaviour:
   integerData:
     integerRef: {fileID: 0}
     integerVal: 1
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &6394223866943531182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 683
+  indentLevel: 1
+  variable: {fileID: 6675584755331029019}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &4049067994736631668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 684
+  indentLevel: 1
+  variable: {fileID: 6675584755331029019}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &741105785589465609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 685
+  indentLevel: 0
+  variable: {fileID: 6675584755331029019}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &7371432106480290333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 686
+  indentLevel: 0
+  variable: {fileID: 6675584755331029019}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
   floatData:
     floatRef: {fileID: 0}
     floatVal: 0

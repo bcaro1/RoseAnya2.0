@@ -28,6 +28,12 @@ public class SceneManager_Alex : MonoBehaviour
     {
 
     }
+    public IEnumerator MainMenu()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(()=>black.color.a ==1);
+        SceneManager.LoadScene("MainMenu(Yingying");
+    }
 
     public IEnumerator MainScene()
     {
