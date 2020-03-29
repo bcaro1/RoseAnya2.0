@@ -54,10 +54,10 @@ public class Gauges_Alex : MonoBehaviour
     void UpdateGauges()
     {
         // Converting number to float between 0-1
-        fireFill = ElementControllerScript.Fire / fillMax;
-        earthFill = ElementControllerScript.Earth / fillMax;
-        waterFill = ElementControllerScript.Water / fillMax;
-        airFill = ElementControllerScript.Wind / fillMax;
+        fireFill = ElementControllerScript.Fire / 12f;
+        earthFill = ElementControllerScript.Earth / 12f;
+        waterFill = ElementControllerScript.Water / 12f;
+        airFill = ElementControllerScript.Wind / 12f;
 
         // Stores previous fill amount
         // This is used in PlayerParticleEffects_Alex
