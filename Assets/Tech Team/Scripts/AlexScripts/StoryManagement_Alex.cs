@@ -8,11 +8,13 @@ public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
     public GameObject Checkpoint;
+    public Flowchart flowchart; // calls the flowchart.
     #endregion
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
     private GameObject Player;
-    public Flowchart flowchart; // calls the flowchart.
+    private GameObject Chicken;
+    
     #endregion
     void Awake()
     {
@@ -24,9 +26,13 @@ public class StoryManagement_Alex : MonoBehaviour
         JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
         JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
 
-        if (JimothyQuest == 2 && JeanieQuest == 1) 
+        if (JimothyQuest == 2 && JeanieQuest == 1 || JimothyQuest == 2 && JeanieQuest == 2) 
         {
             Player.transform.position = Checkpoint.transform.position;
+        }
+        if (JimothyQuest == 2 && JeanieQuest == 2)
+        {
+            
         }
     }
 }
