@@ -7,14 +7,12 @@ using Fungus; // access to fungus
 public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
-    public GameObject Checkpoint;
+    public GameObject Checkpoint, CollectFish;
     public Flowchart flowchart; // calls the flowchart.
     #endregion
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
-    private GameObject Player;
-    private GameObject Chicken;
-    
+    private GameObject Player;    
     #endregion
     void Awake()
     {
@@ -30,9 +28,9 @@ public class StoryManagement_Alex : MonoBehaviour
         {
             Player.transform.position = Checkpoint.transform.position;
         }
-        if (JimothyQuest == 2 && JeanieQuest == 2)
+        if (JimothyQuest == 2 && JeanieQuest == 2 && LearnQuest == 2 && ChickenQuest == 1)
         {
-            
+            CollectFish.SetActive(true);
         }
     }
 }

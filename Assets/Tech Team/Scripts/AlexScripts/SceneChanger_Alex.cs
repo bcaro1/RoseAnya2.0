@@ -44,6 +44,14 @@ public class SceneChanger_Alex : MonoBehaviour
   {
     SceneManagerScript.StartCoroutine("MainScene");
   }
+  public void CaveScene()
+  {
+    SceneManagerScript.StartCoroutine("CaveScene");
+  }
+  public void CastleScene()
+  {
+    SceneManagerScript.StartCoroutine("");
+  }
   public void LoadTravelMenu()
   {
     Cursor.visible = true;

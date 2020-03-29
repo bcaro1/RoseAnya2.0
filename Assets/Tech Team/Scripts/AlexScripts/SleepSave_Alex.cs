@@ -19,7 +19,7 @@ public class SleepSave_Alex : MonoBehaviour
 
     void Update()
     {
-        if (inRadius && Input.GetButtonDown("Interact")) // hardcoded, will change -@AH
+        if (inRadius && Input.GetButtonDown("Interact"))
         {
             Debug.Log("Saving");
             StartCoroutine (FadeOut());
