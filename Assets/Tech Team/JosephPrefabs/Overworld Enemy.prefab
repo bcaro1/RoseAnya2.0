@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4354383458620521529}
   - component: {fileID: 4354383458620521530}
   - component: {fileID: 4354383458620521531}
+  - component: {fileID: 8278638107194385926}
+  - component: {fileID: 1320214434799026313}
   m_Layer: 0
   m_Name: Overworld Enemy
   m_TagString: Untagged
@@ -91,8 +93,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.84549, y: 1, z: 2.129153}
+  m_Center: {x: -0.41714805, y: 0, z: 0.037843823}
 --- !u!114 &4354383458620521531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +110,44 @@ MonoBehaviour:
   BattleSystem: {fileID: 2326316453305214755, guid: 1d7e4a32d6ac38144aa543b96f76edda,
     type: 3}
   Enemy: {fileID: 2310429604482507158, guid: 43f96d63d1a0dff43bd1fb773ffb1274, type: 3}
+--- !u!114 &8278638107194385926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354383458620521476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8412b235499d3544ebccccd5fb84c0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 10
+  patrolTime: 3.5
+  player: {fileID: 7939779302333237547, guid: 1e842b5bb590749e78bfcab53f28b6b9, type: 3}
+  timeC: 0
+--- !u!195 &1320214434799026313
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354383458620521476}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &6563348314350645050
 PrefabInstance:
   m_ObjectHideFlags: 0
