@@ -7,6 +7,9 @@ public class CaveManager_Alex : MonoBehaviour
     #region Public
     public GameObject Enemy1;
     public GameObject Enemy2;
+    public GameObject Enemy3;
+    public GameObject Enemy4;
+    public GameObject Enemy5;
     public GameObject Door;
     #endregion
     #region Private
@@ -21,7 +24,7 @@ public class CaveManager_Alex : MonoBehaviour
 
     void Update()
     {
-        if (Enemy1 == null && Enemy2 == null)
+        if (Enemy1 == null && Enemy2 == null && Enemy3 == null && Enemy4 == null && Enemy5 == null)
         {
             Door.SetActive(false);
         }
