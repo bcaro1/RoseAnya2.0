@@ -73,7 +73,7 @@ public class SceneManager_Alex : MonoBehaviour
     }
     public void Play()
     {
-        StartCoroutine(MainScene());
+        StartCoroutine(LoadingScene());
     }
     public void FinishTutorial()
     {
