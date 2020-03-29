@@ -17,6 +17,7 @@ public class MusicSound_Alex : MonoBehaviour
     public AudioSource MenuMusic;
     public AudioSource VillageMusic;
     public AudioSource ForestMusic;
+    public AudioSource CaveMusic;
     #endregion
 
     void Awake()
@@ -41,12 +42,17 @@ public class MusicSound_Alex : MonoBehaviour
         {
             ForestMusic.Play();
         }
+        if ((!CaveMusic.isPlaying) && currentScene == "CaveScene") // Cave Only
+        {
+            CaveMusic.Play();
+        }
     }
     void Update()
     {
         VillageMusic.volume = AudioVolume;
         ForestMusic.volume = AudioVolume;
         MenuMusic.volume = AudioVolume;
+        CaveMusic.volume = AudioVolume;
     }
     public void SoundToggle()
     {

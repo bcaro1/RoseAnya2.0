@@ -40,6 +40,10 @@ public class SceneChanger_Alex : MonoBehaviour
   {
     SceneManagerScript.StartCoroutine("ForestScene");
   }
+  public void VillageScene()
+  {
+    SceneManagerScript.StartCoroutine("MainScene");
+  }
   public void LoadTravelMenu()
   {
     Cursor.visible = true;
@@ -76,6 +80,13 @@ public class SceneChanger_Alex : MonoBehaviour
       if (other.CompareTag("Player")) 
       {
         BedroomScene();
+      }
+    }
+    if (this.gameObject.tag == "MainScene")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        VillageScene();
       }
     }
     if (this.gameObject.tag == "TravelMenu")
