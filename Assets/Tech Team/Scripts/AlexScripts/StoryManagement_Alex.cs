@@ -23,6 +23,8 @@ public class StoryManagement_Alex : MonoBehaviour
     {
         JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
         JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
+        LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
+        ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
 
         if (JimothyQuest == 2 && JeanieQuest == 1 || JimothyQuest == 2 && JeanieQuest == 2) 
         {

@@ -47,6 +47,18 @@ public class SceneManager_Alex : MonoBehaviour
         yield return new WaitUntil(()=>black.color.a ==1);
         SceneManager.LoadScene("Forest Level");
     }
+    public IEnumerator CaveScene()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(()=>black.color.a ==1);
+        SceneManager.LoadScene("CaveScene");
+    }
+    public IEnumerator CastleScene()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(()=>black.color.a ==1);
+        SceneManager.LoadScene("Castle Scene");
+    }
     public IEnumerator LoadingScene()
     {
         animator.SetBool("Fade", true);

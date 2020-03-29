@@ -46,6 +46,12 @@ public class DialogueTrigger_Alex : MonoBehaviour
             case "Jimothy":
                 flowchart.ExecuteBlock("Jimothy"); // we execute the named block within the flowchart.
                 break;
+            case "Jeanie":
+                flowchart.ExecuteBlock("Jeanie"); // we execute the named block within the flowchart.
+                break;
+            case "Hero":
+                flowchart.ExecuteBlock("Hero2"); // we execute the named block within the flowchart.
+                break;
             
         }
     }
