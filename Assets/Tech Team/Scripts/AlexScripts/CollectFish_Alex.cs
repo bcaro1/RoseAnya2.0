@@ -6,6 +6,7 @@ public class CollectFish_Alex : MonoBehaviour
 {
     #region Public
     public GameObject textUI;
+    public GameObject ChickenEnemy;
     public bool hasFish;
     #endregion
 
@@ -27,7 +28,7 @@ public class CollectFish_Alex : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player")) // if the player is in radius
+        if (other.CompareTag("Player") && (!hasFish)) // if the player is in radius
         {
             textUI.SetActive(true);
 
@@ -35,6 +36,7 @@ public class CollectFish_Alex : MonoBehaviour
             {
                 hasFish = true;
                 textUI.SetActive(false);
+                ChickenEnemy.SetActive(true);
             }
         }
     }
