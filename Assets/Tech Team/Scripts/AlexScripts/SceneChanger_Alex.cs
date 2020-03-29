@@ -9,6 +9,7 @@ public class SceneChanger_Alex : MonoBehaviour
 {
   #region Public
   public Flowchart flowchart; // calls the flowchart.
+  public GameObject canvasUI;
   public GameObject TravelMenuUI;
   public GameObject TravelMenuUI_CaveButton;
   public GameObject TravelMenuUI_CastleButton;
@@ -99,13 +100,25 @@ public class SceneChanger_Alex : MonoBehaviour
     }
     if (this.gameObject.tag == "TravelMenu")
     {
-      if (other.CompareTag("Player") && Input.GetButtonDown("Interact")) 
+      if (other.CompareTag("Player"))
       {
-        LoadTravelMenu();
+        canvasUI.SetActive(true);
+
+        if (Input.GetButtonDown("Interact")) 
+        {
+          canvasUI.SetActive(false);
+          LoadTravelMenu();
+        }
       }
     }
-    
   }
+      void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) // if the player is out of radius
+        {
+            canvasUI.SetActive(false);
+        }
+    }
 
 
 }
