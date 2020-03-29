@@ -2223,6 +2223,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dc6c22e181ad45a698810c95cab07e8, type: 3}
+--- !u!1 &1519356046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519356047}
+  - component: {fileID: 1519356048}
+  m_Layer: 0
+  m_Name: Hero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1519356047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519356046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.043163, y: -4.074911, z: -53.91481}
+  m_LocalScale: {x: 0.09526532, y: 0.09526532, z: 0.09526532}
+  m_Children: []
+  m_Father: {fileID: 4701957732326497526}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1519356048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519356046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Germine, the Hero
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: Guard
 --- !u!1001 &1672318172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3066,6 +3116,66 @@ PrefabInstance:
       propertyPath: eventHandler
       value: 
       objectReference: {fileID: 1993106512}
+    - target: {fileID: 7782755942291274032, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1993106514}
+    - target: {fileID: 4487282770314171949, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1993106514}
+    - target: {fileID: 5230376472389970667, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 1200842588514040894, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1993106514}
+    - target: {fileID: 4024258703906977754, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 266439746250027533, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1993106514}
+    - target: {fileID: 7074731239055658476, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 489850641418539294, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1993106514}
+    - target: {fileID: 3707818204289241196, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 7651464018036817542, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 2570796263391611389, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 2615124906403147902, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
     - target: {fileID: 7612018909686440048, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.size
@@ -3091,6 +3201,21 @@ PrefabInstance:
       propertyPath: nodeRect.y
       value: 246.79405
       objectReference: {fileID: 0}
+    - target: {fileID: 280535978493722328, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 5164946375954884817, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1519356048}
+    - target: {fileID: 51385346776679171, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1993106514}
     m_RemovedComponents:
     - {fileID: 6404174307014810825, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
     - {fileID: 6404174307014811072, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
@@ -3429,7 +3554,7 @@ MonoBehaviour:
   waitForFrames: 1
 --- !u!114 &1993106513
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3444,6 +3569,18 @@ MonoBehaviour:
   targetObject: {fileID: 747450424}
   methodName: MainMenu
   delay: 0
+--- !u!114 &1993106514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6404174305897532635, guid: 72a70313966f548b5a575b71cc2a4c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1993106483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &723829094464377449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,6 +3625,7 @@ Transform:
   m_LocalScale: {x: 10.497, y: 10.497, z: 10.497}
   m_Children:
   - {fileID: 2581339724847373457}
+  - {fileID: 1519356047}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3548,7 +3686,7 @@ GameObject:
   - component: {fileID: 8582713539447107302}
   - component: {fileID: 8582713539447107303}
   m_Layer: 0
-  m_Name: m_Boss_Textured
+  m_Name: Hero
   m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

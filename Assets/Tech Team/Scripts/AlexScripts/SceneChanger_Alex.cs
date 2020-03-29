@@ -50,7 +50,7 @@ public class SceneChanger_Alex : MonoBehaviour
   }
   public void CastleScene()
   {
-    SceneManagerScript.StartCoroutine("Castle Scene");
+    SceneManagerScript.StartCoroutine("CastleScene");
   }
   public void LoadTravelMenu()
   {
