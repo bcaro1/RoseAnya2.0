@@ -23,6 +23,7 @@ public class Puzzle3Tile_Joseph : MonoBehaviour
                 {
                     IsOn = true;
                     Controller.CheckWin();
+                    Debug.Log("Stepped on");
                 }
             }
         }
