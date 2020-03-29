@@ -20,6 +20,7 @@ public class Gauges_Alex : MonoBehaviour
     #region Private
     private GameObject element; // Element that's child of Player
     private ElementController_Joseph ElementControllerScript;
+    private int fillMax;
     #endregion
 
     void Awake()
@@ -27,6 +28,13 @@ public class Gauges_Alex : MonoBehaviour
         // REFERENCES //
         element = GameObject.FindGameObjectWithTag("Element"); // Grabs Element
         ElementControllerScript = element.GetComponent<ElementController_Joseph>();
+        StaticDatabase_Joseph.OnElementChangedCallback += UpdateGauges;
+    }
+
+    private void Start()
+    {
+        fillMax = StaticDatabase_Joseph.MaxMana;
+        UpdateGauges();
     }
 
     void Update()
@@ -46,10 +54,10 @@ public class Gauges_Alex : MonoBehaviour
     void UpdateGauges()
     {
         // Converting number to float between 0-1
-        fireFill = ElementControllerScript.Fire / 12.0f;
-        earthFill = ElementControllerScript.Earth / 12.0f;
-        waterFill = ElementControllerScript.Water / 12.0f;
-        airFill = ElementControllerScript.Wind / 12.0f;
+        fireFill = ElementControllerScript.Fire / fillMax;
+        earthFill = ElementControllerScript.Earth / fillMax;
+        waterFill = ElementControllerScript.Water / fillMax;
+        airFill = ElementControllerScript.Wind / fillMax;
 
         // Stores previous fill amount
         // This is used in PlayerParticleEffects_Alex
@@ -58,6 +66,4 @@ public class Gauges_Alex : MonoBehaviour
         currWaterFill = waterFill;
         currAirFill = airFill;
     }
-
-
 }

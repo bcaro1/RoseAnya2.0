@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST, ESCAPED }
@@ -187,6 +188,20 @@ public class TBBattleSystem_Joseph : MonoBehaviour
 
     }
 
+    IEnumerator LostTheBattle()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        yield return new WaitForSecondsRealtime(.2f);
+
+        Destroy(TBCanvas);
+        SceneManager.LoadScene(3);
+    }
+
     void CheckMultipleLevelUp()
     {
         if(Controller.CheckLevelUp())
@@ -222,6 +237,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         else if(State == BattleState.LOST)
         {
             DialogueText.text = "You Lost!";
+            StartCoroutine(LostTheBattle());
         }
         else if(State == BattleState.ESCAPED)
         {
