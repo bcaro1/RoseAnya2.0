@@ -22,6 +22,11 @@ public class SceneManager_Alex : MonoBehaviour
         {
             GaugesScript = Gauge.GetComponent<Gauges_Alex>();
         }
+        if (currentScene == "MainMenu(Yingying)") // Do this if in Main Menu
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     void Update()
