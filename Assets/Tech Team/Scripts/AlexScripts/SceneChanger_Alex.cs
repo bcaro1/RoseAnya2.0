@@ -31,7 +31,7 @@ public class SceneChanger_Alex : MonoBehaviour
   public void LoadingScene()
   {
     SceneManagerScript.StartCoroutine("LoadingScene");
-    Debug.Log("Loading...");
+    
   }
   public void BedroomScene()
   {

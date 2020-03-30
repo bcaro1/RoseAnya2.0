@@ -50,7 +50,7 @@ public class UseFireElement : MonoBehaviour
 
         MoveFireRingUp.startPlaying = true;
 
-        Debug.Log("test" + MoveFireRingUp.startPlaying);
+        
 
         fire.Play();
     }

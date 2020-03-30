@@ -341,7 +341,7 @@ public class PlayerController_Alex : MonoBehaviour
 
             strengthRayCastRenderer.SetPosition(0, strengthRayCast.origin);
             strengthRayCastRenderer.SetPosition(1, strengthRayHit.point);
-            Debug.Log("target: " + hitGameObject.name);
+            // Debug.Log("target: " + hitGameObject.name);
 
             if (hitGameObject.tag == "PickUp")
             {

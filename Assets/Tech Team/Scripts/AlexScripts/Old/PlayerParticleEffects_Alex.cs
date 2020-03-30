@@ -45,7 +45,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Fire_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("PLAYING FIRE EFFECTS"); 
+                    
                 // }
             }
         }
@@ -55,7 +55,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Water_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("PLAYING WATER EFFECTS"); 
+                    
                 // }
             }
         }
@@ -65,7 +65,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Air_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("PLAYING AIR EFFECTS"); 
+                    
                 // }
             }
         }
@@ -75,7 +75,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Earth_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("PLAYING EARTH EFFECTS"); 
+                    
                 // }
             }
         }
@@ -89,7 +89,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Fire_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("Dis: PLAYING FIRE EFFECTS"); 
+                    
                 // }
             }
         }
@@ -99,7 +99,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Water_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("Dis: PLAYING WATER EFFECTS"); 
+                    
                 // }
             }
         }
@@ -109,7 +109,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Air_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("Dis: PLAYING AIR EFFECTS"); 
+                    
                 // }
             }
         }
@@ -119,7 +119,7 @@ public class PlayerParticleEffects_Alex : MonoBehaviour
             {
                 // for (var i = 0; i < Earth_Absorb_ParticleEffects.length; i++)
                 // {
-                    Debug.Log("Dis: PLAYING EARTH EFFECTS"); 
+                    
                 // }
             }
         }

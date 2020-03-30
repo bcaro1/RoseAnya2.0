@@ -51,7 +51,7 @@ public class Quest1_Fire : MonoBehaviour
 
             if (Dist[i] < 2)
             {
-                Debug.Log("You're close");
+                
             }
         }
     }

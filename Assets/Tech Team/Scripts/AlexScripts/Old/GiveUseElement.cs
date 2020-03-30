@@ -85,7 +85,7 @@ public class GiveUseElement : MonoBehaviour
     {
         PlayerElements.FireElement.fillAmount =- .5f;
 
-        Debug.Log("Took fire from player");
+
 
         fire.Play();
     }
@@ -103,7 +103,7 @@ public class GiveUseElement : MonoBehaviour
     {
         PlayerElements.WaterElement.fillAmount =- .5f;
 
-        Debug.Log("Took water from player");
+    
 
     }
 }

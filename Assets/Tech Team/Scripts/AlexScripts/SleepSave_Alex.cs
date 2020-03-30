@@ -21,7 +21,7 @@ public class SleepSave_Alex : MonoBehaviour
     {
         if (inRadius && Input.GetButtonDown("Interact"))
         {
-            Debug.Log("Saving");
+            
             StartCoroutine (FadeOut());
         }
     }

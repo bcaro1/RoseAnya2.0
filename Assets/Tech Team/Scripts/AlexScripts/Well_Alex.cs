@@ -58,7 +58,7 @@ public class Well_Alex : MonoBehaviour, ElementHolder_Joseph
 
         if (CurrentValue == MaxValue)
         {
-            Debug.Log("Passed Quest!");
+            
             flowchart.SetIntegerVariable("WaterQuest", 2);
         }
     }

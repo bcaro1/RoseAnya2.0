@@ -12,7 +12,7 @@ public class MoveTheGrate_Joseph : MonoBehaviour
         {
             if(gameObject.transform.position.y < 39)
             {
-                Debug.Log(gameObject.transform.position.y);
+                // Debug.Log(gameObject.transform.position.y);
                 transform.position += Vector3.up * 2 * Time.deltaTime;
             }
         }

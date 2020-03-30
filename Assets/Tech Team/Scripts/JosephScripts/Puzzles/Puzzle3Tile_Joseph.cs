@@ -24,15 +24,13 @@ public class Puzzle3Tile_Joseph : MonoBehaviour
             if (!Controller.Won)
             {
                 if (IsOn)
-                {
-                    Debug.Log("Reset");
+                {                    
                     renderer.material = offMat;
                     Controller.ResetPuzzle();
                 }
                 else
                 {
-                    IsOn = true;
-                    Debug.Log("Stepped on");
+                    IsOn = true;                    
                     renderer.material = onMat;
                     Controller.CheckWin();
                 }

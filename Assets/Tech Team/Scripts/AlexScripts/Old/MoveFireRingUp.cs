@@ -24,14 +24,12 @@ public class MoveFireRingUp : MonoBehaviour
     {
         if (startPlaying)
         {
-            Debug.Log("almost there");
             StartCoroutine(MoveUp());
         }
     }
     // broken :( //
     IEnumerator MoveUp()
     {
-        Debug.Log("MOVING UP");
         // turn on particle effect //
         FireRing.SetActive (true);
         // move particle effect up //
