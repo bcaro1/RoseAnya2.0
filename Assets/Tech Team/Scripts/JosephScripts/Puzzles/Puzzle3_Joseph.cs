@@ -23,6 +23,7 @@ public class Puzzle3_Joseph : MonoBehaviour
         for(int i = 0; i < Tiles; i++)
         {
             PuzzleTiles[i].IsOn = false;
+            PuzzleTiles[i].renderer.material = PuzzleTiles[i].offMat;
         }
     }
 
