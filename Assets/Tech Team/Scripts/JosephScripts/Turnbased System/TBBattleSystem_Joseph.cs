@@ -90,6 +90,11 @@ public class TBBattleSystem_Joseph : MonoBehaviour
             DamageText = " The attack seems very effective.";
         }
 
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
+        }
+
         bool IsDead = EnemyUnit.TakeDamage((int)Damage);
 
         EnemyHUD.SetHP(EnemyUnit.CurrentHP);

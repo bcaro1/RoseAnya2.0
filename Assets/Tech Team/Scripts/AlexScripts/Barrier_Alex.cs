@@ -28,8 +28,10 @@ public class Barrier_Alex : MonoBehaviour, ElementHolder_Joseph
         {
             //Subtracts the set value from the current value, shrinks the block and moves it down so that it doesn't float
             CurrentValue -= ValueGiven;
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y - 1.7f, transform.localScale.z);
-            transform.position = new Vector3(transform.position.x, transform.position.y - 1.7f, transform.position.z);
+            //transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y - 1.7f, transform.localScale.z);
+            //transform.position = new Vector3(transform.position.x, transform.position.y - 1.7f, transform.position.z);
+            StopAllCoroutines();
+            StartCoroutine(MoveSmooth(false));
         }
         else
         {
@@ -44,12 +46,48 @@ public class Barrier_Alex : MonoBehaviour, ElementHolder_Joseph
         {
             //Adds the set value to the current value, grows the block and moves it upward so it doesn't collide with the ground
             CurrentValue += ValueGiven;
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y + .1f, transform.localScale.z);
-            transform.position = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
+            //transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y + .1f, transform.localScale.z);
+            //transform.position = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
+            StopAllCoroutines();
+            StartCoroutine(MoveSmooth(true));
         }
         else
         {
             //Error Message Here
         }
+    }
+
+    IEnumerator MoveSmooth(bool Up)
+    {
+        yield return new WaitForSecondsRealtime(.1f);
+
+        float updatedY;
+
+        if (Up)
+        {
+            updatedY = transform.position.y + 2f;
+        }
+        else
+        {
+            updatedY = transform.position.y - 2f;
+        }
+
+        if(!Up)
+        {
+            while(transform.position.y > updatedY)
+            {
+                transform.position += Vector3.up * -5 * Time.deltaTime;
+                yield return new WaitForSecondsRealtime(.1f);
+            }
+        }
+        else
+        {
+            while (transform.position.y < updatedY)
+            {
+                transform.position += Vector3.up * 5 * Time.deltaTime;
+                yield return new WaitForSecondsRealtime(.1f);
+            }
+        }
+
     }
 }
