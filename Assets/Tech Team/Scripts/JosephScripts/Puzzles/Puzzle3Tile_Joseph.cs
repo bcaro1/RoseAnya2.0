@@ -17,13 +17,14 @@ public class Puzzle3Tile_Joseph : MonoBehaviour
             {
                 if (IsOn)
                 {
+                    Debug.Log("Reset");
                     Controller.ResetPuzzle();
                 }
                 else
                 {
                     IsOn = true;
-                    Controller.CheckWin();
                     Debug.Log("Stepped on");
+                    Controller.CheckWin();
                 }
             }
         }
