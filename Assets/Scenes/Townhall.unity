@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 5d0c65b729fe4bf4c9aa96a893ed911c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5d0c65b729fe4bf4c9aa96a893ed911c,
         type: 3}
@@ -204,6 +204,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0c65b729fe4bf4c9aa96a893ed911c, type: 3}
+--- !u!1001 &151086318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_Name
+      value: TH_Walls_Ceiling
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.23369
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 47.295307
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -49.70498
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 2d0a3359d440cd04b8f9fce54b0b63c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 51b5a70e2606b004da07d0fc37dc62a8, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d0a3359d440cd04b8f9fce54b0b63c3, type: 3}
 --- !u!1 &208164633
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,11 +315,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: a03ad2623eb36b644816afb2ce06f472,
-        type: 3}
-      propertyPath: m_Name
-      value: Village_Market_DisplayBox
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a03ad2623eb36b644816afb2ce06f472,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,7 +353,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a03ad2623eb36b644816afb2ce06f472,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a03ad2623eb36b644816afb2ce06f472,
         type: 3}
@@ -310,6 +379,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4042
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a03ad2623eb36b644816afb2ce06f472,
+        type: 3}
+      propertyPath: m_Name
+      value: Village_Market_DisplayBox
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: a03ad2623eb36b644816afb2ce06f472,
         type: 3}
@@ -353,7 +427,7 @@ Transform:
   - {fileID: 954447705}
   - {fileID: 1046712191}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &335940136
 PrefabInstance:
@@ -362,11 +436,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (4)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,6 +506,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
 --- !u!4 &335940137 stripped
@@ -505,7 +579,7 @@ Transform:
   - {fileID: 454815534}
   - {fileID: 1922041758}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &454815533
 PrefabInstance:
@@ -514,11 +588,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446311661}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b13272bdea6de8543a08ac4ce7a518b8,
-        type: 3}
-      propertyPath: m_Name
-      value: Candle (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b13272bdea6de8543a08ac4ce7a518b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -589,6 +658,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 28.529428
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b13272bdea6de8543a08ac4ce7a518b8,
+        type: 3}
+      propertyPath: m_Name
+      value: Candle (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13272bdea6de8543a08ac4ce7a518b8, type: 3}
 --- !u!4 &454815534 stripped
@@ -634,11 +708,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank (2)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,6 +778,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.9735155
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
 --- !u!4 &637179607 stripped
@@ -767,7 +841,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b51751c90cb5c644a9c1f7c617ef333a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b51751c90cb5c644a9c1f7c617ef333a,
         type: 3}
@@ -890,7 +964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &701895815
 PrefabInstance:
@@ -899,11 +973,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (6)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -974,6 +1043,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
 --- !u!4 &701895816 stripped
@@ -989,11 +1063,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1063,6 +1132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 12.9735155
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
@@ -1290,7 +1364,7 @@ Transform:
   - {fileID: 1049572776}
   - {fileID: 1475483432}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &923104564
 PrefabInstance:
@@ -1299,11 +1373,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (3)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1374,6 +1443,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
 --- !u!4 &923104565 stripped
@@ -1389,11 +1463,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank (4)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1464,6 +1533,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.9735155
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
 --- !u!4 &927838655 stripped
@@ -1479,11 +1553,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank (5)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1553,6 +1622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 12.9735155
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
@@ -1688,7 +1762,7 @@ Transform:
   - {fileID: 701895816}
   - {fileID: 1899163521}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1046712190
 PrefabInstance:
@@ -1697,11 +1771,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank (6)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1771,6 +1840,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 11.202631
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
@@ -1972,11 +2046,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank (3)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2047,6 +2116,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.9735155
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
 --- !u!4 &1136570672 stripped
@@ -2105,7 +2179,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b51751c90cb5c644a9c1f7c617ef333a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b51751c90cb5c644a9c1f7c617ef333a,
         type: 3}
@@ -2336,11 +2410,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2411,6 +2480,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
 --- !u!4 &1207922966 stripped
@@ -2469,7 +2543,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f41c8699193e2944d900076ac1190c76,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f41c8699193e2944d900076ac1190c76,
         type: 3}
@@ -2940,11 +3014,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310824522}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
-        type: 3}
-      propertyPath: m_Name
-      value: Picture_Frame_Blank
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 55a26c139cf4d2e4a896611780a06002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3015,6 +3084,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12.9735155
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 55a26c139cf4d2e4a896611780a06002,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture_Frame_Blank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a26c139cf4d2e4a896611780a06002, type: 3}
 --- !u!4 &1632987519 stripped
@@ -3056,7 +3130,7 @@ Transform:
   - {fileID: 1920140535}
   - {fileID: 1323268393}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1705381345
 PrefabInstance:
@@ -3065,11 +3139,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (5)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3139,6 +3208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
@@ -3608,11 +3682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (7)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3682,6 +3751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
@@ -3793,11 +3867,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 446311661}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b13272bdea6de8543a08ac4ce7a518b8,
-        type: 3}
-      propertyPath: m_Name
-      value: Candle
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b13272bdea6de8543a08ac4ce7a518b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3868,6 +3937,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 28.529428
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b13272bdea6de8543a08ac4ce7a518b8,
+        type: 3}
+      propertyPath: m_Name
+      value: Candle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13272bdea6de8543a08ac4ce7a518b8, type: 3}
 --- !u!4 &1922041758 stripped
@@ -3926,7 +4000,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: b51751c90cb5c644a9c1f7c617ef333a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b51751c90cb5c644a9c1f7c617ef333a,
         type: 3}
@@ -3967,11 +4041,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured (2)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4042,6 +4111,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
 --- !u!4 &1960150442 stripped
@@ -4082,7 +4156,7 @@ Transform:
   - {fileID: 1308146846}
   - {fileID: 1091831911}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2064355934
 PrefabInstance:
@@ -4091,11 +4165,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036066428}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Tutorial_Chair_Textured
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0819edc26291345499ff76549e4868ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4166,6 +4235,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0819edc26291345499ff76549e4868ca,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial_Chair_Textured
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0819edc26291345499ff76549e4868ca, type: 3}
 --- !u!4 &2064355935 stripped
@@ -4204,7 +4278,7 @@ Transform:
   - {fileID: 1723395966}
   - {fileID: 2107267803}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2107267802
 PrefabInstance:
