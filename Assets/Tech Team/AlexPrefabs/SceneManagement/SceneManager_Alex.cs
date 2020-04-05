@@ -7,21 +7,15 @@ using UnityEngine.UI;
 public class SceneManager_Alex : MonoBehaviour
 {
     GameObject Player;
-    public GameObject Gauge;
     public Image black;
     public Animator animator;
     string currentScene;
-    private Gauges_Alex GaugesScript;
     
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player"); //Find Player
         currentScene = SceneManager.GetActiveScene().name; // get active scene build index
         
-        if (currentScene != "MainMenu(Yingying)") // Do this if NOT in Main Menu
-        {
-            GaugesScript = Gauge.GetComponent<Gauges_Alex>();
-        }
         if (currentScene == "MainMenu(Yingying)") // Do this if in Main Menu
         {
             Cursor.visible = true;
@@ -79,13 +73,6 @@ public class SceneManager_Alex : MonoBehaviour
     public void Play()
     {
         StartCoroutine(LoadingScene());
-    }
-    public void FinishTutorial()
-    {
-        if(GaugesScript.waterGauge.fillAmount == 1f)
-        {
-            StartCoroutine(LoadingScene());
-        }
     }
 
 
