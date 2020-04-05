@@ -49,7 +49,9 @@ public class CameraCollision_Joseph : MonoBehaviour
     }
     public void HeightSlider(float height)
     {
-        // target.transform.position = new Vector3 (transform.position.x, height, transform.position.z);
+        // Vector3 adjustHeight;
+        // adjustHeight = new Vector3 (target.transform.position.x, height, 0.0f);
+        // target.transform.position = adjustHeight;
     }
     
 }
