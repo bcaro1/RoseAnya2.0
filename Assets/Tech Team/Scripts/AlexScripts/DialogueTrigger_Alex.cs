@@ -15,14 +15,16 @@ public class DialogueTrigger_Alex : MonoBehaviour
     public GameObject Player;
     [Header("Variables")]
     public bool hasPlayer; // is the player in a npc's radius?
+    public PlayerMovement PlayerMovementScript;
     #endregion
 
     #region Private
-    public PlayerMovement PlayerMovementScript;
+    private Animator anim;
     #endregion
 
     private void Awake()
     {
+        // anim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
     }
