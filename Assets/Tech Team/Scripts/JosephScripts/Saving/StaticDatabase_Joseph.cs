@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class StaticDatabase_Joseph
 {
@@ -16,6 +17,8 @@ public static class StaticDatabase_Joseph
     private static GameObject enemy;
 
     private static Item_Joseph item;
+
+    private static Sprite background;
 
     public static int Water
     {
@@ -288,6 +291,19 @@ public static class StaticDatabase_Joseph
         set
         {
             item = value;
+        }
+    }
+
+    public static Sprite BackGround
+    {
+        get
+        {
+            return background;
+        }
+
+        set
+        {
+            background = value;
         }
     }
 }

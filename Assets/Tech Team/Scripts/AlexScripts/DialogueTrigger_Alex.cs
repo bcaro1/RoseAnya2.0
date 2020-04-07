@@ -15,14 +15,17 @@ public class DialogueTrigger_Alex : MonoBehaviour
     public GameObject Player;
     [Header("Variables")]
     public bool hasPlayer; // is the player in a npc's radius?
+    public PlayerMovement PlayerMovementScript;
     #endregion
 
     #region Private
-    public PlayerMovement PlayerMovementScript;
+    private Animator anim;
+    private bool playerTalking;
     #endregion
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
     }
@@ -41,7 +44,9 @@ public class DialogueTrigger_Alex : MonoBehaviour
         switch (this.gameObject.tag)
         {
             case "Fisherman1":
+
                 flowchart.ExecuteBlock("Intro Dialogue"); // we execute the named block within the flowchart.
+                Talking();
                 break;
             case "Fisherman2":
                 flowchart.ExecuteBlock("Fisherman2"); // we execute the named block within the flowchart.
@@ -83,6 +88,19 @@ public class DialogueTrigger_Alex : MonoBehaviour
         }
     }
 
+    public void Talking()
+    {
+        playerTalking = flowchart.GetBooleanVariable("playerTalking");
+
+        if (playerTalking)
+        {
+            anim.SetBool("isTalking", true);
+        }
+        else
+        {
+            anim.SetBool("isTalking", false);
+        }
+    }
     public void FreezePlayer()
     {
         PlayerMovementScript.canMove = false;

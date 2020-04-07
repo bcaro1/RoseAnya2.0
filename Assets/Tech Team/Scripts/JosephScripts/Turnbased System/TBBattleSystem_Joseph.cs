@@ -24,7 +24,8 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     public Button[] ActionButtons;
     public GameObject MagicMenu;
     public Button[] MagicButtons;
-    public int MagicCost = 5;
+    public int MagicCost = 2;
+    public Image BG;
     #endregion
 
     #region Private
@@ -41,6 +42,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         EnemyPrefab = StaticDatabase_Joseph.Enemy;
+        BG.sprite = StaticDatabase_Joseph.BackGround;
         AudioSource source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         source.Stop();
         StartCoroutine(SetupBattle());
