@@ -36,6 +36,10 @@ public class DialogueTrigger_Alex : MonoBehaviour
         { 
             Dialogue();
         }
+        if (hasPlayer)
+        {
+            Talking();
+        }
     }
 
     void Dialogue() 
@@ -77,6 +81,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 break;
             case "Jimothy":
                 flowchart.ExecuteBlock("Jimothy"); // we execute the named block within the flowchart.
+                Talking();
                 break;
             case "Jeanie":
                 flowchart.ExecuteBlock("Jeanie"); // we execute the named block within the flowchart.
