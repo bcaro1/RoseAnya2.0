@@ -20,7 +20,6 @@ public class Gauges_Alex : MonoBehaviour
     #region Private
     private GameObject element; // Element that's child of Player
     private ElementController_Joseph ElementControllerScript;
-    private int fillMax;
     #endregion
 
     void Awake()
@@ -33,37 +32,36 @@ public class Gauges_Alex : MonoBehaviour
 
     private void Start()
     {
-        fillMax = StaticDatabase_Joseph.MaxMana;
-        UpdateGauges();
+        StartCoroutine(FirstUpdate());
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Absorb") || Input.GetButtonDown("Interact"))
-        {
-            UpdateGauges(); // Updates only when player is absorbing / interacting
-        }
-
         fireGauge.fillAmount = fireFill;
         earthGauge.fillAmount = earthFill;
         waterGauge.fillAmount = waterFill;
         airGauge.fillAmount = airFill;
-
     }
 
     void UpdateGauges()
     {
         // Converting number to float between 0-1
-        fireFill = ElementControllerScript.Fire / 12f;
-        earthFill = ElementControllerScript.Earth / 12f;
-        waterFill = ElementControllerScript.Water / 12f;
-        airFill = ElementControllerScript.Wind / 12f;
-
+        fireFill = (float) ElementControllerScript.Fire / StaticDatabase_Joseph.MaxMana;
+        earthFill = (float) ElementControllerScript.Earth / StaticDatabase_Joseph.MaxMana;
+        waterFill = (float) ElementControllerScript.Water / StaticDatabase_Joseph.MaxMana;
+        airFill = (float) ElementControllerScript.Wind / StaticDatabase_Joseph.MaxMana;
         // Stores previous fill amount
         // This is used in PlayerParticleEffects_Alex
         currFireFill = fireFill;
         currEarthFill = earthFill;
         currWaterFill = waterFill;
         currAirFill = airFill;
+    }
+
+    IEnumerator FirstUpdate()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+
+        UpdateGauges();
     }
 }

@@ -14,8 +14,13 @@ public class CameraCollision_Joseph : MonoBehaviour
 
     #region Private
     private Vector3 DollyDir;
+    private GameObject target;
     #endregion
 
+    void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag("Target");
+    }
     void Start()
     {
         DollyDir = transform.localPosition.normalized;
@@ -38,4 +43,16 @@ public class CameraCollision_Joseph : MonoBehaviour
 
         transform.localPosition = Vector3.Lerp(transform.localPosition, DollyDir * Distance, Time.deltaTime * Smooth);
     }
+    public void DistanceSlider(float dist)
+    {
+        MaxDistance = dist;
+    }
+    public void HeightSlider(float height)
+    {
+        // Vector3 adjustHeight;
+        // adjustHeight = new Vector3 (target.transform.position.x, height, 0.0f);
+        // target.transform.position = adjustHeight;
+    }
+    
 }
+
