@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     #region Public
-    public bool canMove, onGround;
-    public AudioSource walkSound; //This is the sound for walking
+    public bool canMove, onGround, isWalking;
     public Animator anim;
     public float turnSmoothTime, speedSmoothTime;
     public float walkSpeed;
@@ -64,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
 
             Walking();
-
             Jumping();
             DoubleJumping();
             Gliding();
@@ -76,19 +74,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
-            if (!walkSound.isPlaying && onGround)
-            {
-                walkSound.Play();
-            }
-            if (!onGround) 
-            {
-                walkSound.Pause();
-            }
+
+            if (onGround) { isWalking = true; } // using this bool for Sounds_Alex
+            if (!onGround) { isWalking = false; }
         }
-        else
-        {
-            walkSound.Pause();
-        }
+        else { isWalking = false; }
     }
 
     void Jumping()

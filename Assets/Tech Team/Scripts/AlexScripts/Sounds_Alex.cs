@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Sounds_Alex : MonoBehaviour
 {
+    public AudioSource walkSound; //This is the sound for walking
     public AudioSource StrengthSound;
     public AudioSource WaterAbsorbSound;
     public AudioSource WaterDisperseSound;
     public AudioSource FireAbsorbSound;
     public AudioSource FireDisperseSound;
+    public bool soundToggle;
 
     private GameObject Player;
+    private PlayerMovement MovementScript;
     private Strength_Alex StrengthScript;
     private Gauges_Alex GaugesScript; // Gauge script
     private GameObject Gauge;
@@ -18,14 +21,30 @@ public class Sounds_Alex : MonoBehaviour
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player");
+        MovementScript = Player.GetComponent<PlayerMovement>();
         StrengthScript = Player.GetComponent<Strength_Alex>();
         Gauge = GameObject.FindGameObjectWithTag("Gauge"); // Grabs Gauge
         GaugesScript = Gauge.GetComponent<Gauges_Alex>(); // Grabs script on Gauge
+
+        // VARIABLES //
+        soundToggle = true;
     }
 
     void Update()
     {
-        PlayStrength();
+        if (soundToggle)
+        {
+            PlayStrength();
+            PlayWalking(); 
+        }
+    }
+    void PlayWalking()
+    {
+        if ((!walkSound.isPlaying) && (MovementScript.isWalking))
+        {
+            walkSound.Play();
+        }
+        else { walkSound.Pause(); }
     }
     void PlayStrength()
     {

@@ -26,16 +26,18 @@ public class PauseMenu : MonoBehaviour
     #endregion
 
     #region Private
-    AudioSource PlayerAudio;
     CameraFollow_Joseph CameraFollowScript;
     private Color maroon;
+    private GameObject SoundPlayer;
+    private Sounds_Alex SoundsScript;
     #endregion
 
     void Awake()
     {
         // REFERENCES //
         CameraFollowScript = CameraBase.GetComponent<CameraFollow_Joseph>();
-        PlayerAudio = Player.GetComponent<AudioSource>();
+        SoundPlayer = GameObject.FindGameObjectWithTag("SoundPlayer");
+        SoundsScript = SoundPlayer.GetComponent<Sounds_Alex>();
 
         // VARIABLES //
         maroon = new Color32(145,1,1,255);
@@ -93,37 +95,4 @@ public class PauseMenu : MonoBehaviour
     {
         CameraFollowScript.InputSensitivity = newSpeed;
     }
-
-
-
-
-
-
-    // public void Sound()
-    // {
-    //     if (PlayerAudio.volume > 0f)
-    //     {
-    //         PlayerAudio.volume = 0f;
-    //     }
-    //     else
-    //     {
-    //         PlayerAudio.volume = 0.645f; // Hardcoded, will change @AH
-    //     }
-    // }
-    // public void Music()
-    // {
-
-    //     if (VillageMusic.volume > 0f || ForestMusic.volume > 0f)
-    //     {
-    //         VillageMusic.volume = 0f;
-    //         ForestMusic.volume = 0f;
-    //     }
-    //     else
-    //     {
-    //         VillageMusic.volume = MusicSound_Alex.AudioVolume;
-    //         ForestMusic.volume = MusicSound_Alex.AudioVolume;
-    //     }
-
-    // }
-
 }

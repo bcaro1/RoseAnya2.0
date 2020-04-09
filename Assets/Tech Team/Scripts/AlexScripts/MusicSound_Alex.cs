@@ -7,10 +7,10 @@ public class MusicSound_Alex : MonoBehaviour
 {
     #region Private
     private AudioSource PlayerAudio;
-    private GameObject Player;
+    private GameObject Player, SoundPlayer;
     private float prevAudioVolume;
     private string currentScene;
-    public static float AudioVolume = 1f;
+    private Sounds_Alex SoundsScript;
     #endregion
 
     #region Public
@@ -19,6 +19,8 @@ public class MusicSound_Alex : MonoBehaviour
     public AudioSource ForestMusic;
     public AudioSource CaveMusic;
     public AudioSource CastleMusic;
+
+    public static float AudioVolume = 1f;
     #endregion
 
     void Awake()
@@ -30,7 +32,11 @@ public class MusicSound_Alex : MonoBehaviour
             // REFERENCES //
             Player = GameObject.FindGameObjectWithTag("Player");
             PlayerAudio = Player.GetComponent<AudioSource>();
+            SoundPlayer = GameObject.FindGameObjectWithTag("SoundPlayer");
+            SoundsScript = SoundPlayer.GetComponent<Sounds_Alex>();
         }
+
+
         if ((!MenuMusic.isPlaying) && currentScene == "MainMenu(Yingying)") // Village Only
         {
             MenuMusic.Play();
@@ -62,14 +68,8 @@ public class MusicSound_Alex : MonoBehaviour
     }
     public void SoundToggle()
     {
-        if (PlayerAudio.volume > 0f)
-        {
-            PlayerAudio.volume = 0f;
-        }
-        else
-        {
-            PlayerAudio.volume = 0.645f; //Hardcoded, need to change @AH
-        }
+        if (SoundsScript.soundToggle) { SoundsScript.soundToggle = false; }
+        else { SoundsScript.soundToggle = true; }
     }
     public void MusicToggle()
     {
