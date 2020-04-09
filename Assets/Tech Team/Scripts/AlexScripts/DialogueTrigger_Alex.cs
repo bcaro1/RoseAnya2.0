@@ -20,7 +20,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     #region Private
     private Animator anim;
-    private bool playerTalking;
+    private bool playerTalking, checkEndConvo;
     #endregion
 
     private void Awake()
@@ -35,65 +35,93 @@ public class DialogueTrigger_Alex : MonoBehaviour
         if (hasPlayer && Input.GetButtonDown("Interact"))
         { 
             Dialogue();
+            checkEndConvo = true;
         }
         if (hasPlayer)
         {
-            Talking();
+            if (checkEndConvo) { EndConvo(); } // Only want to run this when the player interacts with an NPC. Or else it will throw an error.
         }
+        
     }
 
     void Dialogue() 
     {
-        FreezePlayer();
+        // FreezePlayer();
         switch (this.gameObject.tag)
         {
             case "Fisherman1":
-
+                StartConvo();
                 flowchart.ExecuteBlock("Intro Dialogue"); // we execute the named block within the flowchart.
-                Talking();
                 break;
             case "Fisherman2":
+                StartConvo();            
                 flowchart.ExecuteBlock("Fisherman2"); // we execute the named block within the flowchart.
                 break;
             case "Doctor":
+                StartConvo();   
                 flowchart.ExecuteBlock("Doctor"); // we execute the named block within the flowchart.
                 break;
             case "Chef":
+                StartConvo();   
                 flowchart.ExecuteBlock("Chef"); // we execute the named block within the flowchart.
                 break;
             case "SpiceMerchant":
+                StartConvo();   
                 flowchart.ExecuteBlock("Spice Merchant"); // we execute the named block within the flowchart.
                 break;
             case "Fisherman3":
+                StartConvo();
                 flowchart.ExecuteBlock("Fisherman3"); // we execute the named block within the flowchart.
                 break;
             case "BookMerchant":
+                StartConvo();
                 flowchart.ExecuteBlock("Book Merchant"); // we execute the named block within the flowchart.
                 break;
             case "Painter":
+                StartConvo();
                 flowchart.ExecuteBlock("Painter"); // we execute the named block within the flowchart.
                 break;
             case "WineSeller":
+                StartConvo();
                 flowchart.ExecuteBlock("Wine Seller"); // we execute the named block within the flowchart.
                 break;
             case "Elderly1":
+                StartConvo();
                 flowchart.ExecuteBlock("Elderly1"); // we execute the named block within the flowchart.
                 break;
             case "Jimothy":
+                StartConvo();
                 flowchart.ExecuteBlock("Jimothy"); // we execute the named block within the flowchart.
                 Talking();
                 break;
             case "Jeanie":
+                StartConvo();
                 flowchart.ExecuteBlock("Jeanie"); // we execute the named block within the flowchart.
                 break;
             case "Hero":
+                StartConvo();
                 flowchart.ExecuteBlock("Hero2"); // we execute the named block within the flowchart.
                 break;
             
         }
     }
-
-    public void Talking()
+    public void StartConvo()
+    {
+        FreezePlayer(); // Freeze Player
+        anim.SetBool("isTalking", true); // Run NPC Talking Animation
+        flowchart.SetBooleanVariable("playerTalking", true); // Run Player Talking Animation
+    }
+    public void EndConvo()
+    {   
+        if (flowchart.SelectedBlock.ActiveCommand == null)
+        {
+            UnfreezePlayer(); // Unfreeze Player
+            anim.SetBool("isTalking", false); // Stop NPC Talking Animation
+            flowchart.SetBooleanVariable("playerTalking", false); // Stop Player Talking Animation
+            checkEndConvo = false;
+        }   
+    }
+    public void Talking() // Not using
     {
         playerTalking = flowchart.GetBooleanVariable("playerTalking");
 
