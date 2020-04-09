@@ -7,7 +7,7 @@ using Fungus; // access to fungus
 public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
-    public GameObject Checkpoint, CollectFish;
+    public GameObject Checkpoint, CollectFish, Camera;
     public Flowchart flowchart; // calls the flowchart.
     #endregion
     #region Private
@@ -29,6 +29,7 @@ public class StoryManagement_Alex : MonoBehaviour
         if (JimothyQuest == 2 && JeanieQuest == 1 || JimothyQuest == 2 && JeanieQuest == 2) 
         {
             Player.transform.position = Checkpoint.transform.position;
+            Camera.transform.position = Checkpoint.transform.position;
         }
         if (JimothyQuest == 2 && JeanieQuest == 2 && LearnQuest == 2 && ChickenQuest == 1)
         {
