@@ -69,7 +69,7 @@ public class Barrier_Alex : MonoBehaviour, ElementHolder_Joseph
         }
         else
         {
-            updatedY = transform.position.y - 2f;
+            updatedY = transform.position.y - 20f;
         }
 
         if(!Up)
