@@ -43,8 +43,6 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         EnemyPrefab = StaticDatabase_Joseph.Enemy;
         BG.sprite = StaticDatabase_Joseph.BackGround;
-        AudioSource source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
-        source.Stop();
         StartCoroutine(SetupBattle());
     }
 
