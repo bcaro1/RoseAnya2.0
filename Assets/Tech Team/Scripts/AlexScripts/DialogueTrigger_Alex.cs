@@ -92,7 +92,6 @@ public class DialogueTrigger_Alex : MonoBehaviour
             case "Jimothy":
                 StartConvo();
                 flowchart.ExecuteBlock("Jimothy"); // we execute the named block within the flowchart.
-                Talking();
                 break;
             case "Jeanie":
                 StartConvo();
@@ -102,7 +101,106 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 StartConvo();
                 flowchart.ExecuteBlock("Hero2"); // we execute the named block within the flowchart.
                 break;
-            
+            case "PotionSeller":
+                StartConvo();
+                flowchart.ExecuteBlock("PotionSeller"); // we execute the named block within the flowchart.
+                break;
+            case "Elderly2":
+                StartConvo();
+                flowchart.ExecuteBlock("Elderly2"); // we execute the named block within the flowchart.
+                break;
+            case "Elderly3":
+                StartConvo();
+                flowchart.ExecuteBlock("Elderly3"); // we execute the named block within the flowchart.
+                break;
+            case "JMother":
+                StartConvo();
+                flowchart.ExecuteBlock("JMother"); // we execute the named block within the flowchart.
+                break;
+            case "JFather":
+                StartConvo();
+                flowchart.ExecuteBlock("JFather"); // we execute the named block within the flowchart.
+                break;
+            case "JSis":
+                StartConvo();
+                flowchart.ExecuteBlock("Jsis"); // we execute the named block within the flowchart.
+                break;
+            case "CoopMan":
+                StartConvo();
+                flowchart.ExecuteBlock("CoopMan"); // we execute the named block within the flowchart.
+                break;
+            case "FruitMerchant1":
+                StartConvo();
+                flowchart.ExecuteBlock("FruitMerchant1"); // we execute the named block within the flowchart.
+                break;
+            case "FruitMerchant2":
+                StartConvo();
+                flowchart.ExecuteBlock("FruitMerchant2"); // we execute the named block within the flowchart.
+                break;
+            case "Portobello":
+                StartConvo();
+                flowchart.ExecuteBlock("Portobello"); // we execute the named block within the flowchart.
+                break;
+            case "Student1":
+                StartConvo();
+                flowchart.ExecuteBlock("Student1"); // we execute the named block within the flowchart.
+                break;
+            case "Mayor":
+                StartConvo();
+                flowchart.ExecuteBlock("Mayor"); // we execute the named block within the flowchart.
+                break;
+            case "Chicken":
+                StartConvo();
+                flowchart.ExecuteBlock("Chicken"); // we execute the named block within the flowchart.
+                break;
+            case "Busy1":
+                StartConvo();
+                flowchart.ExecuteBlock("BusyNpc1"); // we execute the named block within the flowchart.
+                break;
+            case "Busy2":
+                StartConvo();
+                flowchart.ExecuteBlock("BusyNpc2"); // we execute the named block within the flowchart.
+                break;
+            case "Student2":
+                StartConvo();
+                flowchart.ExecuteBlock("Student2"); // we execute the named block within the flowchart.
+                break;
+            case "OutsideKid":
+                StartConvo();
+                flowchart.ExecuteBlock("OutsideKid1"); // we execute the named block within the flowchart.
+                break;
+            case "OutsideKid2":
+                StartConvo();
+                flowchart.ExecuteBlock("OutsideKid2"); // we execute the named block within the flowchart.
+                break;
+            case "OutsideKid3":
+                StartConvo();
+                flowchart.ExecuteBlock("OutsideKid3"); // we execute the named block within the flowchart.
+                break;
+            case "HotelKeeper":
+                StartConvo();
+                flowchart.ExecuteBlock("Innkeeper"); // we execute the named block within the flowchart.
+                break;
+            case "Student3":
+                StartConvo();
+                flowchart.ExecuteBlock("Student3"); // we execute the named block within the flowchart.
+                break;
+            case "Student4":
+                StartConvo();
+                flowchart.ExecuteBlock("Student4"); // we execute the named block within the flowchart.
+                break;
+            case "Mafioso":
+                StartConvo();
+                flowchart.ExecuteBlock("Mafioso"); // we execute the named block within the flowchart.
+                break;
+            case "Teacher":
+                StartConvo();
+                flowchart.ExecuteBlock("Teacher"); // we execute the named block within the flowchart.
+                break;
+            case "InvisibleBookNote":
+                StartConvo();
+                flowchart.ExecuteBlock("BookNote1"); // we execute the named block within the flowchart.
+                break;
         }
     }
     public void StartConvo()
