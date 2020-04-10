@@ -47041,6 +47041,35 @@ CapsuleCollider:
   m_Height: 0.096016765
   m_Direction: 1
   m_Center: {x: 0, y: 0.040190235, z: -0.00414228}
+--- !u!114 &672013470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3153047023107261658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727902115d1d6439890d37c1ea997087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animNPC: {fileID: 8291273795930102707}
+  agent: {fileID: 0}
+--- !u!114 &672013471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3153047023107261658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f09016820bcbfc40b954776c072e791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PatrolWaiting: 0
+  TotalWaitTime: 3
+  Radius: 3
 --- !u!114 &6404174305825267151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47092,35 +47121,6 @@ NavMeshAgent:
   m_BaseOffset: -0.005
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &672013470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3153047023107261658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727902115d1d6439890d37c1ea997087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animNPC: {fileID: 8291273795930102707}
-  agent: {fileID: 0}
---- !u!114 &672013471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3153047023107261658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f09016820bcbfc40b954776c072e791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PatrolWaiting: 0
-  TotalWaitTime: 3
-  Radius: 3
 --- !u!135 &6404174305189124819
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -51189,7 +51189,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 60a098062b60d7d4bb89bd6580803840, type: 2}
+      objectReference: {fileID: 2100000, guid: 938b6e38e1bac2041b15e438bba45858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
 --- !u!4 &7240957589951821164 stripped
@@ -51754,6 +51754,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Busy1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -52781,7 +52786,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 60a098062b60d7d4bb89bd6580803840, type: 2}
+      objectReference: {fileID: 2100000, guid: 938b6e38e1bac2041b15e438bba45858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
 --- !u!4 &920639167112852877 stripped
@@ -53310,7 +53315,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 973f2b8d4d3a90e4da09cb1902f1a296, type: 2}
+      objectReference: {fileID: 2100000, guid: bcc7a564c85920245ba644664971eed0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
 --- !u!4 &2133165082236719417 stripped
@@ -53840,7 +53845,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
+      objectReference: {fileID: 2100000, guid: 938b6e38e1bac2041b15e438bba45858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
 --- !u!1 &1306613825694784018 stripped
@@ -54500,7 +54505,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 60a098062b60d7d4bb89bd6580803840, type: 2}
+      objectReference: {fileID: 2100000, guid: bcc7a564c85920245ba644664971eed0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
 --- !u!1 &1590536360237867163 stripped
@@ -54793,6 +54798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Busy2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
