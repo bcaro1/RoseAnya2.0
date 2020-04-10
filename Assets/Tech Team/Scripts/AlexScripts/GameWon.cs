@@ -14,9 +14,12 @@ public class GameWon : MonoBehaviour
     public GameObject Credits1Panel;
     public GameObject Credits2Panel;
     public GameObject Credits3Panel;
+    public GameObject SceneManager;
+    private SceneManager_Alex SceneManagerScript;
     void Awake()
     {
         StartCoroutine(Title());
+        SceneManagerScript = SceneManager.GetComponent<SceneManager_Alex>(); // Grabs movement script attached to Player
     }
 
     void Update()
@@ -71,7 +74,7 @@ public class GameWon : MonoBehaviour
         StartCoroutine(FadeOut());
         yield return new WaitForSeconds (2.0f);
         Credits3Panel.SetActive(false);
-        // StartCoroutine(Credits2());
+        SceneManagerScript.LoadMenu();
     }
     public IEnumerator FadeOut()
     {

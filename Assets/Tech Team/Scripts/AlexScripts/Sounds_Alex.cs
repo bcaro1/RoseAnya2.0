@@ -42,7 +42,7 @@ public class Sounds_Alex : MonoBehaviour
     {
         if ((!walkSound.isPlaying) && (MovementScript.isWalking))
         {
-            walkSound.Play();
+            // walkSound.Play();
         }
         else { walkSound.Pause(); }
     }

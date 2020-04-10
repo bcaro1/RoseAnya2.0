@@ -20,14 +20,27 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     #region Private
     private Animator anim;
-    private bool playerTalking, checkEndConvo, IntroDialogue_doOnce;
+    public GameObject NPCUI;
+    private bool playerTalking, checkEndConvo, IntroDialogue_doOnce, EndDialogue_doOnce;
     #endregion
 
-    private void Awake()
+    void Awake()
     {
+        // REFERENCES //
         anim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
+        NPCUI = GameObject.FindGameObjectWithTag("npcUI"); // Grabs NPC UI
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
+
+        // VARIABLES //
+        playerTalking = false;
+        checkEndConvo = false;
+        IntroDialogue_doOnce = false; 
+        EndDialogue_doOnce = false;
+    }
+    void Start()
+    {
+        NPCUI.SetActive(false);
     }
 
     private void Update()
@@ -40,12 +53,13 @@ public class DialogueTrigger_Alex : MonoBehaviour
         if (hasPlayer)
         {
             IntroDialogue();
-            if (checkEndConvo) { EndConvo(); } // Only want to run this when the player interacts with an NPC. Or else it will throw an error.
+            EndDialogue();
+            // if (checkEndConvo) { EndConvo(); } // Only want to run this when the player interacts with an NPC. Or else it will throw an error.
         }
         
     }
 
-    void Dialogue() 
+    void Dialogue()
     {
         // FreezePlayer();
         switch (this.gameObject.tag)
@@ -98,7 +112,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 StartConvo();
                 flowchart.ExecuteBlock("Jeanie");
                 break;
-            case "Hero":
+            case "Hero2":
                 StartConvo();
                 flowchart.ExecuteBlock("Hero2");
                 break;
@@ -212,13 +226,13 @@ public class DialogueTrigger_Alex : MonoBehaviour
     }
     public void EndConvo()
     {   
-        if (flowchart.SelectedBlock.ActiveCommand == null)
-        {
+        // if (flowchart.SelectedBlock.ActiveCommand == null)
+        // {
             UnfreezePlayer(); // Unfreeze Player
             anim.SetBool("isTalking", false); // Stop NPC Talking Animation
             flowchart.SetBooleanVariable("playerTalking", false); // Stop Player Talking Animation
             checkEndConvo = false;
-        }   
+        // }   
     }
     public void Talking() // Not using
     {
@@ -252,7 +266,25 @@ public class DialogueTrigger_Alex : MonoBehaviour
             IntroDialogue_doOnce = true;
         }
     }
+    public void EndDialogue()
+    {
+        if ((this.gameObject.tag == "Hero") && (!EndDialogue_doOnce))
+        {
+            checkEndConvo = true;
+            StartConvo();
+            flowchart.ExecuteBlock("Hero2");
+            EndDialogue_doOnce = true;
+        }
+    }
     void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) // if the player is in NPC's radius
+        {
+            hasPlayer = true;
+            NPCUI.SetActive(true);
+        }
+    }
+    void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player")) // if the player is in NPC's radius
         {
@@ -264,6 +296,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
         if (other.CompareTag("Player")) // if the player is out of NPC's radius
         {
             hasPlayer = false;
+            NPCUI.SetActive(false);
         }
     }
 }
