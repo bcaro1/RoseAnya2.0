@@ -76,16 +76,16 @@ public class Barrier_Alex : MonoBehaviour, ElementHolder_Joseph
         {
             while(transform.position.y > updatedY)
             {
-                transform.position += Vector3.up * -5 * Time.deltaTime;
-                yield return new WaitForSecondsRealtime(.1f);
+                transform.position += Vector3.up * -8 * Time.deltaTime;
+                yield return new WaitForSecondsRealtime(.01f);
             }
         }
         else
         {
             while (transform.position.y < updatedY)
             {
-                transform.position += Vector3.up * 5 * Time.deltaTime;
-                yield return new WaitForSecondsRealtime(.1f);
+                transform.position += Vector3.up * 8 * Time.deltaTime;
+                yield return new WaitForSecondsRealtime(.01f);
             }
         }
 
