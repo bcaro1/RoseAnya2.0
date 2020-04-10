@@ -55,7 +55,7 @@ public class MusicSound_Alex : MonoBehaviour
         }
         if ((!CastleMusic.isPlaying) && currentScene == "Castle Scene") // Castle Only
         {
-            CaveMusic.Play();
+            CastleMusic.Play();
         }
     }
     void Update()
