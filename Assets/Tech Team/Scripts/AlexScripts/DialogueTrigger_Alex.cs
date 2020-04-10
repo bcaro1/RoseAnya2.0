@@ -54,7 +54,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
         {
             IntroDialogue();
             EndDialogue();
-            if (checkEndConvo) { EndConvo(); } // Only want to run this when the player interacts with an NPC. Or else it will throw an error.
+            // if (checkEndConvo) { EndConvo(); } // Only want to run this when the player interacts with an NPC. Or else it will throw an error.
         }
         
     }
@@ -226,13 +226,13 @@ public class DialogueTrigger_Alex : MonoBehaviour
     }
     public void EndConvo()
     {   
-        if (flowchart.SelectedBlock.ActiveCommand == null)
-        {
+        // if (flowchart.SelectedBlock.ActiveCommand == null)
+        // {
             UnfreezePlayer(); // Unfreeze Player
             anim.SetBool("isTalking", false); // Stop NPC Talking Animation
             flowchart.SetBooleanVariable("playerTalking", false); // Stop Player Talking Animation
             checkEndConvo = false;
-        }   
+        // }   
     }
     public void Talking() // Not using
     {
