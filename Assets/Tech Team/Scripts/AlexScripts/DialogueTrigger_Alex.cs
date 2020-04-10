@@ -33,6 +33,8 @@ public class DialogueTrigger_Alex : MonoBehaviour
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
 
         // VARIABLES //
+        playerTalking = false;
+        checkEndConvo = false;
         IntroDialogue_doOnce = false; 
         EndDialogue_doOnce = false;
     }
