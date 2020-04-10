@@ -59,7 +59,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
         
     }
 
-    void Dialogue() 
+    void Dialogue()
     {
         // FreezePlayer();
         switch (this.gameObject.tag)
@@ -282,6 +282,13 @@ public class DialogueTrigger_Alex : MonoBehaviour
         {
             hasPlayer = true;
             NPCUI.SetActive(true);
+        }
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player")) // if the player is in NPC's radius
+        {
+            hasPlayer = true;
         }
     }
     private void OnTriggerExit(Collider other)
