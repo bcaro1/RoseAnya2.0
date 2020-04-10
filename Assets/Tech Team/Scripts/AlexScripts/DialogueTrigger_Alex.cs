@@ -20,14 +20,19 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     #region Private
     private Animator anim;
-    private bool playerTalking, checkEndConvo, IntroDialogue_doOnce;
+    private bool playerTalking, checkEndConvo, IntroDialogue_doOnce, EndDialogue_doOnce;
     #endregion
 
     private void Awake()
     {
+        // REFERENCES //
         anim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
+
+        // VARIABLES //
+        IntroDialogue_doOnce = false; 
+        EndDialogue_doOnce = false;
     }
 
     private void Update()
@@ -40,6 +45,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
         if (hasPlayer)
         {
             IntroDialogue();
+            EndDialogue();
             if (checkEndConvo) { EndConvo(); } // Only want to run this when the player interacts with an NPC. Or else it will throw an error.
         }
         
@@ -98,7 +104,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 StartConvo();
                 flowchart.ExecuteBlock("Jeanie");
                 break;
-            case "Hero":
+            case "Hero2":
                 StartConvo();
                 flowchart.ExecuteBlock("Hero2");
                 break;
@@ -250,6 +256,16 @@ public class DialogueTrigger_Alex : MonoBehaviour
             StartConvo();
             flowchart.ExecuteBlock("Intro Dialogue"); 
             IntroDialogue_doOnce = true;
+        }
+    }
+    public void EndDialogue()
+    {
+        if ((this.gameObject.tag == "Hero") && (!EndDialogue_doOnce))
+        {
+            checkEndConvo = true;
+            StartConvo();
+            flowchart.ExecuteBlock("Hero2");
+            EndDialogue_doOnce = true;
         }
     }
     void OnTriggerEnter(Collider other)
