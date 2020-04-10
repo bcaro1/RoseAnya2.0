@@ -26,7 +26,7 @@ public class StoryManagement_Alex : MonoBehaviour
         LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
         ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
 
-        if (JimothyQuest == 2 && JeanieQuest == 1 || JimothyQuest == 2 && JeanieQuest == 2) 
+        if (JimothyQuest > 0 ) 
         {
             Player.transform.position = Checkpoint.transform.position;
             Camera.transform.position = Checkpoint.transform.position;
