@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 3477944918cf099428e296809fbcc010,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1636,11 +1636,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jimothy
       objectReference: {fileID: 0}
-    - target: {fileID: 3153047021609012499, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5057981186684013336, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
@@ -1655,6 +1650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedCommands.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153047021609012499, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6967937538270828515, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -1684,6 +1684,11 @@ PrefabInstance:
     - target: {fileID: 4115281808506065071, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709303090450340027, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 231163200133651712, guid: 72a70313966f548b5a575b71cc2a4c2d,
@@ -3548,7 +3553,7 @@ MonoBehaviour:
   BattleSystem: {fileID: 2326316453305214755, guid: 1d7e4a32d6ac38144aa543b96f76edda,
     type: 3}
   Enemy: {fileID: 6434437996533223345, guid: 300b55d2cdaf6480087368b6312137bc, type: 3}
-  Background: {fileID: 0}
+  Background: {fileID: 21300000, guid: 089c1fb3f2dc043afbf43fd065c3b334, type: 3}
 --- !u!33 &1490672354608695090
 MeshFilter:
   m_ObjectHideFlags: 0
