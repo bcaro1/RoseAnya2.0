@@ -20,19 +20,25 @@ public class DialogueTrigger_Alex : MonoBehaviour
 
     #region Private
     private Animator anim;
+    public GameObject NPCUI;
     private bool playerTalking, checkEndConvo, IntroDialogue_doOnce, EndDialogue_doOnce;
     #endregion
 
-    private void Awake()
+    void Awake()
     {
         // REFERENCES //
         anim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
+        NPCUI = GameObject.FindGameObjectWithTag("npcUI"); // Grabs NPC UI
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
 
         // VARIABLES //
         IntroDialogue_doOnce = false; 
         EndDialogue_doOnce = false;
+    }
+    void Start()
+    {
+        NPCUI.SetActive(false);
     }
 
     private void Update()
@@ -273,6 +279,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
         if (other.CompareTag("Player")) // if the player is in NPC's radius
         {
             hasPlayer = true;
+            NPCUI.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -280,6 +287,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
         if (other.CompareTag("Player")) // if the player is out of NPC's radius
         {
             hasPlayer = false;
+            NPCUI.SetActive(false);
         }
     }
 }
