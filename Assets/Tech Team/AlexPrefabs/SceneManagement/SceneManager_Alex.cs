@@ -69,6 +69,28 @@ public class SceneManager_Alex : MonoBehaviour
         yield return new WaitUntil(() => black.color.a == 1);
         SceneManager.LoadScene("Loading");
     }
+    public IEnumerator Building1()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene("Building1");
+    }
+    public IEnumerator Building2()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene("Building2");
+    }
+    public IEnumerator Building3()
+    {
+        animator.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene("Building3");
+    }
+
+
+
+    // POST GAME //
     public IEnumerator GameWon()
     {
         animator.SetBool("Fade", true);

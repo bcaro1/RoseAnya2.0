@@ -31,7 +31,6 @@ public class SceneChanger_Alex : MonoBehaviour
   public void LoadingScene()
   {
     SceneManagerScript.StartCoroutine("LoadingScene");
-    
   }
   public void BedroomScene()
   {
@@ -53,6 +52,20 @@ public class SceneChanger_Alex : MonoBehaviour
   {
     SceneManagerScript.StartCoroutine("CastleScene");
   }
+  public void Building1Scene()
+  {
+    SceneManagerScript.StartCoroutine("Building1");
+  }
+  public void Building2Scene()
+  {
+    SceneManagerScript.StartCoroutine("Building2");
+  }
+  public void Building3Scene()
+  {
+    SceneManagerScript.StartCoroutine("Building3");
+  }
+
+
   public void LoadTravelMenu()
   {
     Cursor.visible = true;
@@ -98,6 +111,27 @@ public class SceneChanger_Alex : MonoBehaviour
         VillageScene();
       }
     }
+    if (this.gameObject.tag == "Building1")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        Building1Scene();
+      }
+    }
+    if (this.gameObject.tag == "Building2")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        Building2Scene();
+      }
+    }
+    if (this.gameObject.tag == "Building3")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        Building3Scene();
+      }
+    }
     if (this.gameObject.tag == "TravelMenu")
     {
       if (other.CompareTag("Player"))
@@ -112,13 +146,13 @@ public class SceneChanger_Alex : MonoBehaviour
       }
     }
   }
-      void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player")) // if the player is out of radius
-        {
-            canvasUI.SetActive(false);
-        }
-    }
+  void OnTriggerExit(Collider other)
+  {
+      if (other.CompareTag("Player")) // if the player is out of radius
+      {
+          canvasUI.SetActive(false);
+      }
+  }
 
 
 }
