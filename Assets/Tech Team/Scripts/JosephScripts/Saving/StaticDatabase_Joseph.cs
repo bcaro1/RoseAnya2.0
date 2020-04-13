@@ -20,6 +20,8 @@ public static class StaticDatabase_Joseph
 
     private static Sprite background;
 
+    private static List<Item_Joseph> items;
+
     public static int Water
     {
         get
@@ -161,6 +163,16 @@ public static class StaticDatabase_Joseph
         set
         {
             currenthp = value;
+
+            if (currenthp > hp)
+            {
+                currenthp = hp;
+            }
+
+            if (OnElementChangedCallback != null)
+            {
+                OnElementChangedCallback.Invoke();
+            }
         }
     }
 
@@ -304,6 +316,19 @@ public static class StaticDatabase_Joseph
         set
         {
             background = value;
+        }
+    }
+
+    public static List<Item_Joseph> Items
+    {
+        get
+        {
+            return items;
+        }
+
+        set
+        {
+            items = value;
         }
     }
 }

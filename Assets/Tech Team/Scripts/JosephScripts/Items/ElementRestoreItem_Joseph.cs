@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Element Restoration Item", menuName = "Inventory/Element")]
+[System.Serializable]
+[CreateAssetMenu(fileName = "New Element Restoration Item", menuName = "Inventory/ElementRestoreItem")]
 public class ElementRestoreItem_Joseph : Item_Joseph
 {
     public ElementSlot Element;
@@ -24,6 +25,9 @@ public class ElementRestoreItem_Joseph : Item_Joseph
             case ElementSlot.Fire:
                 StaticDatabase_Joseph.Fire += ElementRestoreAmount;
                 break;
+            case ElementSlot.Health:
+                StaticDatabase_Joseph.CurrentHP += ElementRestoreAmount;
+                break;
             default:
                 break;
         }
@@ -31,4 +35,4 @@ public class ElementRestoreItem_Joseph : Item_Joseph
     }
 }
 
-public enum ElementSlot { Water, Wind, Earth, Fire}
+public enum ElementSlot { Water, Wind, Earth, Fire, Health}

@@ -12,6 +12,16 @@ public class Inventory_Joseph : MonoBehaviour
     public int Space = 15;
     #endregion
 
+    private void Start()
+    {
+        OnItemChangedCallback += UpdateItemBackup;
+
+        if(!(StaticDatabase_Joseph.Items.Count == 0))
+        {
+            Items = StaticDatabase_Joseph.Items;
+        }
+    }
+
     private void Awake()
     {
         if(Instance != null)
@@ -44,5 +54,10 @@ public class Inventory_Joseph : MonoBehaviour
             OnItemChangedCallback.Invoke();
         }
         Items.Remove(Item);
+    }
+
+    private void UpdateItemBackup()
+    {
+        StaticDatabase_Joseph.Items = Items;
     }
 }
