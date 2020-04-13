@@ -29,7 +29,7 @@ public class DataManager_Joseph : MonoBehaviour
         Data.EarthAmount = StaticDatabase_Joseph.Earth;
         Data.FireAmount = StaticDatabase_Joseph.Fire;
         Data.QuestNumber = StaticDatabase_Joseph.CurrentQuest;
-
+        Data.Items = StaticDatabase_Joseph.Items;
 
         string FileName = Data.CharacterName + ".json";
         string json = JsonUtility.ToJson(Data);
@@ -52,6 +52,7 @@ public class DataManager_Joseph : MonoBehaviour
         StaticDatabase_Joseph.Earth = Data.EarthAmount;
         StaticDatabase_Joseph.Fire = Data.FireAmount;
         StaticDatabase_Joseph.CurrentQuest = Data.QuestNumber;
+        StaticDatabase_Joseph.Items = Data.Items;
     }
 
     private void WriteToFile(string FilePath, string json)

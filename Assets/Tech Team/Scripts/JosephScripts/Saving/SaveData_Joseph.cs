@@ -16,4 +16,5 @@ public class SaveData_Joseph
     public int FireAmount;
 
     public int QuestNumber;
+    public List<Item_Joseph> Items;
 }

@@ -31,7 +31,7 @@ public class RPGController_Joseph : MonoBehaviour
             HP = 20;
             CurrentHP = 20;
             Attack = 15;
-            MaxMana = 10;
+            MaxMana = 16;
             MagicAttack = 15;
             StaticDatabase_Joseph.Level = Level;
             StaticDatabase_Joseph.HP = HP;
@@ -42,6 +42,7 @@ public class RPGController_Joseph : MonoBehaviour
         }
 
         CalculateEXPToNextLevel(Level);
+        StaticDatabase_Joseph.OnElementChangedCallback += UpdateCurrentHealth;
     }
 
     public bool GetEXP(int experience)
@@ -74,6 +75,11 @@ public class RPGController_Joseph : MonoBehaviour
     private void CalculateEXPToNextLevel(int Level)
     {
         EXPToNextLevel = Mathf.RoundToInt(0.04f * (Mathf.Pow(Level, 3)) + 0.8f * (Mathf.Pow(Level, 2)) + 2 * Level);
+    }
+
+    private void UpdateCurrentHealth()
+    {
+        CurrentHP = StaticDatabase_Joseph.CurrentHP;
     }
 
     private void CalculateStatChanges()

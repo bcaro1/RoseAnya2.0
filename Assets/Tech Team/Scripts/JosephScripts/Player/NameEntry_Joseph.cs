@@ -7,6 +7,7 @@ using TMPro;
 public class NameEntry_Joseph : MonoBehaviour
 {
     #region Public
+    public GameObject Textbox;
     public TMP_InputField NameInput;
     public TextMeshProUGUI ErrorText;
     #endregion
@@ -30,7 +31,7 @@ public class NameEntry_Joseph : MonoBehaviour
         {
             StaticDatabase_Joseph.CharacterName = NameInput.text;
             PlayerPrefs.SetString("CurrentFile", StaticDatabase_Joseph.CharacterName + ".json");
-            Debug.Log(StaticDatabase_Joseph.CharacterName);
+            Destroy(Textbox);
         }
     }
 }

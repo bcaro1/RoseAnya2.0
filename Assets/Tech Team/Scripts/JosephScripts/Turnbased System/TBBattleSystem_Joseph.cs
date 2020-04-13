@@ -23,8 +23,9 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     public string[] EnemyDialogue;
     public Button[] ActionButtons;
     public GameObject MagicMenu;
+    public GameObject ItemMenu;
     public Button[] MagicButtons;
-    public int MagicCost = 2;
+    public int MagicCost = 4;
     public Image BG;
     #endregion
 
@@ -115,6 +116,15 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         }
     }
 
+    IEnumerator UseItem()
+    {
+        DialogueText.text = "You use an item to recover some energy.";
+        PlayerHUD.SetHP(StaticDatabase_Joseph.CurrentHP);
+        PlayerUnit.CurrentHP = StaticDatabase_Joseph.CurrentHP;
+        yield return new WaitForSecondsRealtime(2f);
+        StartCoroutine(EnemyTurn());
+    }
+
     IEnumerator EnemyTurn()
     {
         for (int i = 0; i < ActionButtons.Length; i++)
@@ -127,7 +137,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         bool IsDead = PlayerUnit.TakeDamage(EnemyUnit.Damage);
-
+        StaticDatabase_Joseph.CurrentHP = PlayerUnit.CurrentHP;
         PlayerHUD.SetHP(PlayerUnit.CurrentHP);
 
         if(IsDead)
@@ -268,6 +278,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
             return;
         }
         MagicMenu.SetActive(false);
+        ItemMenu.SetActive(false);
         StartCoroutine(PlayerAttack(0, false));
     }
 
@@ -284,29 +295,65 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         }
         else
         {
+            ItemMenu.SetActive(false);
             MagicMenu.SetActive(true);
+
+
             if (MagicCost > StaticDatabase_Joseph.Water)
             {
                 MagicButtons[0].interactable = false;
             }
+            else
+            {
+                MagicButtons[0].interactable = true;
+            }
+
             if (MagicCost > StaticDatabase_Joseph.Wind)
             {
                 MagicButtons[1].interactable = false;
             }
+            else
+            {
+                MagicButtons[1].interactable = true;
+            }
+
             if (MagicCost > StaticDatabase_Joseph.Earth)
             {
                 MagicButtons[2].interactable = false;
             }
+            else
+            {
+                MagicButtons[2].interactable = true;
+            }
+
             if (MagicCost > StaticDatabase_Joseph.Fire)
             {
                 MagicButtons[3].interactable = false;
+            }
+            else
+            {
+                MagicButtons[3].interactable = true;
             }
         }
     }
 
     public void OnItemButton()
     {
-        MagicMenu.SetActive(false);
+
+        if(State != BattleState.PLAYERTURN)
+        {
+            return;
+        }
+        
+        if(ItemMenu.activeSelf)
+        {
+            ItemMenu.SetActive(false);
+        }
+        else
+        {
+            MagicMenu.SetActive(false);
+            ItemMenu.SetActive(true);
+        }
     }
 
     public void OnRunButton()
@@ -358,6 +405,12 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         MagicMenu.SetActive(false);
         StaticDatabase_Joseph.Fire -= MagicCost;
         StartCoroutine(PlayerAttack(4, true));
+    }
+
+    public void OnItemUse()
+    {
+        ItemMenu.SetActive(false);
+        StartCoroutine(UseItem());
     }
 
 }
