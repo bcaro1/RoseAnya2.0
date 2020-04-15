@@ -7,12 +7,12 @@ using Fungus; // access to fungus
 public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
-    public GameObject Checkpoint, CollectFish, Camera;
+    public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB;
     public Flowchart flowchart; // calls the flowchart.
     #endregion
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
-    private GameObject Player;    
+    private GameObject Player, FishingMinigame;    
     #endregion
     void Awake()
     {
@@ -35,5 +35,11 @@ public class StoryManagement_Alex : MonoBehaviour
         {
             CollectFish.SetActive(true);
         }
+    }
+    public void LaunchFishing()
+    {
+        GameObject newMinigame = Instantiate(FishingMinigamePREFAB);
+        FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
+        FishingMinigame.SetActive(true);
     }
 }
