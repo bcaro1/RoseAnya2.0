@@ -11,6 +11,7 @@ public class SceneChanger_Alex : MonoBehaviour
   public Flowchart flowchart; // calls the flowchart.
   public GameObject canvasUI;
   public GameObject TravelMenuUI;
+  public GameObject TravelMenuUI_ForestButton;
   public GameObject TravelMenuUI_CaveButton;
   public GameObject TravelMenuUI_CastleButton;
   #endregion
@@ -70,6 +71,7 @@ public class SceneChanger_Alex : MonoBehaviour
   {
     Cursor.visible = true;
     Cursor.lockState = CursorLockMode.None;
+    canvasUI.SetActive(false);
 
     JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
     JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
@@ -77,7 +79,7 @@ public class SceneChanger_Alex : MonoBehaviour
     ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
     HeroQuest = flowchart.GetIntegerVariable("HeroQuest");
     
-    if (JimothyQuest > 0) { TravelMenuUI.SetActive(true); }
+    if (JimothyQuest > 0) { TravelMenuUI.SetActive(true); TravelMenuUI_ForestButton.SetActive(true);}
     if (JeanieQuest > 0) { TravelMenuUI_CaveButton.SetActive(true); }
     if (HeroQuest > 0) { TravelMenuUI_CastleButton.SetActive(true); }
   }
@@ -136,13 +138,20 @@ public class SceneChanger_Alex : MonoBehaviour
     {
       if (other.CompareTag("Player"))
       {
-        canvasUI.SetActive(true);
-
         if (Input.GetButtonDown("Interact")) 
         {
-          canvasUI.SetActive(false);
           LoadTravelMenu();
         }
+      }
+    }
+  }
+  void OnTriggerEnter(Collider other)
+  {
+    if (this.gameObject.tag == "TravelMenu")
+    {
+      if (other.CompareTag("Player"))
+      {
+        canvasUI.SetActive(true);
       }
     }
   }
