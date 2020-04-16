@@ -13,11 +13,13 @@ public class StoryManagement_Alex : MonoBehaviour
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
     private GameObject Player, FishingMinigame;    
+    private PlayerMovement PlayerMovementScript;
     #endregion
     void Awake()
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
     }
     void Start()
     {
@@ -38,6 +40,7 @@ public class StoryManagement_Alex : MonoBehaviour
     }
     public void LaunchFishing()
     {
+        PlayerMovementScript.canMove = false;
         GameObject newMinigame = Instantiate(FishingMinigamePREFAB);
         FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
         FishingMinigame.SetActive(true);

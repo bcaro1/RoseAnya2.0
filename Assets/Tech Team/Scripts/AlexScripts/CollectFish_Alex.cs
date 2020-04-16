@@ -13,9 +13,6 @@ public class CollectFish_Alex : MonoBehaviour
     #region Private
 
     #endregion
-
-
-    
     void Awake()
     {
 

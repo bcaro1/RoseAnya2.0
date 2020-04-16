@@ -5,16 +5,20 @@ using UnityEngine.UI;
 public class MinigameManager : MonoBehaviour
 {
     #region Public
-    public GameObject FishingMinigame;
-    public PlayerMovement PlayerMovementScript;
-    public GameObject Player;
+    public GameObject FishingMinigame, Player, CollectFish;
     public static int score = 0;
+    #endregion
+
+    #region Private
+    private PlayerMovement PlayerMovementScript;
+    private CollectFish_Alex CollectFishScript;
     #endregion
     void Awake()
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
+        CollectFishScript = CollectFish.GetComponent<CollectFish_Alex>();
 
         // VARIABLES //
         score = 0;
@@ -25,7 +29,6 @@ public class MinigameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(score);
         GameWon();
     }
 
@@ -40,7 +43,7 @@ public class MinigameManager : MonoBehaviour
     {
         if (score == 15)
         {
-            Debug.Log("Give fish");
+            CollectFishScript.hasFish = true;
             PlayerMovementScript.canMove = true;
             FishingMinigame.SetActive(false);
             Destroy(gameObject);
