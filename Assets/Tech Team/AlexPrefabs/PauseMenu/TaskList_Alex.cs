@@ -6,14 +6,18 @@ using Fungus; // access to fungus
 
 public class TaskList_Alex : MonoBehaviour
 {
-    string[] tasksText; //Text for the tasks
+    #region Public
     public Text[] CtextBoxes; //Completed - Text UI
     public Text[] IPtextBoxes; //In Progress - Text UI
     public GameObject CompletedText; //Completed text
-    int[] tasks;
-    public int TASK_JimothyQuest, TASK_JeanieQuest, TASK_LearnQuest, TASK_ChickenQuest, TASK_HeroQuest;
     public Flowchart flowchart; // calls the flowchart.
+    #endregion
 
+    #region Private
+    private string[] tasksText; //Text for the tasks
+    private int[] tasks;
+    private int TASK_JimothyQuest, TASK_JeanieQuest, TASK_LearnQuest, TASK_ChickenQuest, TASK_HeroQuest;
+    #endregion
 
     /////***  IMPORTANT ***/////
     // 0 = NOT STARTED
@@ -65,6 +69,8 @@ public class TaskList_Alex : MonoBehaviour
             TASK_ChickenQuest,              //3
             TASK_HeroQuest                  //4
         };
+        
+        BuildTaskList();
     }
     public void BuildTaskList()
     {
