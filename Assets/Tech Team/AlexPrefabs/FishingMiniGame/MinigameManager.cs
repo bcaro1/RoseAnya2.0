@@ -6,6 +6,7 @@ public class MinigameManager : MonoBehaviour
 {
     #region Public
     public GameObject FishingMinigame, Player, CollectFish;
+    public GameObject ChickenEnemy;
     public static int score = 0;
     #endregion
 
@@ -46,6 +47,7 @@ public class MinigameManager : MonoBehaviour
             CollectFishScript.hasFish = true;
             PlayerMovementScript.canMove = true;
             FishingMinigame.SetActive(false);
+            ChickenEnemy.SetActive(true);
             Destroy(gameObject);
         }
 

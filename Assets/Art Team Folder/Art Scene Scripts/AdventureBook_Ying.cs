@@ -14,12 +14,17 @@ public class AdventureBook_Ying : MonoBehaviour
     public GameObject[] pagesArray = new GameObject[7];
     public int curPage = 0;
     public GameObject bookUI;
+    public static bool giveBook;
     #endregion
 
     #region Private
     private bool IsPaused = false;
     #endregion
 
+    void Awake()
+    {
+        giveBook = false;
+    }
     void Start()
     {
         // Instatiate the pages to true/false
@@ -31,19 +36,26 @@ public class AdventureBook_Ying : MonoBehaviour
         // }
     }
 
+    void GiveBookAccess() // This is called in Fungus
+    {
+        giveBook = true;
+    }
     void Update()
     {
-        if (Input.GetButtonDown("Book")) 
-       {
-           if (IsPaused)
-           {
-               Resume();
-           }
-           else
-           {
-               Pause();
-           }
-       }
+        if (giveBook)
+        {
+            if (Input.GetButtonDown("Book")) 
+            {
+                if (IsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
+            }
+        }
     }
     public void Resume()
     {
@@ -74,8 +86,6 @@ public class AdventureBook_Ying : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-
-
 
     // increment page
     public void NextPage()

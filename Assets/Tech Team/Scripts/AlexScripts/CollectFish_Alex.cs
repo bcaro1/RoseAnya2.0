@@ -7,6 +7,7 @@ public class CollectFish_Alex : MonoBehaviour
     #region Public
     public GameObject textUI;
     public GameObject ChickenEnemy;
+    public GameObject fishingMinigame;
     public bool hasFish;
     #endregion
 
@@ -31,9 +32,8 @@ public class CollectFish_Alex : MonoBehaviour
 
             if (Input.GetButtonDown("Interact")) 
             {
-                hasFish = true;
+                fishingMinigame.SetActive(true);
                 textUI.SetActive(false);
-                ChickenEnemy.SetActive(true);
             }
         }
     }
