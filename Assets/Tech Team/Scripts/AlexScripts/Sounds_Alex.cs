@@ -55,18 +55,18 @@ public class Sounds_Alex : MonoBehaviour
     }
     public void AbsorbFire()
     {
-        FireAbsorbSound.Play();
+        if (!FireAbsorbSound.isPlaying) { FireAbsorbSound.Play(); }
     }
     public void DischargeFire()
     {
-        FireDisperseSound.Play();
+        if (!FireDisperseSound.isPlaying) { FireDisperseSound.Play(); }
     }
     public void AbsorbWater()
     {
-        WaterAbsorbSound.Play();
+        if (!WaterAbsorbSound.isPlaying) { WaterAbsorbSound.Play(); }
     }
     public void DischargeWater()
     {
-        WaterDisperseSound.Play();
+        if (!WaterDisperseSound.isPlaying) { WaterDisperseSound.Play(); }
     }
 }

@@ -438,7 +438,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -534,7 +534,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -630,7 +630,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -726,7 +726,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -916,6 +916,7 @@ GameObject:
   - component: {fileID: 1184035618999547473}
   - component: {fileID: 3737877625493121150}
   - component: {fileID: 1531129587351667959}
+  - component: {fileID: 6617607938768801044}
   m_Layer: 0
   m_Name: Element
   m_TagString: Element
@@ -987,6 +988,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6617607938768801044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9103574526022961060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ffa62dfab3e441ca54c1131c66365e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundPlayer: {fileID: 8370508784468183812}
 --- !u!1001 &7939779301104741162
 PrefabInstance:
   m_ObjectHideFlags: 0
