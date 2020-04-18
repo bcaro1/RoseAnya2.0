@@ -32,9 +32,9 @@ public class ElementController_Joseph : MonoBehaviour
         Wind = StaticDatabase_Joseph.Wind;
         Earth = StaticDatabase_Joseph.Earth;
         Fire = StaticDatabase_Joseph.Fire;
-        UnlockedWind = StaticDatabase_Joseph.UnlockedWind;
-        UnlockedEarth = StaticDatabase_Joseph.UnlockedEarth;
-        UnlockedFire = StaticDatabase_Joseph.UnlockedFire;
+        UnlockedWind = true;
+        UnlockedEarth = true;
+        UnlockedFire = true;
 
         StaticDatabase_Joseph.OnElementChangedCallback += UpdateFromDatabase;
     }
