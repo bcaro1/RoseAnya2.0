@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PauseMenuUpdated : MonoBehaviour
 {
     #region Public
-    public GameObject sideMenuUI, pauseMenuUI, optionsMenuUI, controlsMenuUI;
+    public GameObject sideMenuUI, pauseMenuUI, optionsMenuUI, controlsMenuUI, confirmMenuUI;
     public GameObject Player, CameraBase;
 
     [Header("Hover Text")]
@@ -49,6 +49,7 @@ public class PauseMenuUpdated : MonoBehaviour
         pauseMenuUI.SetActive(false);
         optionsMenuUI.SetActive(false);
         controlsMenuUI.SetActive(false);
+        confirmMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
         IsPaused = false;
