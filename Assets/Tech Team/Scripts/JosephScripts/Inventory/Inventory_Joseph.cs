@@ -15,12 +15,14 @@ public class Inventory_Joseph : MonoBehaviour
     private void Start()
     {
         OnItemChangedCallback += UpdateItemBackup;
-
-        if(!(StaticDatabase_Joseph.Items.Count == 0))
-        {
-            Items = StaticDatabase_Joseph.Items;
-        }
+        LoadItems();
     }
+
+    private void Update()
+    {
+        Debug.Log(StaticDatabase_Joseph.Items.Count);
+    }
+
 
     private void Awake()
     {
@@ -58,6 +60,23 @@ public class Inventory_Joseph : MonoBehaviour
 
     private void UpdateItemBackup()
     {
-        StaticDatabase_Joseph.Items = Items;
+        StaticDatabase_Joseph.Items.Clear();
+
+        for(int i = 0; i < Items.Count; i++)
+        {
+            StaticDatabase_Joseph.Items.Add(Items[i]);
+        }
+    }
+
+    private void LoadItems()
+    {
+        int hold = StaticDatabase_Joseph.Items.Count;
+
+        for (int i = 0; i < hold; i++)
+        {
+            Items.Add(StaticDatabase_Joseph.Items[i]);
+
+        }
+        OnItemChangedCallback.Invoke();
     }
 }

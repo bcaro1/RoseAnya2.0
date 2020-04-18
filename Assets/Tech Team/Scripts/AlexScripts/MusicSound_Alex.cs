@@ -58,6 +58,40 @@ public class MusicSound_Alex : MonoBehaviour
             CastleMusic.Play();
         }
     }
+
+    private void OnEnable()
+    {
+        if ((!MenuMusic.isPlaying) && currentScene == "MainMenu(Yingying)") // Village Only
+        {
+            MenuMusic.Play();
+        }
+        if ((!VillageMusic.isPlaying) && currentScene == "RoseAnya(new)") // Village Only
+        {
+            VillageMusic.Play();
+        }
+        if ((!ForestMusic.isPlaying) && currentScene == "Forest Level") // Forest Only
+        {
+            ForestMusic.Play();
+        }
+        if ((!CaveMusic.isPlaying) && currentScene == "CaveScene") // Cave Only
+        {
+            CaveMusic.Play();
+        }
+        if ((!CastleMusic.isPlaying) && currentScene == "Castle Scene") // Castle Only
+        {
+            CastleMusic.Play();
+        }
+    }
+
+    private void OnDisable()
+    {
+        MenuMusic.Stop();
+        VillageMusic.Stop();
+        ForestMusic.Stop();
+        CaveMusic.Stop();
+        CastleMusic.Stop();
+    }
+
     void Update()
     {
         VillageMusic.volume = AudioVolume;
@@ -66,11 +100,13 @@ public class MusicSound_Alex : MonoBehaviour
         CaveMusic.volume = AudioVolume;
         CastleMusic.volume = AudioVolume;
     }
+
     public void SoundToggle()
     {
         if (SoundsScript.soundToggle) { SoundsScript.soundToggle = false; }
         else { SoundsScript.soundToggle = true; }
     }
+
     public void MusicToggle()
     {
         if (AudioVolume > 0f)
@@ -83,6 +119,7 @@ public class MusicSound_Alex : MonoBehaviour
             AudioVolume = prevAudioVolume;
         }
     }
+
     public void VolumeSlider(float vol)
     {
         AudioVolume = vol;

@@ -42,6 +42,5 @@ public class InventorySlot_Joseph : MonoBehaviour
     {
         StaticDatabase_Joseph.Item = Item;
         DescriptionText.text = Item.Name + " - " + Item.Description;
-        Debug.Log("TEST");
     }
 }
