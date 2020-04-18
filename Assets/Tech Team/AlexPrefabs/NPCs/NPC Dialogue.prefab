@@ -947,7 +947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6404174306904750024}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7220367134273990908
 MonoBehaviour:
@@ -1871,11 +1871,9 @@ GameObject:
   - component: {fileID: 6436859311684445691}
   - component: {fileID: 3112345630264616181}
   - component: {fileID: 1395202780978588433}
-  - component: {fileID: 2657970213814327158}
   - component: {fileID: 4926120269974648560}
   - component: {fileID: 1216472370048790817}
   - component: {fileID: 5469097017903422072}
-  - component: {fileID: 8939216151022064611}
   - component: {fileID: 1514660254196178925}
   - component: {fileID: 3173450712167683456}
   - component: {fileID: 5627410662284890766}
@@ -2692,6 +2690,8 @@ GameObject:
   - component: {fileID: 803446349723491501}
   - component: {fileID: 8668679550628429538}
   - component: {fileID: 2976977467354702548}
+  - component: {fileID: 7777807416021282273}
+  - component: {fileID: 1916197359217181701}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Flowchart
@@ -2738,9 +2738,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 4871141503082640600}
+  - {fileID: 678974337954231719}
   selectedCommands:
-  - {fileID: 5211401837309065750}
+  - {fileID: 7218403541460040150}
   variables:
   - {fileID: 1040294943305376102}
   - {fileID: 3404613996966430764}
@@ -3526,7 +3526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 1
-  storyText: "Yeah, Jim\xF0thy.  He\u2019s still lingering around here somewhere...You
+  storyText: "Yeah, Jimothy.  He\u2019s still lingering around here somewhere...You
     may want to ask his family where."
   description: 
   character: {fileID: 5685523644382969005}
@@ -3554,7 +3554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 1
-  storyText: "Jim\xF0thy the Wizard?"
+  storyText: Jimothy the Wizard?
   description: 
   character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
@@ -3581,8 +3581,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 1
-  storyText: "You might have a better chance of finding out if you ask Jim\xF0thy.
-    The Wizard."
+  storyText: You might have a better chance of finding out if you ask Jimothy. The
+    Wizard.
   description: 
   character: {fileID: 5685523644382969005}
   portrait: {fileID: 0}
@@ -3841,7 +3841,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7314221336979484046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3868,7 +3868,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &634105588747236622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,8 +4011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2321.425
-    y: -54.117878
+    x: -2317.594
+    y: -52.2024
     width: 120.87268
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4121,7 +4121,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1295717496078637529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4203,7 +4203,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8620873323834042848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4230,7 +4230,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1036732080681425222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4257,7 +4257,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5223969736660565962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4285,7 +4285,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2363676086581286166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4300,7 +4300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 57
   indentLevel: 1
-  storyText: Yeah. I was wondering what you knew about Jimothy or becoming a fish?
+  storyText: "Yeah. I was wondering what you knew about Jim\U000F7AF9 or becoming
+    a fish?"
   description: 
   character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
@@ -4312,7 +4313,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1344391451541484566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4339,7 +4340,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3963914266483048213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4366,7 +4367,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6795788101248479646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4394,7 +4395,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2100168332070810846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4421,7 +4422,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3213905462550012145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,7 +4449,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5455792215107628977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,7 +4476,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7574250878761462897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4554,8 +4555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2038.9441
-    y: -45.297523
+    x: -2044.6907
+    y: -43.382046
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4625,7 +4626,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2702616185419662212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4652,7 +4653,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1107593850682605118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4679,7 +4680,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2196005109554150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4707,7 +4708,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3524391384974461287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4734,7 +4735,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1768284318443071524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4761,7 +4762,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &9159139456985587962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4788,7 +4789,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6631889699251459942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4815,7 +4816,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8117830910554316524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4842,7 +4843,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8033929444370687341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4933,7 +4934,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8890529099898268752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4960,7 +4961,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1658440392106752905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4987,7 +4988,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &265903014131943019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5002,8 +5003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1911.4437
-    y: -51.162872
+    x: -1922.9369
+    y: -45.41644
     width: 141.94293
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -5132,7 +5133,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2085918000864349361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5147,7 +5148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 85
   indentLevel: 1
-  storyText: Alright, thank you.
+  storyText: Hm...alright, thank you. Fascinating.
   description: 
   character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
@@ -5159,7 +5160,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8166150913364729541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5186,7 +5187,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6699077415247335681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5214,7 +5215,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1504884794996549840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5229,7 +5230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 88
   indentLevel: 1
-  storyText: When you become a fish?
+  storyText: When you became a fish?
   description: 
   character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
@@ -5241,7 +5242,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1335490160583014064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5268,7 +5269,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2996143112675130563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5295,7 +5296,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3570444421279253823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5322,7 +5323,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3908065486039483194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5349,7 +5350,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6422194907117864923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5377,7 +5378,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3609755289355483365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5405,7 +5406,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3217759860267644507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5496,7 +5497,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &257549824807329716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5523,7 +5524,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7612119570446860157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5550,7 +5551,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3693427641757187708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5578,7 +5579,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7687533721677816399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5605,7 +5606,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4109813070395857973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5633,7 +5634,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7841820665119038103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5648,8 +5649,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 109
   indentLevel: 0
-  storyText: "Can\u2019t complain.\r\nSo do you know anything about Jim\xF0thy? Or
-    what happened to turn you into fish?"
+  storyText: "Can\u2019t complain.\r\nSo do you know anything about Jimothy? Or what
+    happened to turn you into fish?"
   description: 
   character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
@@ -5661,7 +5662,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2171697073640300414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5688,7 +5689,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &637896425625129761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10152,8 +10153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2465.4314
-    y: 42.180584
+    x: -2457.7693
+    y: 44.09606
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10244,11 +10245,11 @@ MonoBehaviour:
   - {fileID: 3112345630264616181}
   - {fileID: 4741779154027944370}
   - {fileID: 4020278114987899092}
-  - {fileID: 2657970213814327158}
-  - {fileID: 1395202780978588433}
   - {fileID: 1216472370048790817}
+  - {fileID: 1395202780978588433}
+  - {fileID: 7777807416021282273}
   - {fileID: 4926120269974648560}
-  - {fileID: 8939216151022064611}
+  - {fileID: 1916197359217181701}
   - {fileID: 5469097017903422072}
   - {fileID: 8502371349178375170}
   - {fileID: 889007760479966566}
@@ -10308,7 +10309,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4958026993562215995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10335,7 +10336,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5626425799940053744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10362,7 +10363,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5757415187753231970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10389,7 +10390,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4947717075905734699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10480,7 +10481,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1159807842597141134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10507,7 +10508,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6069031654874729663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10534,7 +10535,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6637103549447624964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10562,7 +10563,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8227994020331881273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10589,7 +10590,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4226058038252011596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10616,7 +10617,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2717220825540344885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10644,7 +10645,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6330825042163781890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10671,7 +10672,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7233466341567538813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10686,7 +10687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 297
   indentLevel: 1
-  storyText: "Jim\xF0thy?! IS THAT YOU?"
+  storyText: Jimothy?! IS THAT YOU?
   description: 
   character: {fileID: 6404174305897532635}
   portrait: {fileID: 0}
@@ -10698,7 +10699,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3237688355715320121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10725,7 +10726,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4051946072473009480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10753,7 +10754,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4818605148163656697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10780,7 +10781,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5389200338230693259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10808,7 +10809,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4412458266788708663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10836,7 +10837,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4771203322072071804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10863,7 +10864,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2828037492218526772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10890,7 +10891,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6965803556968346650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10917,7 +10918,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7100322089148343147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10944,7 +10945,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1627963021631076754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10971,7 +10972,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &189298797934132676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10998,7 +10999,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6666478420873716454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11025,7 +11026,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2659413513089913019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11052,7 +11053,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &168678120033860197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11079,7 +11080,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2621539181839205120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11106,7 +11107,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3078934962497009833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11135,7 +11136,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4538696006164265060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11162,7 +11163,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &629183890960142756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11189,7 +11190,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1462320580008385188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11217,7 +11218,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &952051956660646086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11244,7 +11245,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1250164670540755729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11271,7 +11272,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6137033656004373243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11298,7 +11299,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1914927721342522213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11325,7 +11326,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7273671871930367568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11352,7 +11353,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2899232324031871593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11379,7 +11380,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8471348378576809195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11407,7 +11408,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5832236332368789710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11434,7 +11435,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4876373481647978226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11461,7 +11462,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4558196280090394123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11488,7 +11489,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7681045437378744614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11515,7 +11516,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3338212649102487120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11542,7 +11543,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1170749230096196728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11570,7 +11571,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &9198555367939931733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11598,7 +11599,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7689446533409426987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11625,7 +11626,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8536142902873919731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11652,7 +11653,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4331745703747594618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11679,7 +11680,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2073091147970793481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11706,7 +11707,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &187614235707186167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11733,7 +11734,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8509644474734939202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11760,7 +11761,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &570971961623257424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11787,7 +11788,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7010771720613220555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11814,7 +11815,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6698809317320233210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11841,7 +11842,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3107175860724825435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11868,7 +11869,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8262662417571800543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11895,7 +11896,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2750402298108482794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11922,7 +11923,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4926814847266356681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11950,7 +11951,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8113966840043391204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11977,7 +11978,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5508634576916587908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12004,7 +12005,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1656240945130413710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12031,7 +12032,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1481969943319852252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12058,7 +12059,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3484568556416484552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12085,7 +12086,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4909112065961370470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12113,7 +12114,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8927730641906312455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12140,7 +12141,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8685388354109473748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12167,7 +12168,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &678974337954231719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12268,7 +12269,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4553556627236754156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12295,7 +12296,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &247838090420570084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12322,7 +12323,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2994000492737241530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12349,7 +12350,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5942851025595345225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12377,7 +12378,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2518162082080933255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12405,7 +12406,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &9139030408904036942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12433,7 +12434,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5336071517377137406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12461,7 +12462,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2706003475294889103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12488,7 +12489,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5116462836670246451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12515,7 +12516,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3948571726941534106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12543,7 +12544,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &9174489906978175513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12570,7 +12571,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7738446634738756135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12597,7 +12598,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3853859900525988461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12625,7 +12626,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8661554069259362875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12652,7 +12653,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1536270985727145143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12679,7 +12680,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4017532586761900707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12706,7 +12707,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &668377589760844979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12733,7 +12734,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6043259423090721407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12748,7 +12749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 382
   indentLevel: 1
-  storyText: "Wait\u2026\r\nDid Jim\xF0thy send you? That spineless eel?\r"
+  storyText: "Wait\u2026\r\nDid Jimothy send you? That spineless eel?\r"
   description: 
   character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
@@ -12760,7 +12761,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &274264144729325183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12787,7 +12788,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7283793550271366211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12814,7 +12815,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2460600293540340711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12841,7 +12842,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5210596048783314331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12869,7 +12870,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6311366833881175356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12896,7 +12897,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8239653205955497834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12923,7 +12924,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &668058446475156799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13094,7 +13095,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1780042089103076999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13121,7 +13122,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4302340692537991243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13148,7 +13149,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3318346490061647453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13175,7 +13176,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4143807025475653835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13202,7 +13203,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3233829084772525740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13229,7 +13230,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8184018402935048017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13257,7 +13258,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4903750917922526545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13284,7 +13285,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7167097760376039616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13376,7 +13377,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2542166851587601013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13403,7 +13404,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3362928370991603647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13430,7 +13431,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8535280487922323352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13458,7 +13459,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2051761797938992925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13485,7 +13486,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7242780131404748576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13512,7 +13513,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1994439221081392972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13539,7 +13540,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &13079797037487541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13567,7 +13568,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7359768846731583210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13594,7 +13595,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5292177986329635248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13621,7 +13622,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2049305744257178563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13757,7 +13758,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4270796931284334399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13785,7 +13786,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5432585539783617651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13812,7 +13813,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8230459234468546662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13839,7 +13840,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5189982735736582859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13866,7 +13867,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5661378805310689430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13893,7 +13894,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2242642055932302830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13920,7 +13921,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1943203552750926397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13947,7 +13948,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5179835441101883527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13975,7 +13976,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &617989893556561902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14003,7 +14004,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7226364711188154132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14030,7 +14031,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8041974482949031973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14057,7 +14058,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7472639243777019250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15065,7 +15066,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2549756294318533474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15092,7 +15093,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4741779154027944370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15119,7 +15120,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5191295454267566830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15147,7 +15148,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3724850258924220894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15174,7 +15175,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6761259158915817647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15201,7 +15202,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6385078178380299722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15229,7 +15230,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8561407609590608241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15256,7 +15257,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7532652468891230644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15284,7 +15285,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4020278114987899092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15312,7 +15313,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &889007760479966566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15339,7 +15340,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8502371349178375170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15366,7 +15367,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8055714291959373709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15393,7 +15394,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3914595378061502789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15420,7 +15421,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3922358989627678479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15447,7 +15448,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2256606755927434893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15475,7 +15476,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4200071093145845513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15502,7 +15503,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1513766560121315273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15529,7 +15530,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &9180819131833453256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15556,7 +15557,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4413399616234884020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15583,7 +15584,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6112779863785327536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15611,7 +15612,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8230237334960952217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18591,7 +18592,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4604772416287448768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18760,7 +18761,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8133298598448731529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18788,7 +18789,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3359151741450893552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18815,7 +18816,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2142241652928585485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18842,7 +18843,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4021542024930548251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18870,7 +18871,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8617067286808741560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19040,7 +19041,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &236994672703219361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19067,7 +19068,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1242423524502621349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19094,7 +19095,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7839397595522748807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19122,7 +19123,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1326144026369349061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19149,7 +19150,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3867842266354047131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19176,7 +19177,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8329555043974906791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19203,7 +19204,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7129813093704479102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19230,7 +19231,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &770530065973870281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19257,7 +19258,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4961001831099099589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19284,7 +19285,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &126489676258906231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19311,7 +19312,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3555720821314209168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19338,7 +19339,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8116304140405209302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19366,7 +19367,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2938454930865434828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19457,7 +19458,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &3274379079292893959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19484,7 +19485,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8212735872274779097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19512,7 +19513,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7334072670181843974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21678,7 +21679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2602.186
+    x: -2604.1016
     y: 31.421158
     width: 136.1965
     height: 40
@@ -21786,7 +21787,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1409255990973495948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21813,7 +21814,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7259708247021963129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21840,7 +21841,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &155749406066973457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21868,7 +21869,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &8065570073755531188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21923,7 +21924,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &8329266387041990907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22611,7 +22612,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1395202780978588433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22638,34 +22639,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &2657970213814327158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828021264282709891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1107
-  indentLevel: 1
-  storyText: Wait, he did? The ABSOLUTE MADMAN!
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4926120269974648560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22692,7 +22666,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1216472370048790817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22707,10 +22681,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1109
   indentLevel: 1
-  storyText: "I mean, he defeated the demon that was causing massive issues for everyone
-    on his own.\r\nThat\u2019s kind of impressive, all things considering."
+  storyText: Wait, he did? The ABSOLUTE MADMAN!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 2360306776178459531}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -22720,7 +22693,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5469097017903422072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22747,34 +22720,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &8939216151022064611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828021264282709891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1111
-  indentLevel: 1
-  storyText: No, but I have an idea of how to find out where it is.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1514660254196178925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22856,7 +22802,7 @@ MonoBehaviour:
   storyText: "I just put the barriers back up!\r\nUgh..Did you come to beat me up
     again?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -22866,7 +22812,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5627410662284890766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22893,7 +22839,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7218403541460040150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22920,7 +22866,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4329915102401675062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22938,7 +22884,7 @@ MonoBehaviour:
   storyText: "Mm, ha! You\u2019re not wrong.\r\nSadly, this time, however...I don\u2019t
     know.\r\nYou\u2019d be better off asking Jimothy."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -22948,7 +22894,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4733738832904676490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22975,7 +22921,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5893766297408303544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22992,7 +22938,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Why on earth would I know where he is?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23002,7 +22948,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6863247356445060418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23030,7 +22976,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &661961757665218330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23048,7 +22994,7 @@ MonoBehaviour:
   storyText: "Details, {i}details{/i}!\r\nForget about that. Just answer me this.\r\nWhat
     are you even doing back here again?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23075,7 +23021,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: Who knows what that little freak has up his sleeve?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23085,7 +23031,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2079530753032620333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23102,7 +23048,7 @@ MonoBehaviour:
   indentLevel: 1
   storyText: "Don\u2019t come back and break my barrier again!!"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 4424003840125114874}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -23112,7 +23058,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2220777708014041014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24178,7 +24124,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6743636697264432804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24205,7 +24151,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &803331701700222444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24232,7 +24178,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &4679826419408212713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24259,7 +24205,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5783430093897539934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24287,7 +24233,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1916789566253155220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24314,7 +24260,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3696770036075420708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24329,7 +24275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1181
   indentLevel: 1
-  storyText: Ah, found Jimothy, did you?
+  storyText: "Ah, found Jim\U000F7AF9othy, did you?"
   description: 
   character: {fileID: 775103610947623653}
   portrait: {fileID: 0}
@@ -24341,7 +24287,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2609793856327189470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24368,7 +24314,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5718391690524089802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24460,7 +24406,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7051844136510795308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24487,7 +24433,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1721090459806354415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24515,7 +24461,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &229919196157922510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24542,7 +24488,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &4447220563949132089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24557,7 +24503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1193
   indentLevel: 1
-  storyText: "I\u2019m sure someone like that exists."
+  storyText: "I\u2019m sure someone like that exists. {b}Somehow.{/b}"
   description: 
   character: {fileID: 775103610947623653}
   portrait: {fileID: 0}
@@ -24569,7 +24515,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2381059319347098414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24597,7 +24543,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &2227799580190990990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26731,7 +26677,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &3790474525096914746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26758,7 +26704,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7312370260940188684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26785,7 +26731,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &1893405601838214737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26812,7 +26758,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &1059384910937370992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26839,7 +26785,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5847514049186336080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26866,7 +26812,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &6418915462515088797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26893,7 +26839,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &535420377374070291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26922,7 +26868,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7748105697193881676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26949,7 +26895,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &7312942096873233189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26976,7 +26922,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5566932716196439141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27067,7 +27013,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &5149208645143623650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27094,7 +27040,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &9119969708377231870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27122,7 +27068,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2663197141794224171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27149,7 +27095,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &5237954414072455424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27176,7 +27122,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &7899812986494124724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27204,7 +27150,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &6092590883629445525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27231,7 +27177,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1357928132466253043}
 --- !u!114 &2957346721674914676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27259,7 +27205,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!114 &291218778354338707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46511,6 +46457,61 @@ MonoBehaviour:
   indentLevel: 1
   commenterName: 
   commentText: obtain book here
+--- !u!114 &7777807416021282273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2344
+  indentLevel: 1
+  storyText: "I mean, he defeated the demon that was causing massive issues for everyone
+    on his own.\r\nThat\u2019s kind of impressive, all things considering."
+  description: 
+  character: {fileID: 2360306776178459531}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 6404174305090260909}
+--- !u!114 &1916197359217181701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828021264282709891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2345
+  indentLevel: 1
+  storyText: No, but I have an idea of how to find out where it is.
+  description: 
+  character: {fileID: 2360306776178459531}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 6404174305090260909}
 --- !u!1 &1963494975298164261
 GameObject:
   m_ObjectHideFlags: 0
@@ -46690,7 +46691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6404174306904750024}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8166380826805140870
 MonoBehaviour:
@@ -46979,7 +46980,7 @@ RectTransform:
   - {fileID: 4364205875168971463}
   - {fileID: 8089386020512307573}
   m_Father: {fileID: 6404174306904750024}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -49192,7 +49193,7 @@ RectTransform:
   m_Children:
   - {fileID: 9203854284593727204}
   m_Father: {fileID: 6404174306904750024}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -49485,7 +49486,7 @@ RectTransform:
   m_Children:
   - {fileID: 6404174306521910475}
   m_Father: {fileID: 6404174306904750024}
-  m_RootOrder: 13
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -49927,7 +49928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6404174306904750024}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6404174305897532635
 MonoBehaviour:
@@ -49941,7 +49942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: PC
+  nameText: Me
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
@@ -50355,7 +50356,6 @@ Transform:
   - {fileID: 2326638881925288584}
   - {fileID: 2133165081966604739}
   - {fileID: 2628236873334532097}
-  - {fileID: 6404174305090260914}
   - {fileID: 6404174305897532636}
   - {fileID: 2490902870971001512}
   - {fileID: 7331059161115634168}
@@ -50390,6 +50390,7 @@ Transform:
   - {fileID: 8432224260395360662}
   - {fileID: 953370632739191155}
   - {fileID: 6597349485810464032}
+  - {fileID: 6404174305090260914}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51891,7 +51892,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -51920,15 +51921,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8f63416f9441c8e4f89c2bae88399db0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17074ef917a16c6428e522f5c1c0622a, type: 3}
---- !u!1 &8344946792124621600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
-    type: 3}
-  m_PrefabInstance: {fileID: 67230680816351785}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5013752390466752819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
+    type: 3}
+  m_PrefabInstance: {fileID: 67230680816351785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8344946792124621600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
     type: 3}
   m_PrefabInstance: {fileID: 67230680816351785}
   m_PrefabAsset: {fileID: 0}
@@ -51992,7 +51993,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -52128,7 +52129,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -52259,7 +52260,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -52390,7 +52391,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
@@ -52491,7 +52492,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -52627,7 +52628,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
@@ -52728,7 +52729,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -52923,15 +52924,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 938b6e38e1bac2041b15e438bba45858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!4 &7240957589951821164 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 2380073645564665462}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5919512531057624959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 2380073645564665462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7240957589951821164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 2380073645564665462}
   m_PrefabAsset: {fileID: 0}
@@ -52995,7 +52996,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -53024,15 +53025,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8df14064886379549b53cdb87c1d12a0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17074ef917a16c6428e522f5c1c0622a, type: 3}
---- !u!4 &7406571416440184497 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2572639199306134955}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5805760794917104802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2572639199306134955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7406571416440184497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
     type: 3}
   m_PrefabInstance: {fileID: 2572639199306134955}
   m_PrefabAsset: {fileID: 0}
@@ -53091,7 +53092,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -53155,15 +53156,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &6822185578925010295 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3282183724217758846}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7563263941372600164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3282183724217758846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6822185578925010295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 3282183724217758846}
   m_PrefabAsset: {fileID: 0}
@@ -53227,7 +53228,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
@@ -53261,15 +53262,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e267f9e835e29434e8501807907aaa4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b57799c09c45bc4cbd5db5716ed87e0, type: 3}
---- !u!4 &7685664101369253803 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
-    type: 3}
-  m_PrefabInstance: {fileID: 3445889271860274353}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6697889619825982904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3445889271860274353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7685664101369253803 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
     type: 3}
   m_PrefabInstance: {fileID: 3445889271860274353}
   m_PrefabAsset: {fileID: 0}
@@ -53328,7 +53329,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -53357,15 +53358,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8df14064886379549b53cdb87c1d12a0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17074ef917a16c6428e522f5c1c0622a, type: 3}
---- !u!1 &4854351056821097349 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3494779599069530764}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8432224260395360662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3494779599069530764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4854351056821097349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
     type: 3}
   m_PrefabInstance: {fileID: 3494779599069530764}
   m_PrefabAsset: {fileID: 0}
@@ -53429,7 +53430,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -53493,15 +53494,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!4 &8106288229279828900 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3820713831328260286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5054177785739835831 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3820713831328260286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8106288229279828900 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 3820713831328260286}
   m_PrefabAsset: {fileID: 0}
@@ -53565,7 +53566,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -53696,7 +53697,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -53760,15 +53761,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!4 &116958131340469423 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 4964426955865575349}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4018579853806835388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4964426955865575349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &116958131340469423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 4964426955865575349}
   m_PrefabAsset: {fileID: 0}
@@ -53891,15 +53892,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ace38369b1d224abc9e3c2c66e50dfd6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 437112ced20694f8fb2621a99b708a4d, type: 3}
---- !u!1 &3850041584700436243 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 437112ced20694f8fb2621a99b708a4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5066538010896659994}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &231163200133651712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 437112ced20694f8fb2621a99b708a4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5066538010896659994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3850041584700436243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 437112ced20694f8fb2621a99b708a4d,
     type: 3}
   m_PrefabInstance: {fileID: 5066538010896659994}
   m_PrefabAsset: {fileID: 0}
@@ -53963,7 +53964,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -54225,7 +54226,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -54254,15 +54255,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f19b10d1db085964eafbbc06f78e28d4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17074ef917a16c6428e522f5c1c0622a, type: 3}
---- !u!4 &953370632739191155 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
-    type: 3}
-  m_PrefabInstance: {fileID: 5206646348311220841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4278512360926448480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5206646348311220841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &953370632739191155 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
     type: 3}
   m_PrefabInstance: {fileID: 5206646348311220841}
   m_PrefabAsset: {fileID: 0}
@@ -54321,7 +54322,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -54350,15 +54351,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8f63416f9441c8e4f89c2bae88399db0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17074ef917a16c6428e522f5c1c0622a, type: 3}
---- !u!1 &4205995025613209901 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
-    type: 3}
-  m_PrefabInstance: {fileID: 5296056309709477924}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &866357893244039998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5296056309709477924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4205995025613209901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 17074ef917a16c6428e522f5c1c0622a,
     type: 3}
   m_PrefabInstance: {fileID: 5296056309709477924}
   m_PrefabAsset: {fileID: 0}
@@ -54481,15 +54482,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 938b6e38e1bac2041b15e438bba45858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!4 &920639167112852877 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5313245627567251095}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4223705375616288670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5313245627567251095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &920639167112852877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 5313245627567251095}
   m_PrefabAsset: {fileID: 0}
@@ -54548,7 +54549,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -54617,15 +54618,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &2816765513931612807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6068253437940317070}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1246494992040464532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6068253437940317070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2816765513931612807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 6068253437940317070}
   m_PrefabAsset: {fileID: 0}
@@ -54689,7 +54690,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -54753,15 +54754,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!4 &1371128142086143475 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6232292530672391913}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2692132364410359776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6232292530672391913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1371128142086143475 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 6232292530672391913}
   m_PrefabAsset: {fileID: 0}
@@ -55146,15 +55147,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &3153047023107261658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6404174305825267155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2133165082606024393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6404174305825267155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3153047023107261658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 6404174305825267155}
   m_PrefabAsset: {fileID: 0}
@@ -55283,15 +55284,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &3153047022406661821 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6404174306534338484}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2133165083297055918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6404174306534338484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3153047022406661821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 6404174306534338484}
   m_PrefabAsset: {fileID: 0}
@@ -55501,7 +55502,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -55580,15 +55581,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &3409132207306460628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 6660338656338187485}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1807335942580518855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6660338656338187485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3409132207306460628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 6660338656338187485}
   m_PrefabAsset: {fileID: 0}
@@ -55652,7 +55653,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -55879,7 +55880,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -56015,7 +56016,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 17074ef917a16c6428e522f5c1c0622a,
         type: 3}
@@ -56116,7 +56117,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b57799c09c45bc4cbd5db5716ed87e0,
         type: 3}
@@ -56217,7 +56218,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -56281,15 +56282,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &1208801383860140663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7198840598813778814}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2782626077555361892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7198840598813778814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1208801383860140663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 7198840598813778814}
   m_PrefabAsset: {fileID: 0}
@@ -56353,7 +56354,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -56548,15 +56549,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bcc7a564c85920245ba644664971eed0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &1590536360237867163 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7292266173723146642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2326638881925288584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7292266173723146642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1590536360237867163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 7292266173723146642}
   m_PrefabAsset: {fileID: 0}
@@ -56620,7 +56621,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
@@ -56684,15 +56685,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac6a4dfd401c9ac4c982efbb6b3bff89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6424438dd28c34746850a76c1ea0f1bf, type: 3}
---- !u!1 &2183527195576841937 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7884852402808713176}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2888544256896910530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7884852402808713176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2183527195576841937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6424438dd28c34746850a76c1ea0f1bf,
     type: 3}
   m_PrefabInstance: {fileID: 7884852402808713176}
   m_PrefabAsset: {fileID: 0}
@@ -56756,7 +56757,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6424438dd28c34746850a76c1ea0f1bf,
         type: 3}
