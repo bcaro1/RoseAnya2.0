@@ -9,9 +9,10 @@ public class PipeSpawner : MonoBehaviour
     public float height;
     public Transform GamePanel;
     private float timer = 0;
+    private float position;
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -19,9 +20,9 @@ public class PipeSpawner : MonoBehaviour
         if (timer > waitTime)
         {
             GameObject newPipe = Instantiate(pipe);
-            newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+            // newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+            newPipe.transform.localPosition = gameObject.transform.localPosition;
             newPipe.transform.SetParent(GamePanel, false);
-            Debug.Log(newPipe.transform.position);
             Destroy(newPipe, 15);
             timer = 0;
         }

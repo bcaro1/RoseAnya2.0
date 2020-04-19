@@ -7,6 +7,7 @@ public class TBEnemySpawn : MonoBehaviour
     public GameObject BattleSystem;
     public GameObject Enemy;
     public Sprite Background;
+    public AudioClip BGM;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +15,7 @@ public class TBEnemySpawn : MonoBehaviour
         {
             StaticDatabase_Joseph.Enemy = Enemy;
             StaticDatabase_Joseph.BackGround = Background;
+            StaticDatabase_Joseph.BGM = BGM;
             Instantiate(BattleSystem);
             Destroy(gameObject);
         }

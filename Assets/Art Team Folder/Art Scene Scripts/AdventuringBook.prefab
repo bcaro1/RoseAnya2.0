@@ -530,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2470620196234873439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -555,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.059376504, y: 0}
   m_AnchorMax: {x: 0.943, y: 0.9832496}
-  m_AnchoredPosition: {x: -0.41003418, y: 0.95999146}
+  m_AnchoredPosition: {x: -0.41003418, y: 0.95996094}
   m_SizeDelta: {x: 0.13000107, y: 6.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2470620196251857906
@@ -999,7 +999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 169.5, y: 52.300003}
+  m_AnchoredPosition: {x: 169.5, y: 52.30005}
   m_SizeDelta: {x: -455.53, y: -245.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620196447712029
@@ -1488,6 +1488,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2470620197488371572}
+        m_MethodName: BuildArrays
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2470620196605693761
@@ -1857,7 +1868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2470620196670443974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1874,6 +1885,7 @@ RectTransform:
   - {fileID: 2470620196685974538}
   - {fileID: 2470620197931046231}
   - {fileID: 2470620198121861702}
+  - {fileID: 2470620197586732966}
   m_Father: {fileID: 2470620197488371563}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1958,7 +1970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.059376504, y: 0}
   m_AnchorMax: {x: 0.943, y: 0.9832496}
-  m_AnchoredPosition: {x: -0.41003418, y: 0.95999146}
+  m_AnchoredPosition: {x: -0.41003418, y: 0.95996094}
   m_SizeDelta: {x: 0.13000107, y: 6.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2470620196725278415
@@ -4020,7 +4032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -167, y: 52.300003}
+  m_AnchoredPosition: {x: -167, y: 52.30005}
   m_SizeDelta: {x: -455.53, y: -245.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620197040032018
@@ -4842,7 +4854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 169.5, y: 52.300003}
+  m_AnchoredPosition: {x: 169.5, y: 52.30005}
   m_SizeDelta: {x: -455.53, y: -245.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620197217868533
@@ -5130,7 +5142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08150538, y: 0.33}
   m_AnchorMax: {x: 0.46400002, y: 0.651}
-  m_AnchoredPosition: {x: 0, y: -0.16500092}
+  m_AnchoredPosition: {x: 0, y: -0.16500854}
   m_SizeDelta: {x: -1.3999939, y: 0.30000305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620197309132871
@@ -5820,7 +5832,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2470620196670443974}
-  - {fileID: 2470620197586732966}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5908,14 +5919,10 @@ MonoBehaviour:
   - {fileID: 2470620197188382334}
   - {fileID: 2470620197023288635}
   IPtextBoxes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  TASK_JimothyQuest: 0
-  TASK_JeanieQuest: 0
-  TASK_LearnQuest: 0
-  TASK_ChickenQuest: 0
-  TASK_HeroQuest: 0
+  - {fileID: 2470620196725278410}
+  - {fileID: 2470620197695519189}
+  - {fileID: 2470620196823538973}
+  CompletedText: {fileID: 2470620197794766152}
   flowchart: {fileID: 0}
 --- !u!114 &2470620197488371573
 MonoBehaviour:
@@ -5939,6 +5946,7 @@ MonoBehaviour:
   - {fileID: 2470620197931046230}
   - {fileID: 2470620198121861701}
   curPage: 0
+  bookUI: {fileID: 2470620196670443973}
 --- !u!1 &2470620197492266555
 GameObject:
   m_ObjectHideFlags: 0
@@ -6179,7 +6187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -167, y: 52.300003}
+  m_AnchoredPosition: {x: -167, y: 52.30005}
   m_SizeDelta: {x: -455.53, y: -245.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620197551731767
@@ -6400,19 +6408,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2470620197586732965}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2470620196407932794}
   - {fileID: 2470620198011493249}
-  m_Father: {fileID: 2470620197488371563}
-  m_RootOrder: 1
+  m_Father: {fileID: 2470620196670443974}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.06097412, y: -0.000030517578}
+  m_SizeDelta: {x: 48.405945, y: 25.099823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2470620197605802936
 GameObject:
@@ -6863,7 +6871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.54200006, y: 0.07020218}
   m_AnchorMax: {x: 0.9683268, y: 0.39800003}
-  m_AnchoredPosition: {x: 0, y: 0.5800171}
+  m_AnchoredPosition: {x: 0, y: 0.5800781}
   m_SizeDelta: {x: -1.2000122, y: 0.23999977}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620197713950619
@@ -7256,7 +7264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 150.62, y: 8.725983}
+  m_AnchoredPosition: {x: 150.62, y: 8.725952}
   m_SizeDelta: {x: 562.76, y: -211.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620197794766164
@@ -7822,7 +7830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.059376504, y: 0}
   m_AnchorMax: {x: 0.943, y: 0.9832496}
-  m_AnchoredPosition: {x: -0.41003418, y: 0.95999146}
+  m_AnchoredPosition: {x: -0.41003418, y: 0.95996094}
   m_SizeDelta: {x: 0.13000107, y: 6.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2470620197989049395
@@ -8113,6 +8121,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2470620197488371572}
+        m_MethodName: BuildArrays
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2470620198100064844
@@ -8307,7 +8326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.059376504, y: 0}
   m_AnchorMax: {x: 0.943, y: 0.9832496}
-  m_AnchoredPosition: {x: -0.41003418, y: 0.95999146}
+  m_AnchoredPosition: {x: -0.41003418, y: 0.95996094}
   m_SizeDelta: {x: 0.13000107, y: 6.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2470620198135138539
@@ -8502,7 +8521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5434946, y: 0.08924958}
   m_AnchorMax: {x: 0.9695055, y: 0.38871944}
-  m_AnchoredPosition: {x: -1, y: -1.0500183}
+  m_AnchoredPosition: {x: -1, y: -1.0500488}
   m_SizeDelta: {x: -1.2000122, y: -2.1000004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2470620198160506994

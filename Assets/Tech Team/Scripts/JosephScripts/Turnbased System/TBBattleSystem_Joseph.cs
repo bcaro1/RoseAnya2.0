@@ -33,11 +33,18 @@ public class TBBattleSystem_Joseph : MonoBehaviour
     private TBUnit_Joseph PlayerUnit;
     private TBUnit_Joseph EnemyUnit;
     private RPGController_Joseph Controller;
+    private GameObject Sound;
+    private AudioSource Source;
     #endregion
 
     void Start()
     {
+        Source = GetComponent<AudioSource>();
+        Source.clip = StaticDatabase_Joseph.BGM;
+        Source.Play();
         Controller = GameObject.FindGameObjectWithTag("Player").GetComponent<RPGController_Joseph>();
+        Sound = GameObject.FindGameObjectWithTag("MusicPlayer");
+        Sound.SetActive(false);
         State = BattleState.START;
         Time.timeScale = 0;
         Cursor.visible = true;
@@ -198,6 +205,8 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Source.Stop();
+        Sound.SetActive(true);
 
         Destroy(TBCanvas);
 
@@ -210,6 +219,8 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Source.Stop();
+        Sound.SetActive(true);
 
         yield return new WaitForSecondsRealtime(.2f);
 

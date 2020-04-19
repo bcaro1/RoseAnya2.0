@@ -27,11 +27,11 @@ public class Gauges_Alex : MonoBehaviour
         // REFERENCES //
         element = GameObject.FindGameObjectWithTag("Element"); // Grabs Element
         ElementControllerScript = element.GetComponent<ElementController_Joseph>();
-        StaticDatabase_Joseph.OnElementChangedCallback += UpdateGauges;
     }
 
     private void Start()
     {
+        StaticDatabase_Joseph.OnElementChangedCallback += CallUpdateGauges;
         StartCoroutine(FirstUpdate());
     }
 
@@ -43,8 +43,14 @@ public class Gauges_Alex : MonoBehaviour
         airGauge.fillAmount = airFill;
     }
 
-    void UpdateGauges()
+    void CallUpdateGauges()
     {
+        StartCoroutine(UpdateGauges());
+    }
+
+    IEnumerator UpdateGauges()
+    {
+        yield return new WaitForSecondsRealtime(.1f);
         // Converting number to float between 0-1
         fireFill = (float) ElementControllerScript.Fire / StaticDatabase_Joseph.MaxMana;
         earthFill = (float) ElementControllerScript.Earth / StaticDatabase_Joseph.MaxMana;
@@ -62,6 +68,6 @@ public class Gauges_Alex : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1f);
 
-        UpdateGauges();
+        StartCoroutine(UpdateGauges());
     }
 }

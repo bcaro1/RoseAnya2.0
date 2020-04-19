@@ -10,7 +10,7 @@ public static class StaticDatabase_Joseph
 
     private static int water, fire, earth, wind, maxmana, currentquest, level, hp, currenthp, attack, magic, exp;
 
-    private static bool unlockedfire, unlockedearth, unlockedwind;
+    private static bool unlockedfire = true, unlockedearth = true, unlockedwind = true;
 
     private static string charactername;
 
@@ -20,7 +20,9 @@ public static class StaticDatabase_Joseph
 
     private static Sprite background;
 
-    private static List<Item_Joseph> items;
+    private static List<Item_Joseph> items = new List<Item_Joseph>();
+
+    private static AudioClip bgm;
 
     public static int Water
     {
@@ -329,6 +331,19 @@ public static class StaticDatabase_Joseph
         set
         {
             items = value;
+        }
+    }
+
+    public static AudioClip BGM
+    {
+        get
+        {
+            return bgm;
+        }
+
+        set
+        {
+            bgm = value;
         }
     }
 }

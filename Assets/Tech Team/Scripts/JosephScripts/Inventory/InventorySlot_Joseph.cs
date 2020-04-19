@@ -40,8 +40,10 @@ public class InventorySlot_Joseph : MonoBehaviour
 
     public void focusItem()
     {
-        StaticDatabase_Joseph.Item = Item;
-        DescriptionText.text = Item.Name + " - " + Item.Description;
-        Debug.Log("TEST");
+        if (Item != null)
+        {
+            StaticDatabase_Joseph.Item = Item;
+            DescriptionText.text = Item.Name + " - " + Item.Description;
+        }
     }
 }

@@ -1677,11 +1677,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 8f85418d0a0698f498b91638f9a8892d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 96173d32864d64bcb966638abd03e06c, type: 2}
     - target: {fileID: -2842766115444601439, guid: 8f85418d0a0698f498b91638f9a8892d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1692,6 +1687,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 60a098062b60d7d4bb89bd6580803840, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 8f85418d0a0698f498b91638f9a8892d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96173d32864d64bcb966638abd03e06c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f85418d0a0698f498b91638f9a8892d, type: 3}
 --- !u!1 &1812408675
@@ -2094,6 +2094,7 @@ MonoBehaviour:
   Checkpoint: {fileID: 0}
   CollectFish: {fileID: 0}
   Camera: {fileID: 0}
+  FishingMinigamePREFAB: {fileID: 0}
   flowchart: {fileID: 0}
 --- !u!1001 &531990740255971749
 PrefabInstance:
@@ -2701,6 +2702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishingMiniGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8702150317093156975, guid: 2e79dac4a19834f07add708cc564c6a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8702150317093156963, guid: 2e79dac4a19834f07add708cc564c6a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2804,6 +2810,16 @@ PrefabInstance:
     - target: {fileID: 8702150317093156963, guid: 2e79dac4a19834f07add708cc564c6a8,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702150318639356056, guid: 2e79dac4a19834f07add708cc564c6a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.012451172
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701945968035171708, guid: 2e79dac4a19834f07add708cc564c6a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

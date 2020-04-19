@@ -7,29 +7,84 @@ using UnityEngine.EventSystems;
 
 public class AdventureBook_Ying : MonoBehaviour
 {
-    public static bool IsPaused = false;
-
     #region Public
     // Number of pages in the book, array will hold game objects for each page
     // Keeps track of current page for flipping
     public int numPages = 7;
     public GameObject[] pagesArray = new GameObject[7];
     public int curPage = 0;
+    public GameObject bookUI;
+    public static bool giveBook;
     #endregion
 
+    #region Private
+    private bool IsPaused = false;
+    #endregion
+
+    void Awake()
+    {
+        giveBook = false;
+    }
     void Start()
     {
         // Instatiate the pages to true/false
 
+        // pagesArray[0].SetActive(true);
+        // for (int i = 1; i < numPages; i++)
+        // {
+        //     pagesArray[i].SetActive(false);
+        // }
+    }
+
+    void GiveBookAccess() // This is called in Fungus
+    {
+        giveBook = true;
+    }
+    void Update()
+    {
+        if (giveBook)
+        {
+            if (Input.GetButtonDown("Book")) 
+            {
+                if (IsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
+            }
+        }
+    }
+    public void Resume()
+    {
+        for (int i = 0; i < numPages; i++)
+        {
+            pagesArray[i].SetActive(false);
+        }
+        curPage = 0;
+        bookUI.SetActive(false);
+        Time.timeScale = 1f;
+        IsPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Pause()
+    {
+        bookUI.SetActive(true);
         pagesArray[0].SetActive(true);
+
         for (int i = 1; i < numPages; i++)
         {
             pagesArray[i].SetActive(false);
         }
-    }
-
-    void Update()
-    {
+        curPage = 0;
+        Time.timeScale = 0f;
+        IsPaused = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // increment page
@@ -42,7 +97,7 @@ public class AdventureBook_Ying : MonoBehaviour
         }
         else
         {
-            Debug.Log("Last page reached");
+            // Debug.Log("Last page reached");
         }
     }
 
@@ -56,7 +111,7 @@ public class AdventureBook_Ying : MonoBehaviour
         }
         else
         {
-            Debug.Log("First page reached");
+            // Debug.Log("First page reached");
         }
     }
 

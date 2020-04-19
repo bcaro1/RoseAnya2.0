@@ -15,16 +15,12 @@ public class Sounds_Alex : MonoBehaviour
     private GameObject Player;
     private PlayerMovement MovementScript;
     private Strength_Alex StrengthScript;
-    private Gauges_Alex GaugesScript; // Gauge script
-    private GameObject Gauge;
     void Awake()
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player");
         MovementScript = Player.GetComponent<PlayerMovement>();
         StrengthScript = Player.GetComponent<Strength_Alex>();
-        Gauge = GameObject.FindGameObjectWithTag("Gauge"); // Grabs Gauge
-        GaugesScript = Gauge.GetComponent<Gauges_Alex>(); // Grabs script on Gauge
 
         // VARIABLES //
         soundToggle = true;
@@ -57,83 +53,20 @@ public class Sounds_Alex : MonoBehaviour
             StrengthSound.Pause();
         }
     }
-    public void AbsorbSounds()
+    public void AbsorbFire()
     {
-        if (Input.GetButtonDown("Absorb"))
-        {
-            if ((!FireAbsorbSound.isPlaying) && GaugesScript.fireGauge.fillAmount > GaugesScript.currFireFill) // Check if new fill is greater than previous fill
-            {
-                FireAbsorbSound.Play();
-            }
-            else 
-            {
-                FireAbsorbSound.Pause();
-            }
-        }
-        if (Input.GetButtonDown("Absorb"))
-        {
-            if ((!WaterAbsorbSound.isPlaying) && GaugesScript.waterGauge.fillAmount > GaugesScript.currWaterFill)
-            {
-                WaterAbsorbSound.Play();
-            }
-            else 
-            {
-                WaterAbsorbSound.Pause();
-            }
-        }
-        if (Input.GetButtonDown("Absorb"))
-        {
-            if (GaugesScript.airGauge.fillAmount > GaugesScript.currAirFill)
-            {
-
-            }
-        }
-        if (Input.GetButtonDown("Absorb"))
-        {
-            if (GaugesScript.earthGauge.fillAmount > GaugesScript.currEarthFill)
-            {
-
-            }
-        }
+        if (!FireAbsorbSound.isPlaying) { FireAbsorbSound.Play(); }
     }
-    public void DischargeSounds()
+    public void DischargeFire()
     {
-        if (Input.GetButtonDown("Interact"))
-        {
-            if ((!WaterDisperseSound.isPlaying) && GaugesScript.fireGauge.fillAmount < GaugesScript.currFireFill)
-            {
-                FireDisperseSound.Play();
-            }
-            else
-            {
-                FireDisperseSound.Pause();
-            }
-        }
-        if (Input.GetButtonDown("Interact"))
-        {
-            if ((!WaterDisperseSound.isPlaying) && GaugesScript.waterGauge.fillAmount < GaugesScript.currWaterFill)
-            {
-                WaterDisperseSound.Play();
-            }
-            else
-            {
-                WaterDisperseSound.Pause();
-            }
-        }
-        if (Input.GetButtonDown("Interact"))
-        {
-            if (GaugesScript.airGauge.fillAmount < GaugesScript.currAirFill)
-            {
-
-            }
-        }
-        if (Input.GetButtonDown("Interact"))
-        {
-            if (GaugesScript.earthGauge.fillAmount < GaugesScript.currEarthFill)
-            {
-
-            }
-        }
+        if (!FireDisperseSound.isPlaying) { FireDisperseSound.Play(); }
     }
-
+    public void AbsorbWater()
+    {
+        if (!WaterAbsorbSound.isPlaying) { WaterAbsorbSound.Play(); }
+    }
+    public void DischargeWater()
+    {
+        if (!WaterDisperseSound.isPlaying) { WaterDisperseSound.Play(); }
+    }
 }

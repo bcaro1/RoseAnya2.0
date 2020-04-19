@@ -31,6 +31,7 @@ public class ElementRestoreItem_Joseph : Item_Joseph
             default:
                 break;
         }
+
         RemoveFromInventory();
     }
 }

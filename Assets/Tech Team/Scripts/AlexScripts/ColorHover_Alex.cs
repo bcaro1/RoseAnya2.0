@@ -9,7 +9,6 @@ public class ColorHover_Alex : MonoBehaviour, IPointerEnterHandler, IPointerExit
     #region Public
     [Header("Hover Text")]
     public Text ResumeText;
-    public Text TasksText;
     public Text OptionsText;
     public Text ControlsText;
     public Text CreditsText;
@@ -34,10 +33,6 @@ public class ColorHover_Alex : MonoBehaviour, IPointerEnterHandler, IPointerExit
         {
             ResumeText.color = maroon;
         } 
-        else if (gameObject.name == "TaskButton")
-        {
-            TasksText.color = maroon;  
-        }
         else if (gameObject.name == "OptionsButton")
         {
             OptionsText.color = maroon;
@@ -62,10 +57,6 @@ public class ColorHover_Alex : MonoBehaviour, IPointerEnterHandler, IPointerExit
         {
             ResumeText.color = Color.black;
         } 
-        else if (gameObject.name == "TaskButton")
-        {
-            TasksText.color = Color.black; 
-        }
         else if (gameObject.name == "OptionsButton")
         {
             OptionsText.color = Color.black;
