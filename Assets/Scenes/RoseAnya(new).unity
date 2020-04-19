@@ -2234,6 +2234,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6165e40aede284884b99927dc9b9b9f5, type: 2}
+    - target: {fileID: 92678169068911328, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
 --- !u!95 &672013466 stripped
@@ -5729,7 +5734,7 @@ GameObject:
   - component: {fileID: 2012493293}
   m_Layer: 0
   m_Name: Overworld Enemy Chicken
-  m_TagString: Untagged
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6309,6 +6314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectFish
       objectReference: {fileID: 0}
+    - target: {fileID: 3592270478532185440, guid: 6ae1623b1ec674283815ad1d97ca6289,
+        type: 3}
+      propertyPath: m_TagString
+      value: CollectFish
+      objectReference: {fileID: 0}
     - target: {fileID: 3592270478532185451, guid: 6ae1623b1ec674283815ad1d97ca6289,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6369,6 +6379,11 @@ PrefabInstance:
       propertyPath: ChickenEnemy
       value: 
       objectReference: {fileID: 2012493292}
+    - target: {fileID: 3592270478532185447, guid: 6ae1623b1ec674283815ad1d97ca6289,
+        type: 3}
+      propertyPath: StoryManager
+      value: 
+      objectReference: {fileID: 1186199687}
     - target: {fileID: 3592270478691417694, guid: 6ae1623b1ec674283815ad1d97ca6289,
         type: 3}
       propertyPath: m_LocalPosition.z

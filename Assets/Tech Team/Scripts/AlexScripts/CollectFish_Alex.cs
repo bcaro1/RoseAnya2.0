@@ -7,16 +7,16 @@ public class CollectFish_Alex : MonoBehaviour
     #region Public
     public GameObject textUI;
     public GameObject ChickenEnemy;
-    public GameObject fishingMinigame;
+    public GameObject StoryManager;    
     public bool hasFish;
     #endregion
 
     #region Private
-
+    private StoryManagement_Alex StoryManagementScript;
     #endregion
     void Awake()
     {
-
+        StoryManagementScript = StoryManager.GetComponent<StoryManagement_Alex>(); 
     }
 
     void Update()
@@ -32,7 +32,7 @@ public class CollectFish_Alex : MonoBehaviour
 
             if (Input.GetButtonDown("Interact")) 
             {
-                fishingMinigame.SetActive(true);
+                StoryManagementScript.LaunchFishing();
                 textUI.SetActive(false);
             }
         }

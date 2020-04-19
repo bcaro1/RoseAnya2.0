@@ -18,6 +18,8 @@ public class MinigameManager : MonoBehaviour
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
+        CollectFish = GameObject.FindGameObjectWithTag("CollectFish");
+        ChickenEnemy = GameObject.FindGameObjectWithTag("Chicken");
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
         CollectFishScript = CollectFish.GetComponent<CollectFish_Alex>();
 
@@ -31,11 +33,12 @@ public class MinigameManager : MonoBehaviour
     void Update()
     {
         GameWon();
+        // Debug.Log(score);
     }
 
     public void GameOver()
     {
-        Debug.Log("GameOver");
+        // Debug.Log("GameOver");
         PlayerMovementScript.canMove = true;
         FishingMinigame.SetActive(false);
         Destroy(gameObject);
