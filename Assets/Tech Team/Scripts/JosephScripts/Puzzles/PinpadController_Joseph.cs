@@ -5,13 +5,13 @@ using UnityEngine;
 public class PinpadController_Joseph : MonoBehaviour
 {
     public PinpadTile_Joseph[] tiles;
-    public bool won;
+    public bool Won;
 
     private bool[] Combination = new bool[4];
 
     private void Update()
     {
-        if (!won)
+        if (!Won)
         {
             for (int i = 0; i < tiles.Length; i++)
             {
@@ -27,7 +27,7 @@ public class PinpadController_Joseph : MonoBehaviour
 
         if(Combination[0] && Combination[1] && Combination[2] && Combination[3])
         {
-            won = true;
+            Won = true;
         }
     }
 }
