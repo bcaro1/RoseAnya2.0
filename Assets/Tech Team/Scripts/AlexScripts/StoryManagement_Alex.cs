@@ -7,12 +7,12 @@ using Fungus; // access to fungus
 public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
-    public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB, HouseFire;
+    public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB, HouseFire, FishingMinigame;
     public Flowchart flowchart; // calls the flowchart.
     #endregion
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
-    private GameObject Player, FishingMinigame;    
+    private GameObject Player;    
     private PlayerMovement PlayerMovementScript;
     #endregion
     void Awake()
@@ -40,10 +40,12 @@ public class StoryManagement_Alex : MonoBehaviour
     }
     public void LaunchFishing()
     {
-        PlayerMovementScript.canMove = false;
-        GameObject newMinigame = Instantiate(FishingMinigamePREFAB);
-        FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
-        FishingMinigame.SetActive(true);
+        if (FishingMinigame == null)
+        {
+            FishingMinigame = Instantiate(FishingMinigamePREFAB);
+            FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
+            PlayerMovementScript.canMove = false;
+        }
     }
     public void LaunchHouseFire()
     {
