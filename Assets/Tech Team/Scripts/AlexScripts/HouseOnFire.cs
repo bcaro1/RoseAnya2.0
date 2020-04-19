@@ -34,7 +34,7 @@ public class HouseOnFire : MonoBehaviour
             // fire[i].SetActive(true);
         // }
 
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(10f);
         FireTimeout();
     }
     public void FireTimeout()
