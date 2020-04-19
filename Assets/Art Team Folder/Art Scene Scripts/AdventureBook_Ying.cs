@@ -14,7 +14,7 @@ public class AdventureBook_Ying : MonoBehaviour
     public GameObject[] pagesArray = new GameObject[7];
     public int curPage = 0;
     public GameObject bookUI;
-    public static bool giveBook;
+    public static bool giveBook = false;
     #endregion
 
     #region Private
@@ -23,7 +23,7 @@ public class AdventureBook_Ying : MonoBehaviour
 
     void Awake()
     {
-        giveBook = false;
+
     }
     void Start()
     {

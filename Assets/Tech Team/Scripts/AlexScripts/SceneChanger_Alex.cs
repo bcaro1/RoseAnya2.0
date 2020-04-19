@@ -69,6 +69,7 @@ public class SceneChanger_Alex : MonoBehaviour
 
   public void LoadTravelMenu()
   {
+    TravelMenuUI.SetActive(true);
     Cursor.visible = true;
     Cursor.lockState = CursorLockMode.None;
     canvasUI.SetActive(false);
@@ -79,7 +80,7 @@ public class SceneChanger_Alex : MonoBehaviour
     ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
     HeroQuest = flowchart.GetIntegerVariable("HeroQuest");
     
-    if ((JimothyQuest > 0) && (AdventureBook_Ying.giveBook)) { TravelMenuUI.SetActive(true); TravelMenuUI_ForestButton.SetActive(true);}
+    if ((JimothyQuest > 0) && (AdventureBook_Ying.giveBook)) { TravelMenuUI_ForestButton.SetActive(true);}
     if (JeanieQuest > 0) { TravelMenuUI_CaveButton.SetActive(true); }
     if (HeroQuest > 0) { TravelMenuUI_CastleButton.SetActive(true); }
   }
