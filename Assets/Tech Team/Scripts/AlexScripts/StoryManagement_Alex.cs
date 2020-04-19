@@ -7,7 +7,7 @@ using Fungus; // access to fungus
 public class StoryManagement_Alex : MonoBehaviour
 {
     #region Public
-    public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB;
+    public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB, HouseFire;
     public Flowchart flowchart; // calls the flowchart.
     #endregion
     #region Private
@@ -28,7 +28,7 @@ public class StoryManagement_Alex : MonoBehaviour
         LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
         ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
 
-        if (JimothyQuest > 0 ) 
+        if (JimothyQuest > 0 ) // CHECKPOINT
         {
             Player.transform.position = Checkpoint.transform.position;
             Camera.transform.position = Checkpoint.transform.position;
@@ -44,5 +44,9 @@ public class StoryManagement_Alex : MonoBehaviour
         GameObject newMinigame = Instantiate(FishingMinigamePREFAB);
         FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
         FishingMinigame.SetActive(true);
+    }
+    public void LaunchHouseFire()
+    {
+        HouseFire.SetActive(true);
     }
 }

@@ -5,7 +5,7 @@ using Fungus; // access to fungus
 public class HouseOnFire : MonoBehaviour
 {
     #region Public
-    public GameObject[] fire;
+    // public GameObject[] fire;
     public Flowchart flowchart;
     #endregion
 
@@ -13,9 +13,9 @@ public class HouseOnFire : MonoBehaviour
 
     #endregion
 
-    void Awake()
+    void Start()
     {
-        
+        StartFire();
     }
 
 
@@ -26,32 +26,33 @@ public class HouseOnFire : MonoBehaviour
 
     public IEnumerator StartFire()
     {
-        for(var i = 0; i < fire.Length; i++)
-        {
-            gameObject.SetActive(true);
-            fire[i].SetActive(true);
-        }
+        // for(var i = 0; i < fire.Length; i++)
+        // {
+            // gameObject.SetActive(true);
+            // fire[i].SetActive(true);
+        // }
 
         yield return new WaitForSeconds(30f);
         FireTimeout();
     }
     public void FireTimeout()
     {
-        for(var i = 0; i < fire.Length; i++)
-        {
-            fire[i].SetActive(false);
-        }
+        // for(var i = 0; i < fire.Length; i++)
+        // {
+            // fire[i].SetActive(false);
+        // }
         gameObject.SetActive(false);
         
     }
     public void CompleteFire()
     {
         // if gameobject position = ...
+
         flowchart.SetIntegerVariable("HouseFire", 2);
-        for(var i = 0; i < fire.Length; i++)
-        {
-            fire[i].SetActive(false);
-        }
+        // for(var i = 0; i < fire.Length; i++)
+        // {
+            // fire[i].SetActive(false);
+        // }
         gameObject.SetActive(false);
     }
 }
