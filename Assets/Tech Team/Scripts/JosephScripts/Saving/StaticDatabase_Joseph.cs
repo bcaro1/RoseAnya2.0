@@ -20,7 +20,7 @@ public static class StaticDatabase_Joseph
 
     private static Sprite background;
 
-    private static List<Item_Joseph> items;
+    private static List<Item_Joseph> items = new List<Item_Joseph>();
 
     private static AudioClip bgm;
 

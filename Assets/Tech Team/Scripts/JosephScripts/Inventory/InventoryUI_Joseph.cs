@@ -68,7 +68,6 @@ public class InventoryUI_Joseph : MonoBehaviour
         Item_Joseph hold = StaticDatabase_Joseph.Item;
         if(hold != null)
         {
-            Debug.Log("here");
             hold.Use();
             DescriptionText.text = "";
             UpdateUI();

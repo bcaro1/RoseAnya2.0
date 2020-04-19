@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 public class DataManager_Joseph : MonoBehaviour
 {
     #region Public
     public SaveData_Joseph Data;
+    public Flowchart Chart;
     #endregion
 
     private void Start()
@@ -30,6 +32,18 @@ public class DataManager_Joseph : MonoBehaviour
         Data.EarthAmount = StaticDatabase_Joseph.Earth;
         Data.FireAmount = StaticDatabase_Joseph.Fire;
         Data.QuestNumber = StaticDatabase_Joseph.CurrentQuest;
+        Data.Level = StaticDatabase_Joseph.Level;
+        Data.HP = StaticDatabase_Joseph.HP;
+        Data.CurrentHP = StaticDatabase_Joseph.CurrentHP;
+        Data.Attack = StaticDatabase_Joseph.Attack;
+        Data.Magic = StaticDatabase_Joseph.Magic;
+        Data.Exp = StaticDatabase_Joseph.EXP;
+        Data.JimothyQuest = Chart.GetIntegerVariable("JimothyQuest");
+        Data.JeanieQuest = Chart.GetIntegerVariable("JeanieQuest");
+        Data.LearnQuest = Chart.GetIntegerVariable("LearnQuest");
+        Data.ChickenQuest = Chart.GetIntegerVariable("ChickenQuest");
+        Data.HeroQuest = Chart.GetIntegerVariable("HeroQuest");
+        Data.HouseFire = Chart.GetIntegerVariable("HouseFire");
         
         for(int i = 0; i < StaticDatabase_Joseph.Items.Count; i++)
         {
@@ -58,14 +72,26 @@ public class DataManager_Joseph : MonoBehaviour
         StaticDatabase_Joseph.Earth = Data.EarthAmount;
         StaticDatabase_Joseph.Fire = Data.FireAmount;
         StaticDatabase_Joseph.CurrentQuest = Data.QuestNumber;
+        StaticDatabase_Joseph.Level = Data.Level;
+        StaticDatabase_Joseph.HP = Data.HP;
+        StaticDatabase_Joseph.CurrentHP = Data.CurrentHP;
+        StaticDatabase_Joseph.Attack = Data.Attack;
+        StaticDatabase_Joseph.Magic = Data.Magic;
+        StaticDatabase_Joseph.EXP = Data.Exp;
+        Chart.SetIntegerVariable("JimothyQuest", Data.JimothyQuest);
+        Chart.SetIntegerVariable("JeanieQuest", Data.JeanieQuest);
+        Chart.SetIntegerVariable("LearnQuest", Data.LearnQuest);
+        Chart.SetIntegerVariable("ChickenQuest", Data.ChickenQuest);
+        Chart.SetIntegerVariable("HeroQuest", Data.HeroQuest);
+        Chart.SetIntegerVariable("HouseFire", Data.HouseFire);
+
         StaticDatabase_Joseph.Items = new List<Item_Joseph>();
         for(int i = 0; i < Data.Items.Count; i++)
         {
             StaticDatabase_Joseph.Items.Add(Data.Items[i]);
-            Debug.Log(StaticDatabase_Joseph.Items[i].Name);
         }
 
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
 
     private void WriteToFile(string FilePath, string json)

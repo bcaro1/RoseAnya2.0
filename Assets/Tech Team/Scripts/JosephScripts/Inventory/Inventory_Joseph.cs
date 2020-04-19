@@ -20,7 +20,7 @@ public class Inventory_Joseph : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(StaticDatabase_Joseph.Items.Count);
+
     }
 
 
