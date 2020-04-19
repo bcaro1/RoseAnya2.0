@@ -7,6 +7,7 @@ public class HouseOnFire : MonoBehaviour
     #region Public
     // public GameObject[] fire;
     public Flowchart flowchart;
+    public GameObject Door3;
     #endregion
 
     #region Private
@@ -15,6 +16,7 @@ public class HouseOnFire : MonoBehaviour
 
     void Start()
     {
+        Door3.SetActive(false);
         StartFire();
     }
 
@@ -41,8 +43,8 @@ public class HouseOnFire : MonoBehaviour
         // {
             // fire[i].SetActive(false);
         // }
+        Door3.SetActive(true);
         gameObject.SetActive(false);
-        
     }
     public void CompleteFire()
     {
@@ -53,6 +55,7 @@ public class HouseOnFire : MonoBehaviour
         // {
             // fire[i].SetActive(false);
         // }
+        Door3.SetActive(true);
         gameObject.SetActive(false);
     }
 }
