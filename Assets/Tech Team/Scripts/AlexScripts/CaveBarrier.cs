@@ -10,7 +10,7 @@ public class CaveBarrier : MonoBehaviour
     {
         if(controller.Won)
         {
-            if(gameObject.transform.position.y < 39)
+            if(gameObject.transform.position.y < 70)
             {
                 // Debug.Log(gameObject.transform.position.y);
                 transform.position += Vector3.up * 2 * Time.deltaTime;
