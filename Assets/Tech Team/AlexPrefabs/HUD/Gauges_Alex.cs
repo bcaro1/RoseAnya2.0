@@ -27,11 +27,11 @@ public class Gauges_Alex : MonoBehaviour
         // REFERENCES //
         element = GameObject.FindGameObjectWithTag("Element"); // Grabs Element
         ElementControllerScript = element.GetComponent<ElementController_Joseph>();
+        StaticDatabase_Joseph.OnElementChangedCallback += CallUpdateGauges;
     }
 
     private void Start()
     {
-        StaticDatabase_Joseph.OnElementChangedCallback += CallUpdateGauges;
         StartCoroutine(FirstUpdate());
     }
 
@@ -69,5 +69,9 @@ public class Gauges_Alex : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         StartCoroutine(UpdateGauges());
+    }
+    private void OnDestroy()
+    {
+        StaticDatabase_Joseph.OnElementChangedCallback -= CallUpdateGauges;
     }
 }
