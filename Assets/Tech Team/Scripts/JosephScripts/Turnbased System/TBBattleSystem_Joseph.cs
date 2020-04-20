@@ -161,6 +161,11 @@ public class TBBattleSystem_Joseph : MonoBehaviour
 
     IEnumerator RunAttempt(bool escaped)
     {
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
+        }
+
         string EscapeText = "You failed to escape";
         if(escaped)
         {
@@ -381,6 +386,10 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         {
             return;
         }
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
+        }
         MagicMenu.SetActive(false);
         StaticDatabase_Joseph.Water -= MagicCost;
         StartCoroutine(PlayerAttack(1, true));
@@ -391,6 +400,10 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         if (State != BattleState.PLAYERTURN)
         {
             return;
+        }
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
         }
         MagicMenu.SetActive(false);
         StaticDatabase_Joseph.Wind -= MagicCost;
@@ -403,6 +416,10 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         {
             return;
         }
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
+        }
         MagicMenu.SetActive(false);
         StaticDatabase_Joseph.Earth -= MagicCost;
         StartCoroutine(PlayerAttack(3, true));
@@ -414,6 +431,10 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         {
             return;
         }
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
+        }
         MagicMenu.SetActive(false);
         StaticDatabase_Joseph.Fire -= MagicCost;
         StartCoroutine(PlayerAttack(4, true));
@@ -421,6 +442,10 @@ public class TBBattleSystem_Joseph : MonoBehaviour
 
     public void OnItemUse()
     {
+        for (int i = 0; i < ActionButtons.Length; i++)
+        {
+            ActionButtons[i].interactable = false;
+        }
         ItemMenu.SetActive(false);
         StartCoroutine(UseItem());
     }
