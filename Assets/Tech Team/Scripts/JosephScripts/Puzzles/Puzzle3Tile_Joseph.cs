@@ -10,11 +10,16 @@ public class Puzzle3Tile_Joseph : MonoBehaviour
     public Material offMat;
     public Material onMat;
     public Renderer renderer;
+    public GameObject SoundPlayer;
     #endregion
 
+    #region Private
+    private Sounds_Alex SoundsScript;
+    #endregion
     private void Start()
     {
         renderer = GetComponent<Renderer>();
+        SoundsScript = SoundPlayer.GetComponent<Sounds_Alex>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,6 +37,7 @@ public class Puzzle3Tile_Joseph : MonoBehaviour
                 {
                     IsOn = true;                    
                     renderer.material = onMat;
+                    SoundsScript.PlayTileSound();
                     Controller.CheckWin();
                 }
             }
