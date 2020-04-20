@@ -212,13 +212,13 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 StartConvo();
                 flowchart.ExecuteBlock("Teacher");
                 break;
-            case "InvisibleBookNote":
+            case "InvisbleBookNote":
                 StartConvo();
-                flowchart.ExecuteBlock("InvisibleBookNote");
+                flowchart.ExecuteBlock("BookNote");
                 break;
             case "InvisibleBookNote2":
                 StartConvo();
-                flowchart.ExecuteBlock("InvisibleBookNote2");
+                flowchart.ExecuteBlock("BookNote2");
                 break;
             case "SelfDialogue":
                 StartConvo();
