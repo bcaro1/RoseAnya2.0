@@ -16,6 +16,8 @@ public class PauseMenuUpdated : MonoBehaviour
 
     #region Private
     CameraFollow_Joseph CameraFollowScript;
+    private GameObject SceneManagement;
+    private SceneManager_Alex SceneManagerScript;
     private Color maroon;
     private bool IsPaused = false;
     #endregion
@@ -24,6 +26,8 @@ public class PauseMenuUpdated : MonoBehaviour
     {
         // REFERENCES //
         CameraFollowScript = CameraBase.GetComponent<CameraFollow_Joseph>();
+        SceneManagement = GameObject.FindGameObjectWithTag("SceneManager");
+        SceneManagerScript = SceneManagement.GetComponent<SceneManager_Alex>();
 
         // VARIABLES //
         maroon = new Color32(145,1,1,255);
@@ -71,6 +75,20 @@ public class PauseMenuUpdated : MonoBehaviour
     {
         Application.Quit();
         Cursor.visible = true;
+    }
+    public void Reset()
+    {
+        sideMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(false);
+        confirmMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        IsPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        SceneManagerScript.StartCoroutine("LoadingScene");
     }
 
     public void ActiveColor()

@@ -12,6 +12,7 @@ public class ColorHover_Alex : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public Text OptionsText;
     public Text ControlsText;
     public Text CreditsText;
+    public Text ResetText;
     public Text QuitText;
     #endregion
 
@@ -49,6 +50,10 @@ public class ColorHover_Alex : MonoBehaviour, IPointerEnterHandler, IPointerExit
         {
             QuitText.color = maroon;
         }
+        else if (gameObject.name == "ResetButton")
+        {
+            QuitText.color = maroon;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -70,6 +75,10 @@ public class ColorHover_Alex : MonoBehaviour, IPointerEnterHandler, IPointerExit
             CreditsText.color = Color.black;
         }
         else if (gameObject.name == "QuitButton")
+        {
+            QuitText.color = Color.black;
+        }
+        else if (gameObject.name == "ResetButton")
         {
             QuitText.color = Color.black;
         }
