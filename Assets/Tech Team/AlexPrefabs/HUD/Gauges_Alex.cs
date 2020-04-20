@@ -50,7 +50,7 @@ public class Gauges_Alex : MonoBehaviour
 
     IEnumerator UpdateGauges()
     {
-        yield return new WaitForSecondsRealtime(.05f);
+        yield return new WaitForSecondsRealtime(.1f);
         // Converting number to float between 0-1
         fireFill = (float) ElementControllerScript.Fire / StaticDatabase_Joseph.MaxMana;
         earthFill = (float) ElementControllerScript.Earth / StaticDatabase_Joseph.MaxMana;

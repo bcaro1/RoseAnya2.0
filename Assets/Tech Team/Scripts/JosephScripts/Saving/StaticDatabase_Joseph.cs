@@ -65,7 +65,6 @@ public static class StaticDatabase_Joseph
 
             if (OnElementChangedCallback != null)
             {
-                Debug.Log("Here");
                 OnElementChangedCallback.Invoke();
             }
         }
