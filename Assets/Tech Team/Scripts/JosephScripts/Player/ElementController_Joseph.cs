@@ -20,7 +20,7 @@ public class ElementController_Joseph : MonoBehaviour
     private bool UnlockedEarth = false;
     private bool UnlockedWind = false;
     private bool UnlockedFire = false;
-    private int CurrentElement = 0;
+    public int CurrentElement = 0;
     private int MaxElementValue = 16;
     private float CooldownTimer = 0;
     #endregion
@@ -35,7 +35,7 @@ public class ElementController_Joseph : MonoBehaviour
         UnlockedWind = true;
         UnlockedEarth = true;
         UnlockedFire = true;
-
+        
         StaticDatabase_Joseph.OnElementChangedCallback += UpdateFromDatabase;
     }
 
@@ -128,6 +128,7 @@ public class ElementController_Joseph : MonoBehaviour
             if (Fire + Value <= MaxElementValue)
             {
                 Fire += Value;
+                Debug.Log(Fire);
             }
         }
         UpdateValues();
@@ -288,10 +289,17 @@ public class ElementController_Joseph : MonoBehaviour
 
     public void UpdateFromDatabase()
     {
+        StartCoroutine(WaitForUpdate());
+    }
+
+    IEnumerator WaitForUpdate()
+    {
+        yield return new WaitForSecondsRealtime(0.05f);
         Water = StaticDatabase_Joseph.Water;
         Wind = StaticDatabase_Joseph.Wind;
         Earth = StaticDatabase_Joseph.Earth;
         Fire = StaticDatabase_Joseph.Fire;
+        MaxElementValue = StaticDatabase_Joseph.MaxMana;
     }
 
     public bool GetWindUnlocked => UnlockedWind;
