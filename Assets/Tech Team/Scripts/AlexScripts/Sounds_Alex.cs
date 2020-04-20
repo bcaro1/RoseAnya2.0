@@ -64,10 +64,10 @@ public class Sounds_Alex : MonoBehaviour
             if (!FireAbsorbSound.isPlaying) 
             { 
                 FireAbsorbSound.Play(); 
-                ParticleManager.SetActive(true); 
-                ParticleManagerScript.FireParticle(); 
+                ParticleManager.SetActive(true);  
             }
         }
+        ParticleManagerScript.FireParticle();
     }
     public void DischargeFire()
     {
@@ -77,9 +77,9 @@ public class Sounds_Alex : MonoBehaviour
             { 
                 FireDisperseSound.Play(); 
                 ParticleManager.SetActive(true); 
-                ParticleManagerScript.FireParticle(); 
             }
         }
+        ParticleManagerScript.FireParticle(); 
     }
     public void AbsorbWater()
     {
@@ -89,9 +89,9 @@ public class Sounds_Alex : MonoBehaviour
             { 
                 WaterAbsorbSound.Play(); 
                 ParticleManager.SetActive(true); 
-                ParticleManagerScript.WaterParticle(); 
             }
         }
+        ParticleManagerScript.WaterParticle(); 
     }
     public void DischargeWater()
     {
@@ -100,10 +100,10 @@ public class Sounds_Alex : MonoBehaviour
             if (!WaterDisperseSound.isPlaying) 
             { 
                 WaterDisperseSound.Play(); 
-                ParticleManager.SetActive(true); 
-                ParticleManagerScript.WaterParticle(); 
+                ParticleManager.SetActive(true);                 
             }
         }
+        ParticleManagerScript.WaterParticle(); 
     }
     public void AbsorbDischargeWind()
     {
@@ -113,9 +113,9 @@ public class Sounds_Alex : MonoBehaviour
             { 
                 WindSound.Play(); 
                 ParticleManager.SetActive(true); 
-                ParticleManagerScript.WindParticle(); 
             }
         }
+        ParticleManagerScript.WindParticle(); 
     }
     public void AbsorbDischargeEarth()
     {
@@ -125,8 +125,8 @@ public class Sounds_Alex : MonoBehaviour
             { 
                 StrengthSound.Play(); 
                 ParticleManager.SetActive(true); 
-                ParticleManagerScript.EarthParticle(); 
             }
         }
+        ParticleManagerScript.EarthParticle(); 
     }
 }

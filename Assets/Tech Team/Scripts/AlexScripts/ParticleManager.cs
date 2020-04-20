@@ -14,6 +14,11 @@ public class ParticleManager : MonoBehaviour
         Fire.Stop();
         Wind.Stop();
         Earth.Stop();
+
+        Water.enableEmission = false;
+        Fire.enableEmission = false;
+        Wind.enableEmission = false;
+        Earth.enableEmission = false;
     }
 
     void Update()
@@ -22,61 +27,59 @@ public class ParticleManager : MonoBehaviour
     }
     public void WaterParticle()
     {
-        Debug.Log("Play Water");
+        // Debug.Log("Play Water");
         StartCoroutine(CoWaterParticle());
     }
     public void FireParticle()
     {
-        Debug.Log("Play Fire");
+        // Debug.Log("Play Fire");
         StartCoroutine(CoFireParticle());
     }
     public void WindParticle()
-    {Debug.Log("Play Wind");
+    {
+        // Debug.Log("Play Wind");
         StartCoroutine(CoWindParticle());
     }
     public void EarthParticle()
     {
-        Debug.Log("Play Earth");
+        // Debug.Log("Play Earth");
         StartCoroutine(CoEarthParticle());
     }
     private IEnumerator CoWaterParticle()
     {
-        if (!Water.isPlaying) 
-        { 
-            Water.Play(); 
-            yield return new WaitForSeconds(2.0f);
-            Water.Stop();
-            gameObject.SetActive(false);
-        }
+        Water.enableEmission = true;
+        Water.Play(); 
+        yield return new WaitForSeconds(2.0f);
+        Water.Stop();
+        Water.enableEmission = false;
+        gameObject.SetActive(false);
     }
     private IEnumerator CoFireParticle()
     {
-        if (!Fire.isPlaying) 
-        { 
-            Fire.Play(); 
-            yield return new WaitForSeconds(2.0f);
-            Fire.Stop();
-            gameObject.SetActive(false);
-        }
+        Fire.enableEmission = true;
+        Fire.Play(); 
+        yield return new WaitForSeconds(2.0f);
+        Fire.Stop();
+        Fire.enableEmission = false;
+        gameObject.SetActive(false);
     }
     private IEnumerator CoWindParticle()
     {
-        if (!Wind.isPlaying) 
-        { 
-            Wind.Play(); 
-            yield return new WaitForSeconds(2.0f);
-            Wind.Stop();
-            gameObject.SetActive(false);
-        }
+        Wind.enableEmission = true;
+        Wind.Play(); 
+        yield return new WaitForSeconds(2.0f);
+        Wind.Stop();
+        Wind.enableEmission = false;
+        gameObject.SetActive(false);
+
     }
     private IEnumerator CoEarthParticle()
     {
-        if (!Earth.isPlaying) 
-        { 
-            Earth.Play(); 
-            yield return new WaitForSeconds(2.0f);
-            Earth.Stop();
-            gameObject.SetActive(false);
-        }
+        Earth.enableEmission = true;
+        Earth.Play(); 
+        yield return new WaitForSeconds(2.0f);
+        Earth.Stop();
+        Earth.enableEmission = false;
+        gameObject.SetActive(false);
     }
 }
