@@ -46,9 +46,9 @@ public class StoryManagement_Alex : MonoBehaviour
     {
         if (FishingMinigame == null)
         {
+            PlayerMovementScript.canMove = false;
             FishingMinigame = Instantiate(FishingMinigamePREFAB);
             FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
-            PlayerMovementScript.canMove = false;
         }
     }
     public void LaunchHouseFire()
