@@ -10,6 +10,7 @@ public class FeedChicken_Alex : MonoBehaviour
     public GameObject textUI;
     public GameObject CollectFish;
     public Flowchart flowchart; // calls the flowchart.
+    public Item_Joseph fish;
     #endregion
 
     #region Private
@@ -40,6 +41,7 @@ public class FeedChicken_Alex : MonoBehaviour
                     CollectFishScript.hasFish = false;
                     flowchart.SetIntegerVariable("ChickenQuest", 2);
                     flowchart.SetIntegerVariable("HeroQuest", 1);
+                    Inventory_Joseph.Instance.Remove(fish);
                 }
             }
         }
