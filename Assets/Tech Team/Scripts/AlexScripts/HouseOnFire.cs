@@ -23,39 +23,26 @@ public class HouseOnFire : MonoBehaviour
 
     void Update()
     {
-        // CompleteFire();
+        CompleteFire();
     }
 
     public IEnumerator StartFire()
     {
-        // for(var i = 0; i < fire.Length; i++)
-        // {
-            // gameObject.SetActive(true);
-            // fire[i].SetActive(true);
-        // }
-
         yield return new WaitForSeconds(10f);
         FireTimeout();
     }
     public void FireTimeout()
     {
-        // for(var i = 0; i < fire.Length; i++)
-        // {
-            // fire[i].SetActive(false);
-        // }
         Door3.SetActive(true);
         gameObject.SetActive(false);
     }
     public void CompleteFire()
     {
-        // if gameobject position = ...
-
-        flowchart.SetIntegerVariable("HouseFire", 2);
-        // for(var i = 0; i < fire.Length; i++)
-        // {
-            // fire[i].SetActive(false);
-        // }
-        Door3.SetActive(true);
-        gameObject.SetActive(false);
+        if (gameObject.transform.position.y < -9)
+        {
+            flowchart.SetIntegerVariable("HouseFire", 2);
+            Door3.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }
