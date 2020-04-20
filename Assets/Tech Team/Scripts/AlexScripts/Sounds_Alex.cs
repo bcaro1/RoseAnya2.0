@@ -10,17 +10,20 @@ public class Sounds_Alex : MonoBehaviour
     public AudioSource WaterDisperseSound;
     public AudioSource FireAbsorbSound;
     public AudioSource FireDisperseSound;
+    public GameObject ParticleManager;
     public bool soundToggle;
 
     private GameObject Player;
     private PlayerMovement MovementScript;
     private Strength_Alex StrengthScript;
+    private ParticleManager ParticleManagerScript;
     void Awake()
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player");
         MovementScript = Player.GetComponent<PlayerMovement>();
         StrengthScript = Player.GetComponent<Strength_Alex>();
+        ParticleManagerScript = ParticleManager.GetComponent<ParticleManager>();
 
         // VARIABLES //
         soundToggle = true;
@@ -63,10 +66,20 @@ public class Sounds_Alex : MonoBehaviour
     }
     public void AbsorbWater()
     {
-        if (!WaterAbsorbSound.isPlaying) { WaterAbsorbSound.Play(); }
+        if (!WaterAbsorbSound.isPlaying) 
+        { 
+            WaterAbsorbSound.Play(); 
+            ParticleManager.SetActive(true); 
+            ParticleManagerScript.WaterParticle(); 
+        }
     }
     public void DischargeWater()
     {
-        if (!WaterDisperseSound.isPlaying) { WaterDisperseSound.Play(); }
+        if (!WaterDisperseSound.isPlaying) 
+        { 
+            WaterDisperseSound.Play(); 
+            ParticleManager.SetActive(true); 
+            ParticleManagerScript.WaterParticle(); 
+        }
     }
 }
