@@ -9,6 +9,7 @@ public class StoryManagement_Alex : MonoBehaviour
     #region Public
     public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB, HouseFire, FishingMinigame;
     public Flowchart flowchart; // calls the flowchart.
+    public GameObject QuestSymbolStart, QuestSymbolBook, QuestSymbolFire;
     #endregion
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
@@ -27,6 +28,9 @@ public class StoryManagement_Alex : MonoBehaviour
         JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
         LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
         ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
+        
+
+        QuestSymbolSetup();
 
         if (JimothyQuest > 0 ) // CHECKPOINT
         {
@@ -50,5 +54,25 @@ public class StoryManagement_Alex : MonoBehaviour
     public void LaunchHouseFire()
     {
         HouseFire.SetActive(true);
+    }
+    public void QuestSymbolSetup()
+    {
+        JimothyQuest = flowchart.GetIntegerVariable("JimothyQuest");
+        JeanieQuest = flowchart.GetIntegerVariable("JeanieQuest");
+        LearnQuest = flowchart.GetIntegerVariable("LearnQuest");
+        ChickenQuest = flowchart.GetIntegerVariable("ChickenQuest");
+        
+        if (JimothyQuest == 0)
+        {
+            QuestSymbolStart.SetActive(true);
+        }   
+        if (JimothyQuest == 1)
+        {
+            QuestSymbolBook.SetActive(true);
+        } 
+        if (LearnQuest == 1)
+        {
+            QuestSymbolFire.SetActive(true);
+        }
     }
 }
