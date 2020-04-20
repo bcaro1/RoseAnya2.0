@@ -18,12 +18,6 @@ public class Inventory_Joseph : MonoBehaviour
         LoadItems();
     }
 
-    private void Update()
-    {
-
-    }
-
-
     private void Awake()
     {
         if(Instance != null)

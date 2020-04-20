@@ -19,8 +19,8 @@ public class InventoryUI_Joseph : MonoBehaviour
     {
         Inventory = Inventory_Joseph.Instance;
         Inventory.OnItemChangedCallback += UpdateUI;
-
         Slots = ItemsParent.GetComponentsInChildren<InventorySlot_Joseph>();
+        UpdateUI();
     }
 
     private void Awake()
@@ -46,6 +46,7 @@ public class InventoryUI_Joseph : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 StaticDatabase_Joseph.Item = null;
                 DescriptionText.text = "";
+                UpdateUI();
             }
             else
             {

@@ -54,6 +54,60 @@ public class ElementController_Joseph : MonoBehaviour
         }
     }
 
+    void ToggleElementUP()
+    {
+        if (CurrentElement < 3)
+        {
+            CurrentElement++;
+        }
+        else
+        {
+            CurrentElement = 0;
+        }
+
+        if (CurrentElement == 1 && !UnlockedWind)
+        {
+            CurrentElement = 0;
+        }
+
+        if (CurrentElement == 2 && !UnlockedEarth)
+        {
+            CurrentElement = 0;
+        }
+
+        if (CurrentElement == 3 && !UnlockedFire)
+        {
+            CurrentElement = 0;
+        }
+    }
+
+    void ToggleElementDown()
+    {
+        if (CurrentElement > 0)
+        {
+            CurrentElement--;
+        }
+        else
+        {
+            CurrentElement = 3;
+        }
+
+        if (CurrentElement == 1 && !UnlockedWind)
+        {
+            CurrentElement = 0;
+        }
+
+        if (CurrentElement == 2 && !UnlockedEarth)
+        {
+            CurrentElement = 0;
+        }
+
+        if (CurrentElement == 3 && !UnlockedFire)
+        {
+            CurrentElement = 0;
+        }
+    }
+
     void ToggleElement()
     {
         //Scrolls the Element one further in the cycle if not already at the end of the list, if it is at the end of the list it resets back to 0
