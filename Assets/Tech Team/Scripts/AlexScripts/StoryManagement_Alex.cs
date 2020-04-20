@@ -44,6 +44,10 @@ public class StoryManagement_Alex : MonoBehaviour
             CollectFish.SetActive(true);
         }
     }
+    void Update()
+    {
+        QuestSymbolSetup_FISHING();
+    }
     public void LaunchFishing()
     {
         if (FishingMinigame == null)
@@ -79,6 +83,14 @@ public class StoryManagement_Alex : MonoBehaviour
         if ((ChickenQuest == 1) && (!CollectFishScript.hasFish))
         {
             QuestSymbolFish.SetActive(true);
+        }
+    }
+    public void QuestSymbolSetup_FISHING()
+    {
+        if (ChickenQuest == 1)
+        {
+            if (!CollectFishScript.hasFish) { QuestSymbolFish.SetActive(true); }
+            else { QuestSymbolFish.SetActive(false); }
         }
     }
 }
