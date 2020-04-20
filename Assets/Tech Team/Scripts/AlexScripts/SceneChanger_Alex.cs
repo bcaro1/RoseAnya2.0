@@ -65,6 +65,10 @@ public class SceneChanger_Alex : MonoBehaviour
   {
     SceneManagerScript.StartCoroutine("Building3");
   }
+  public void TownhallScene()
+  {
+    SceneManagerScript.StartCoroutine("Townhall");
+  }
 
 
   public void LoadTravelMenu()
@@ -133,6 +137,13 @@ public class SceneChanger_Alex : MonoBehaviour
       if (other.CompareTag("Player")) 
       {
         Building3Scene();
+      }
+    }
+    if (this.gameObject.tag == "Townhall")
+    {
+      if (other.CompareTag("Player")) 
+      {
+        TownhallScene();
       }
     }
     if (this.gameObject.tag == "TravelMenu")

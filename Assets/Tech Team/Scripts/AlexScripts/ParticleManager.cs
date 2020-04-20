@@ -22,18 +22,21 @@ public class ParticleManager : MonoBehaviour
     }
     public void WaterParticle()
     {
+        Debug.Log("Play Water");
         StartCoroutine(CoWaterParticle());
     }
     public void FireParticle()
     {
+        Debug.Log("Play Fire");
         StartCoroutine(CoFireParticle());
     }
     public void WindParticle()
-    {
+    {Debug.Log("Play Wind");
         StartCoroutine(CoWindParticle());
     }
     public void EarthParticle()
     {
+        Debug.Log("Play Earth");
         StartCoroutine(CoEarthParticle());
     }
     private IEnumerator CoWaterParticle()
@@ -41,7 +44,7 @@ public class ParticleManager : MonoBehaviour
         if (!Water.isPlaying) 
         { 
             Water.Play(); 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
             Water.Stop();
             gameObject.SetActive(false);
         }
@@ -51,7 +54,7 @@ public class ParticleManager : MonoBehaviour
         if (!Fire.isPlaying) 
         { 
             Fire.Play(); 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
             Fire.Stop();
             gameObject.SetActive(false);
         }
@@ -61,7 +64,7 @@ public class ParticleManager : MonoBehaviour
         if (!Wind.isPlaying) 
         { 
             Wind.Play(); 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
             Wind.Stop();
             gameObject.SetActive(false);
         }
@@ -71,7 +74,7 @@ public class ParticleManager : MonoBehaviour
         if (!Earth.isPlaying) 
         { 
             Earth.Play(); 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
             Earth.Stop();
             gameObject.SetActive(false);
         }
