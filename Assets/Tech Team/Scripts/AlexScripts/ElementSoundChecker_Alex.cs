@@ -35,9 +35,17 @@ public class ElementSoundChecker_Alex : MonoBehaviour
         {
             SoundsScript.AbsorbWater();
         }
-        if (other.CompareTag("Water") && Input.GetButtonDown("Interact")) // DischargeFire
+        if (other.CompareTag("Water") && Input.GetButtonDown("Interact")) 
         {
             SoundsScript.DischargeWater();
+        }
+        if (other.CompareTag("Wind") && (Input.GetButtonDown("Interact") || Input.GetButtonDown("Absorb"))) 
+        {
+            SoundsScript.AbsorbDischargeWind();
+        }
+        if (other.CompareTag("Earth") && (Input.GetButtonDown("Interact") || Input.GetButtonDown("Absorb"))) 
+        {
+            SoundsScript.AbsorbDischargeEarth();
         }
     }
 }

@@ -10,6 +10,7 @@ public class Sounds_Alex : MonoBehaviour
     public AudioSource WaterDisperseSound;
     public AudioSource FireAbsorbSound;
     public AudioSource FireDisperseSound;
+    public AudioSource WindSound;
     public GameObject ParticleManager;
     public bool soundToggle;
 
@@ -58,28 +59,74 @@ public class Sounds_Alex : MonoBehaviour
     }
     public void AbsorbFire()
     {
-        if (!FireAbsorbSound.isPlaying) { FireAbsorbSound.Play(); }
+        if (soundToggle)
+        {
+            if (!FireAbsorbSound.isPlaying) 
+            { 
+                FireAbsorbSound.Play(); 
+                ParticleManager.SetActive(true); 
+                ParticleManagerScript.FireParticle(); 
+            }
+        }
     }
     public void DischargeFire()
     {
-        if (!FireDisperseSound.isPlaying) { FireDisperseSound.Play(); }
+        if (soundToggle)
+        {
+            if (!FireDisperseSound.isPlaying) 
+            { 
+                FireDisperseSound.Play(); 
+                ParticleManager.SetActive(true); 
+                ParticleManagerScript.FireParticle(); 
+            }
+        }
     }
     public void AbsorbWater()
     {
-        if (!WaterAbsorbSound.isPlaying) 
-        { 
-            WaterAbsorbSound.Play(); 
-            ParticleManager.SetActive(true); 
-            ParticleManagerScript.WaterParticle(); 
+        if (soundToggle)
+        {
+            if (!WaterAbsorbSound.isPlaying) 
+            { 
+                WaterAbsorbSound.Play(); 
+                ParticleManager.SetActive(true); 
+                ParticleManagerScript.WaterParticle(); 
+            }
         }
     }
     public void DischargeWater()
     {
-        if (!WaterDisperseSound.isPlaying) 
-        { 
-            WaterDisperseSound.Play(); 
-            ParticleManager.SetActive(true); 
-            ParticleManagerScript.WaterParticle(); 
+        if (soundToggle)
+        {
+            if (!WaterDisperseSound.isPlaying) 
+            { 
+                WaterDisperseSound.Play(); 
+                ParticleManager.SetActive(true); 
+                ParticleManagerScript.WaterParticle(); 
+            }
+        }
+    }
+    public void AbsorbDischargeWind()
+    {
+        if (soundToggle)
+        {
+            if (!WindSound.isPlaying) 
+            { 
+                WindSound.Play(); 
+                ParticleManager.SetActive(true); 
+                ParticleManagerScript.WindParticle(); 
+            }
+        }
+    }
+    public void AbsorbDischargeEarth()
+    {
+        if (soundToggle)
+        {
+            if (!StrengthSound.isPlaying) 
+            { 
+                StrengthSound.Play(); 
+                ParticleManager.SetActive(true); 
+                ParticleManagerScript.EarthParticle(); 
+            }
         }
     }
 }
