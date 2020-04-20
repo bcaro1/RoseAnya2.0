@@ -9,18 +9,20 @@ public class StoryManagement_Alex : MonoBehaviour
     #region Public
     public GameObject Checkpoint, CollectFish, Camera, FishingMinigamePREFAB, HouseFire, FishingMinigame;
     public Flowchart flowchart; // calls the flowchart.
-    public GameObject QuestSymbolStart, QuestSymbolBook, QuestSymbolFire;
+    public GameObject QuestSymbolStart, QuestSymbolBook, QuestSymbolFire, QuestSymbolFish;
     #endregion
     #region Private
     private int JimothyQuest, JeanieQuest, LearnQuest, ChickenQuest, HeroQuest;
     private GameObject Player;    
     private PlayerMovement PlayerMovementScript;
+    private CollectFish_Alex CollectFishScript;
     #endregion
     void Awake()
     {
         // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player");
         PlayerMovementScript = Player.GetComponent<PlayerMovement>(); // Grabs movement script attached to Player
+        CollectFishScript = CollectFish.GetComponent<CollectFish_Alex>(); // Grabs movement script attached to Player
     }
     void Start()
     {
@@ -42,13 +44,17 @@ public class StoryManagement_Alex : MonoBehaviour
             CollectFish.SetActive(true);
         }
     }
+    void Update()
+    {
+        QuestSymbolSetup_FISHING();
+    }
     public void LaunchFishing()
     {
         if (FishingMinigame == null)
         {
+            PlayerMovementScript.canMove = false;
             FishingMinigame = Instantiate(FishingMinigamePREFAB);
             FishingMinigame = GameObject.FindGameObjectWithTag("FishingMinigame");
-            PlayerMovementScript.canMove = false;
         }
     }
     public void LaunchHouseFire()
@@ -73,6 +79,18 @@ public class StoryManagement_Alex : MonoBehaviour
         if (LearnQuest == 1)
         {
             QuestSymbolFire.SetActive(true);
+        }
+        if ((ChickenQuest == 1) && (!CollectFishScript.hasFish))
+        {
+            QuestSymbolFish.SetActive(true);
+        }
+    }
+    public void QuestSymbolSetup_FISHING()
+    {
+        if (ChickenQuest == 1)
+        {
+            if (!CollectFishScript.hasFish) { QuestSymbolFish.SetActive(true); }
+            else { QuestSymbolFish.SetActive(false); }
         }
     }
 }
