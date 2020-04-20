@@ -17,5 +17,6 @@ public class Item_Joseph : ScriptableObject
     public void RemoveFromInventory()
     {
         Inventory_Joseph.Instance.Remove(this);
+        InventoryUI_Joseph.Instance.UpdateUI();
     }
 }

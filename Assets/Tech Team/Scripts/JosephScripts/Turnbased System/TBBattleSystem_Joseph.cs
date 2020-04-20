@@ -219,6 +219,7 @@ public class TBBattleSystem_Joseph : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        StaticDatabase_Joseph.CurrentHP = StaticDatabase_Joseph.HP;
         Source.Stop();
         Sound.SetActive(true);
 

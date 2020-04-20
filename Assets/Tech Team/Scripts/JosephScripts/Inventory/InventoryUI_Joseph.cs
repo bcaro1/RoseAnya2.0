@@ -7,6 +7,7 @@ public class InventoryUI_Joseph : MonoBehaviour
     public Transform ItemsParent;
     public GameObject InventoryUI;
     public TextMeshProUGUI DescriptionText;
+    public static InventoryUI_Joseph Instance;
     #endregion
 
     #region Private
@@ -20,6 +21,15 @@ public class InventoryUI_Joseph : MonoBehaviour
         Inventory.OnItemChangedCallback += UpdateUI;
 
         Slots = ItemsParent.GetComponentsInChildren<InventorySlot_Joseph>();
+    }
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            return;
+        }
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -48,7 +58,7 @@ public class InventoryUI_Joseph : MonoBehaviour
         }
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         for (int i = 0; i < Slots.Length; i++)
         {
