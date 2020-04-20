@@ -11,6 +11,7 @@ public class Sounds_Alex : MonoBehaviour
     public AudioSource FireAbsorbSound;
     public AudioSource FireDisperseSound;
     public AudioSource WindSound;
+    public AudioSource TileSound;
     public GameObject ParticleManager;
     public GameObject Element;
     public bool soundToggle;
@@ -58,6 +59,16 @@ public class Sounds_Alex : MonoBehaviour
         else
         {
             StrengthSound.Pause();
+        }
+    }
+    public void PlayTileSound()
+    {
+        if (soundToggle)
+        {
+            // if (!TileSound.isPlaying) 
+            // { 
+                TileSound.Play(); 
+            // }
         }
     }
     public void AbsorbFire()
