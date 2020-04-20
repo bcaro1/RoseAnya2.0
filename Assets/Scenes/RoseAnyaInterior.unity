@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2383,6 +2383,86 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -6388744287747599261, guid: 5d30888d0c3188f4cb1a9986fccabb1d, type: 3}
+--- !u!1001 &336417384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4609087517436438096, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_Name
+      value: Save_Load
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 901.75494
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 531.3041
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -869.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5254974966966759410, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702589182419102062, guid: 66f9a714cf6359342a86bc0bde58afde,
+        type: 3}
+      propertyPath: Chart
+      value: 
+      objectReference: {fileID: 1401779073}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66f9a714cf6359342a86bc0bde58afde, type: 3}
+--- !u!1 &336417385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4609087517436438096, guid: 66f9a714cf6359342a86bc0bde58afde,
+    type: 3}
+  m_PrefabInstance: {fileID: 336417384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &337568323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3781,6 +3861,11 @@ PrefabInstance:
       propertyPath: flowchart
       value: 
       objectReference: {fileID: 1401779073}
+    - target: {fileID: 6700710206347956759, guid: 1e842b5bb590749e78bfcab53f28b6b9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e842b5bb590749e78bfcab53f28b6b9, type: 3}
 --- !u!1 &451167169 stripped
@@ -14486,6 +14571,7 @@ MonoBehaviour:
   inRadius: 0
   black: {fileID: 1826366894}
   animator: {fileID: 1826366893}
+  SaveLoad: {fileID: 336417385}
 --- !u!65 &1660289619
 BoxCollider:
   m_ObjectHideFlags: 0

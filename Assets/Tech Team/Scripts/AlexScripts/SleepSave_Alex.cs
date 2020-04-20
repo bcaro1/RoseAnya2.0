@@ -11,17 +11,21 @@ public class SleepSave_Alex : MonoBehaviour
     public bool inRadius;
     public Image black;
     public Animator animator;
+    public GameObject SaveLoad;
+    private DataManager_Joseph DataManagerScript;
     
     void Awake()
     {
+        // REFERENCES //
         Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
+        DataManagerScript = SaveLoad.GetComponent<DataManager_Joseph>();
     }
 
     void Update()
     {
         if (inRadius && Input.GetButtonDown("Interact"))
         {
-            
+            DataManagerScript.Save();
             StartCoroutine (FadeOut());
         }
     }
