@@ -313,4 +313,9 @@ public class ElementController_Joseph : MonoBehaviour
     public void SetEarthUnlocked(bool Unlocked) => UnlockedEarth = Unlocked;
 
     public void SetFireUnlocked(bool Unlocked) => UnlockedFire = Unlocked;
+
+    private void OnDestroy()
+    {
+        StaticDatabase_Joseph.OnElementChangedCallback -= UpdateFromDatabase;
+    }
 }
