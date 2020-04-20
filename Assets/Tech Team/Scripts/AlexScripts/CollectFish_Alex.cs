@@ -27,6 +27,7 @@ public class CollectFish_Alex : MonoBehaviour
         {
             Inventory_Joseph.Instance.Add(fish);
             recievedFish = true;
+            ChickenEnemy.SetActive(true);
         }
     }
 
