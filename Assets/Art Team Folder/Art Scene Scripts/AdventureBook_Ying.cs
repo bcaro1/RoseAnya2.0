@@ -13,7 +13,7 @@ public class AdventureBook_Ying : MonoBehaviour
     public int numPages = 7;
     public GameObject[] pagesArray = new GameObject[7];
     public int curPage = 0;
-    public GameObject bookUI;
+    public GameObject bookUI, bookIcon;
     public static bool giveBook = false;
     #endregion
 
@@ -34,11 +34,13 @@ public class AdventureBook_Ying : MonoBehaviour
         // {
         //     pagesArray[i].SetActive(false);
         // }
+        if (giveBook) { bookIcon.SetActive(true); }
     }
 
     void GiveBookAccess() // This is called in Fungus
     {
         giveBook = true;
+        bookIcon.SetActive(true);
     }
     void Update()
     {
