@@ -9,6 +9,7 @@ public class CollectFish_Alex : MonoBehaviour
     public GameObject ChickenEnemy;
     public GameObject StoryManager;    
     public bool hasFish;
+    public Item_Joseph fish;
     #endregion
 
     #region Private
@@ -21,7 +22,10 @@ public class CollectFish_Alex : MonoBehaviour
 
     void Update()
     {
-
+        if(hasFish)
+        {
+            Inventory_Joseph.Instance.Add(fish);
+        }
     }
 
     void OnTriggerStay(Collider other)

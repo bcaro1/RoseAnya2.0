@@ -11,7 +11,7 @@ public class Item_Joseph : ScriptableObject
     public virtual void Use()
     {
         //Use the Item
-        RemoveFromInventory();
+        //RemoveFromInventory();
     }
 
     public void RemoveFromInventory()
