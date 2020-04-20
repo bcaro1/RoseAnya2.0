@@ -14,6 +14,7 @@ public class CollectFish_Alex : MonoBehaviour
 
     #region Private
     private StoryManagement_Alex StoryManagementScript;
+    private bool recievedFish = false;
     #endregion
     void Awake()
     {
@@ -22,9 +23,10 @@ public class CollectFish_Alex : MonoBehaviour
 
     void Update()
     {
-        if(hasFish)
+        if(hasFish && !recievedFish)
         {
             Inventory_Joseph.Instance.Add(fish);
+            recievedFish = true;
         }
     }
 
