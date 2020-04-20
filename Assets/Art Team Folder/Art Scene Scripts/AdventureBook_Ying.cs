@@ -143,5 +143,12 @@ public class AdventureBook_Ying : MonoBehaviour
         curPage = 6;
         pagesArray[curPage].SetActive(true);
     }
+
+    public void SaveButton()
+    {
+        pagesArray[curPage].SetActive(false);
+        curPage = 7;
+        pagesArray[curPage].SetActive(true);
+    }
 }
 
