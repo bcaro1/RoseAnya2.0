@@ -47,7 +47,7 @@ public class Animations : MonoBehaviour
     void PlayerMoving()
     {
         // If player is moving and on the ground, change Speed in animator
-        if((Input.GetButton("Horizontal") || Input.GetButton("Vertical") && onGround))
+        if((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0) && onGround)
         {
             anim.SetFloat("Speed", 1);
         }
