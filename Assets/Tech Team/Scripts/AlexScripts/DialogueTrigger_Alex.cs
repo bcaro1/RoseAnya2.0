@@ -214,7 +214,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 break;
             case "InvisbleBookNote":
                 StartConvo();
-                flowchart.ExecuteBlock("BookNote");
+                flowchart.ExecuteBlock("BookNote1");
                 break;
             case "InvisibleBookNote2":
                 StartConvo();
