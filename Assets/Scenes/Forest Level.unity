@@ -2838,6 +2838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 4263323607302866256, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: selectedBlocks.Array.size
@@ -3044,11 +3049,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4278512360926448480, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4263323607302866256, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3377,12 +3377,12 @@ PrefabInstance:
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.size
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: nodeRect.width
-      value: 123.892105
+      value: 138.41791
       objectReference: {fileID: 0}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -3413,26 +3413,37 @@ PrefabInstance:
         type: 3}
       propertyPath: commandList.Array.data[6]
       value: 
-      objectReference: {fileID: 1104988559}
+      objectReference: {fileID: 1104988564}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.data[7]
       value: 
-      objectReference: {fileID: 1104988549}
+      objectReference: {fileID: 1104988563}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.data[8]
       value: 
-      objectReference: {fileID: 1104988549}
+      objectReference: {fileID: 1104988562}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: eventHandler
       value: 
       objectReference: {fileID: 1104988561}
+    - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: commandList.Array.data[9]
+      value: 
+      objectReference: {fileID: 1104988559}
+    - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: commandList.Array.data[10]
+      value: 
+      objectReference: {fileID: 1104988549}
     - target: {fileID: 1409255990973495948, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: storyText
-      value: "Alright, so, to do this I just..\r\nReach out and\u2026\"INTERACT\""
+      value: "Alright, remember what you learned in magic school...\r If I were to
+        imagine attuning my body to a specific element such as water\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 8655166309715239635, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -3623,6 +3634,12 @@ PrefabInstance:
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 588771135}
+    - target: {fileID: 7259708247021963129, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: storyText
+      value: I can probably take these down in order to find them. I can probably
+        take these down in order to find them.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8046807634333629200, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
     - {fileID: 6682560066348372130, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
@@ -3708,6 +3725,18 @@ MonoBehaviour:
   targetObject: {fileID: 2081455227}
   methodName: MainScene
   delay: 0
+--- !u!114 &1104988529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1357928132466253043, guid: 72a70313966f548b5a575b71cc2a4c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1104988522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1104988530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3850041584700436243, guid: 72a70313966f548b5a575b71cc2a4c2d,
@@ -3956,6 +3985,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1104988550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6404174305897532635, guid: 72a70313966f548b5a575b71cc2a4c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1104988522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1104988551 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4741779154027944370, guid: 72a70313966f548b5a575b71cc2a4c2d,
@@ -4095,7 +4136,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1104988561
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4107,6 +4148,90 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1104988578}
   waitForFrames: 1
+--- !u!114 &1104988562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104988525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2405
+  indentLevel: 1
+  storyText: "Ah! Maybe the adventuring book Samon gave me will have some useful tips\u2026
+    Well, let\u2019s do this!"
+  description: 
+  character: {fileID: 1104988550}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1104988529}
+--- !u!114 &1104988563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104988525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2404
+  indentLevel: 1
+  storyText: "And then, after that, I can absorb the element as mana into my body...
+    If I were to imagine that, it\u2019d be like pressing a button."
+  description: 
+  character: {fileID: 1104988550}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1104988529}
+--- !u!114 &1104988564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104988525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2403
+  indentLevel: 1
+  storyText: 'Theoretically I would be scrolling through a wheel or cycling between
+    elements& '
+  description: 
+  character: {fileID: 1104988550}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1104988529}
 --- !u!114 &1104988578 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
