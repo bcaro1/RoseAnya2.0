@@ -11,6 +11,7 @@ public class Item_Joseph : ScriptableObject
     public virtual void Use()
     {
         //Use the Item
+        StaticDatabase_Joseph.CurrentHP += 20;
         //RemoveFromInventory();
     }
 

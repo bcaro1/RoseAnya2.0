@@ -63,7 +63,7 @@ public class InventoryUI_Joseph : MonoBehaviour
     {
         for (int i = 0; i < Slots.Length; i++)
         {
-            if(i < Inventory.Items.Count)
+            if (i < Inventory.Items.Count)
             {
                 Slots[i].AddItem(Inventory.Items[i]);
             }
