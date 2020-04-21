@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Walking()
     {
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical")) != 0)
         {
             transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jumping()
     {
-        if (onGround && Input.GetKeyDown(KeyCode.Space)) //@AH
+        if (onGround && Input.GetButtonDown("Jump")) //@AH
         {
             rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
         }     
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (ElementControllerScript.Wind > 0)
         {
-            if (!onGround && !DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space)) //@AH
+            if (!onGround && !DoubleJumpInProgress && Input.GetButtonDown("Jump")) //@AH
             {
                 rb.AddForce(new Vector3(0, 15, 0), ForceMode.Impulse);
                 DoubleJumpInProgress = true;
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (ElementControllerScript.Wind >= 1)
         {
-            if (!onGround && DoubleJumpInProgress && Input.GetKeyDown(KeyCode.Space)) //@AH
+            if (!onGround && DoubleJumpInProgress && Input.GetButtonDown("Jump")) //@AH
             {
                 rb.mass = 1;
                 ElementControllerScript.Wind --;
