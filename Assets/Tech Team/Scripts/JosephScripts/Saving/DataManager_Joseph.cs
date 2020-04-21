@@ -44,6 +44,7 @@ public class DataManager_Joseph : MonoBehaviour
         Data.ChickenQuest = Chart.GetIntegerVariable("ChickenQuest");
         Data.HeroQuest = Chart.GetIntegerVariable("HeroQuest");
         Data.HouseFire = Chart.GetIntegerVariable("HouseFire");
+        Data.Book = StaticDatabase_Joseph.Book;
         
         for(int i = 0; i < StaticDatabase_Joseph.Items.Count; i++)
         {
@@ -78,6 +79,7 @@ public class DataManager_Joseph : MonoBehaviour
         StaticDatabase_Joseph.Attack = Data.Attack;
         StaticDatabase_Joseph.Magic = Data.Magic;
         StaticDatabase_Joseph.EXP = Data.Exp;
+        StaticDatabase_Joseph.Book = Data.Book;
         Chart.SetIntegerVariable("JimothyQuest", Data.JimothyQuest);
         Chart.SetIntegerVariable("JeanieQuest", Data.JeanieQuest);
         Chart.SetIntegerVariable("LearnQuest", Data.LearnQuest);

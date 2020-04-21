@@ -10,7 +10,7 @@ public static class StaticDatabase_Joseph
 
     private static int water, fire, earth, wind, maxmana, currentquest, level, hp, currenthp, attack, magic, exp;
 
-    private static bool unlockedfire = true, unlockedearth = true, unlockedwind = true;
+    private static bool unlockedfire = true, unlockedearth = true, unlockedwind = true, book = false;
 
     private static string charactername;
 
@@ -344,6 +344,19 @@ public static class StaticDatabase_Joseph
         set
         {
             bgm = value;
+        }
+    }
+
+    public static bool Book
+    {
+        get
+        {
+            return book;
+        }
+
+        set
+        {
+            book = value;
         }
     }
 }

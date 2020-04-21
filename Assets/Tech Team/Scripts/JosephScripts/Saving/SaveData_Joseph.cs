@@ -9,6 +9,7 @@ public class SaveData_Joseph
     public bool WindUnlocked;
     public bool EarthUnlocked;
     public bool FireUnlocked;
+    public bool Book;
 
     public int WaterAmount;
     public int WindAmount;

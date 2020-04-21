@@ -34,12 +34,14 @@ public class AdventureBook_Ying : MonoBehaviour
         // {
         //     pagesArray[i].SetActive(false);
         // }
+        giveBook = StaticDatabase_Joseph.Book;
         if (giveBook) { bookIcon.SetActive(true); }
     }
 
     void GiveBookAccess() // This is called in Fungus
     {
         giveBook = true;
+        StaticDatabase_Joseph.Book = giveBook;
         bookIcon.SetActive(true);
     }
     void Update()
