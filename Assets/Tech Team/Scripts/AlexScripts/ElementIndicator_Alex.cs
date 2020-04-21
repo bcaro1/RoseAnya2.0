@@ -25,11 +25,12 @@ public class ElementIndicator_Alex : MonoBehaviour
     void Update()
     {
         StartCoroutine(MainIndicator());
+        // Debug.Log(ElementControllerScript.CurrentElement);
     }
     
     private IEnumerator MainIndicator()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        if ((Input.GetAxis("Mouse ScrollWheel") != 0) || (Input.GetButtonDown("Swap Element Up")) || (Input.GetButtonDown("Swap Element Down")))
         {
             yield return new WaitForSeconds(0.1f);
             if (ElementControllerScript.CurrentElement == 0)

@@ -47,7 +47,7 @@ public class ElementController_Joseph : MonoBehaviour
         {
             ToggleElement();
         }
-        if(Input.GetButtonDown("Swap Element UP"))
+        if(Input.GetButtonDown("Swap Element Up"))
         {
             ToggleElementUP();
         }
