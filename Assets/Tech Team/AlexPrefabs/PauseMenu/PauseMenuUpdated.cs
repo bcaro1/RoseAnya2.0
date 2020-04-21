@@ -7,7 +7,7 @@ public class PauseMenuUpdated : MonoBehaviour
 {
     #region Public
     public GameObject sideMenuUI, pauseMenuUI, optionsMenuUI, controlsMenuUI, confirmMenuUI;
-    public GameObject Player, CameraBase;
+    public GameObject Player, CameraBase, npc;
 
     [Header("Hover Text")]
 
@@ -18,6 +18,7 @@ public class PauseMenuUpdated : MonoBehaviour
     CameraFollow_Joseph CameraFollowScript;
     private GameObject SceneManagement;
     private SceneManager_Alex SceneManagerScript;
+    private DialogueTrigger_Alex DialogueTriggerScript;
     private Color maroon;
     private bool IsPaused = false;
     #endregion
@@ -88,6 +89,9 @@ public class PauseMenuUpdated : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        npc = GameObject.FindGameObjectWithTag("Fisherman1");
+        DialogueTriggerScript = npc.GetComponent<DialogueTrigger_Alex>();
+        DialogueTriggerScript.EndConvo(); // This is so Player doesn't get stuck in TalkingAnimation
         SceneManagerScript.StartCoroutine("LoadingScene");
     }
 

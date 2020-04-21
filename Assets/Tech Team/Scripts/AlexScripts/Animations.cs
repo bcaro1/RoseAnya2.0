@@ -79,6 +79,10 @@ public class Animations : MonoBehaviour
             anim.SetBool("isTalking", false);
         }
     }
+    public void StopPlayerTalking()
+    {
+        anim.SetBool("isTalking", false);
+    }
     void PlayerGliding()
     {
         // If Player is on the ground, they cannot glide
