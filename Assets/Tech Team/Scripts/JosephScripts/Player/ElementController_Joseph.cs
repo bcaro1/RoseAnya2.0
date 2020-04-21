@@ -47,6 +47,14 @@ public class ElementController_Joseph : MonoBehaviour
         {
             ToggleElement();
         }
+        if(Input.GetButtonDown("Swap Element UP"))
+        {
+            ToggleElementUP();
+        }
+        if(Input.GetButtonDown("Swap Element Down"))
+        {
+            ToggleElementDown();
+        }
         //Checks to see if Dash is pushed, and if it is dashes
         if(Input.GetButtonDown("Dash"))
         {
