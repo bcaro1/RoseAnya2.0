@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 23b08eb4b7bd55d4ca600b0a612d5fcf,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -685,7 +685,7 @@ PrefabInstance:
     - target: {fileID: 5732732018487244705, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.627
+      value: -32.78
       objectReference: {fileID: 0}
     - target: {fileID: 5732732018487244705, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -937,7 +937,21 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.0878919
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4170674121896536929, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: commandList.Array.size
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359865715923615981, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: storyText
+      value: "That\u2019s correct! Here\u2019s your gold star! Come back later for
+        another round! \r"
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8466954401213728949, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
+    - {fileID: 2503344395553953149, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
+    - {fileID: 1717114226685778917, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
 --- !u!1001 &419704166
 PrefabInstance:
@@ -1100,7 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 1270637772}
 --- !u!4 &420203225
 Transform:
   m_ObjectHideFlags: 1

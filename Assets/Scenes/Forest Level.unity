@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 3477944918cf099428e296809fbcc010,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2251,6 +2251,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6478914482355864772, guid: 0689d498b71d8764f8094d8b7140b97a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1000061
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0689d498b71d8764f8094d8b7140b97a, type: 3}
 --- !u!1 &901478669
@@ -2833,6 +2838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 4263323607302866256, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: selectedBlocks.Array.size
@@ -2841,27 +2851,32 @@ PrefabInstance:
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: scrollPos.x
-      value: 3360.4248
+      value: 3347.5266
       objectReference: {fileID: 0}
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: scrollPos.y
-      value: 110.31014
+      value: 117.66938
       objectReference: {fileID: 0}
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 1104988529}
+      objectReference: {fileID: 1104988578}
     - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
+      objectReference: {fileID: 1104988558}
+    - target: {fileID: 8470425815236908067, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: zoom
+      value: 0.7916949
       objectReference: {fileID: 0}
     - target: {fileID: 6404174306904750024, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -2933,15 +2948,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3153047023208629200, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2133165083554823936, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 21.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1040294943305376102, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3153047021609012499, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919512531057624959, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 231163200133651712, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -3023,22 +3053,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4263323607302866256, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2816765513931612807, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2692132364410359776, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3153047023208629200, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3108,27 +3128,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8958109319691758408, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8779090986914956722, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7951711610430642279, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8022843082375611942, guid: 72a70313966f548b5a575b71cc2a4c2d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919512531057624959, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3372,12 +3377,12 @@ PrefabInstance:
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: nodeRect.width
-      value: 121.97995
+      value: 138.41791
       objectReference: {fileID: 0}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -3408,22 +3413,43 @@ PrefabInstance:
         type: 3}
       propertyPath: commandList.Array.data[6]
       value: 
-      objectReference: {fileID: 1104988550}
+      objectReference: {fileID: 1104988564}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.data[7]
       value: 
-      objectReference: {fileID: 1104988559}
+      objectReference: {fileID: 1104988563}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: commandList.Array.data[8]
       value: 
-      objectReference: {fileID: 1104988549}
+      objectReference: {fileID: 1104988562}
     - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: eventHandler
       value: 
       objectReference: {fileID: 1104988561}
+    - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: commandList.Array.data[9]
+      value: 
+      objectReference: {fileID: 1104988559}
+    - target: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: commandList.Array.data[10]
+      value: 
+      objectReference: {fileID: 1104988549}
+    - target: {fileID: 1409255990973495948, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: storyText
+      value: "Alright, remember what you learned in magic school...\r If I were to
+        imagine attuning my body to a specific element such as water\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655166309715239635, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: storyText
+      value: '"[PRESS Q]"'
+      objectReference: {fileID: 0}
     - target: {fileID: 8329266387041990907, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
       propertyPath: nodeRect.y
@@ -3433,6 +3459,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958109319691758408, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951711610430642279, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3827467833009268092, guid: 72a70313966f548b5a575b71cc2a4c2d,
         type: 3}
@@ -3598,6 +3634,12 @@ PrefabInstance:
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 588771135}
+    - target: {fileID: 7259708247021963129, guid: 72a70313966f548b5a575b71cc2a4c2d,
+        type: 3}
+      propertyPath: storyText
+      value: I can probably take these down in order to find them. I can probably
+        take these down in order to find them.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8046807634333629200, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
     - {fileID: 6682560066348372130, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
@@ -3616,6 +3658,7 @@ PrefabInstance:
     - {fileID: 8561407609590608241, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
     - {fileID: 7777807416021282273, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
     - {fileID: 1916197359217181701, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
+    - {fileID: 8655166309715239635, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 72a70313966f548b5a575b71cc2a4c2d, type: 3}
 --- !u!95 &1104988523 stripped
 Animator:
@@ -3677,21 +3720,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 2392
+  itemId: 2400
   indentLevel: 1
   targetObject: {fileID: 2081455227}
   methodName: MainScene
   delay: 0
 --- !u!114 &1104988529 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7734758140539786410, guid: 72a70313966f548b5a575b71cc2a4c2d,
+  m_CorrespondingSourceObject: {fileID: 1357928132466253043, guid: 72a70313966f548b5a575b71cc2a4c2d,
     type: 3}
   m_PrefabInstance: {fileID: 1104988522}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104988525}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1104988530 stripped
@@ -3712,7 +3755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 2393
+  itemId: 2401
   indentLevel: 1
   targetObject: {fileID: 2081455227}
   methodName: MainScene
@@ -3753,7 +3796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 2394
+  itemId: 2402
   indentLevel: 1
   targetObject: {fileID: 1104988530}
   methodName: EndConvo
@@ -3944,14 +3987,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &1104988550 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8655166309715239635, guid: 72a70313966f548b5a575b71cc2a4c2d,
+  m_CorrespondingSourceObject: {fileID: 6404174305897532635, guid: 72a70313966f548b5a575b71cc2a4c2d,
     type: 3}
   m_PrefabInstance: {fileID: 1104988522}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104988525}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1104988551 stripped
@@ -4093,7 +4136,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1104988561
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4105,6 +4148,90 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1104988578}
   waitForFrames: 1
+--- !u!114 &1104988562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104988525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2405
+  indentLevel: 1
+  storyText: "Ah! Maybe the adventuring book Samon gave me will have some useful tips\u2026
+    Well, let\u2019s do this!"
+  description: 
+  character: {fileID: 1104988550}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1104988529}
+--- !u!114 &1104988563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104988525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2404
+  indentLevel: 1
+  storyText: "And then, after that, I can absorb the element as mana into my body...
+    If I were to imagine that, it\u2019d be like pressing a button."
+  description: 
+  character: {fileID: 1104988550}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1104988529}
+--- !u!114 &1104988564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104988525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2403
+  indentLevel: 1
+  storyText: 'Theoretically I would be scrolling through a wheel or cycling between
+    elements& '
+  description: 
+  character: {fileID: 1104988550}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1104988529}
 --- !u!114 &1104988578 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 785903197128209196, guid: 72a70313966f548b5a575b71cc2a4c2d,
