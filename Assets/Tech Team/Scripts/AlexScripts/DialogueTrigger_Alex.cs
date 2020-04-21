@@ -164,7 +164,7 @@ public class DialogueTrigger_Alex : MonoBehaviour
                 StartConvo();
                 flowchart.ExecuteBlock("Mayor");
                 break;
-            case "Chicken":
+            case "Chicken1":
                 StartConvo();
                 flowchart.ExecuteBlock("Chicken");
                 break;
