@@ -19,6 +19,7 @@ public class PauseMenuUpdated : MonoBehaviour
     private GameObject SceneManagement;
     private SceneManager_Alex SceneManagerScript;
     private DialogueTrigger_Alex DialogueTriggerScript;
+    private Animations AnimationsScript;
     private Color maroon;
     private bool IsPaused = false;
     #endregion
@@ -26,9 +27,11 @@ public class PauseMenuUpdated : MonoBehaviour
     void Awake()
     {
         // REFERENCES //
+        Player = GameObject.FindGameObjectWithTag("Player"); // Grabs Player
         CameraFollowScript = CameraBase.GetComponent<CameraFollow_Joseph>();
         SceneManagement = GameObject.FindGameObjectWithTag("SceneManager");
         SceneManagerScript = SceneManagement.GetComponent<SceneManager_Alex>();
+        AnimationsScript = Player.GetComponent<Animations>();
 
         // VARIABLES //
         maroon = new Color32(145,1,1,255);
@@ -64,12 +67,24 @@ public class PauseMenuUpdated : MonoBehaviour
 
     public void Pause()
     {
-        sideMenuUI.SetActive(true);
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        IsPaused = true;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        if (!AnimationsScript.playerTalking)
+        {
+            sideMenuUI.SetActive(true);
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            IsPaused = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            sideMenuUI.SetActive(true);
+            pauseMenuUI.SetActive(true);
+            IsPaused = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
     }
 
     public void Quit()

@@ -12,7 +12,7 @@ public class Animations : MonoBehaviour
     private Rigidbody PlayerRb;
     private DialogueTrigger_Alex DialogueTriggerScript;
     private bool onGround;
-    private bool playerTalking;
+
     #endregion
 
     #region Public
@@ -22,6 +22,7 @@ public class Animations : MonoBehaviour
     [Tooltip("Drag and drop NPC's animator here")]
     public Animator animNPC;
     public Flowchart flowchart; // calls the flowchart.
+    public bool playerTalking;
     #endregion
 
     void Awake()
