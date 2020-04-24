@@ -85,7 +85,7 @@ public class SceneChanger_Alex : MonoBehaviour
     HeroQuest = flowchart.GetIntegerVariable("HeroQuest");
     
     if ((JimothyQuest > 0) && (AdventureBook_Ying.giveBook)) { TravelMenuUI_ForestButton.SetActive(true);}
-    if (JeanieQuest > 0) { TravelMenuUI_CaveButton.SetActive(true); }
+    if (JeanieQuest == 1) { TravelMenuUI_CaveButton.SetActive(true); }
     if (HeroQuest > 0) { TravelMenuUI_CastleButton.SetActive(true); }
   }
   public void Resume()
